@@ -1,0 +1,15 @@
+{
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 100],
+  "editor.formatOnSave": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "files.associations": {
+    "**/.vscode/*.json": "jsonc"
+  },
+  "deno.enable": true,
+  "deno.unstable": true,
+  "deno.importMap": "./src/import_map.json",
+}

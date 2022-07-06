@@ -1,0 +1,1615 @@
+meta:
+  head:
+    charSet: "UTF-8"
+    title: "Nap Joseph Calub"
+    author: "Nap Joseph Calub"
+    description: "Curriculum Vitae of Nap Joseph Calub"
+    keywords: "resume, curriculum vitae, profile"
+    viewport: "width=device-width, initial-scale=1"
+  openGraph:
+    ogTitle: "Nap Joseph Calub"
+    ogDescription: "Curriculum Vitae of Nap Joseph Calub"
+    ogLocale: "en_US"
+    ogImage: "https://napjose.ph/calub/profile-pictures/professional-300x300.jpg"
+    ogType: "profile"
+    ogProfileFirstName: "Nap Joseph"
+    ogProfileLastName: "Calub"
+    ogProfileGender: "male"
+    ogProfileUsername: "njncalub"
+    ogSiteName: "Nap Joseph Calub"
+    ogUrl: "https://napjose.ph/calub"
+  footer:
+    links:
+      - title: "View source at GitHub"
+        url: "https://github.com/napjoseph/mono-rush/tree/main/personal/calub"
+        icon:
+          prefix: "fab"
+          iconName: "github"
+sections:
+  - title: "Header"
+    meta:
+      displayHeader: false
+    content:
+      type: "header"
+      value:
+        introText: "Curriculum Vitae of"
+        fullName: "Nap Joseph Calub"
+        images:
+          - use: true
+            source: "static"
+            path: "/profile-pictures/professional-300x300.jpg"
+            title: "Professional"
+          - use: true
+            source: "static"
+            path: "/profile-pictures/playful-300x300.jpg"
+            title: "Playful"
+        links:
+          - title: "Website"
+            value: "napjose.ph/calub"
+            linkTo: "https://napjose.ph/calub"
+            icon:
+              prefix: "fas"
+              iconName: "globe-asia"
+          - title: "Email"
+            value: "hello@napjose.ph"
+            linkTo: "mailto:hello@napjose.ph"
+            icon:
+              prefix: "far"
+              iconName: "envelope"
+          - title: "Mobile"
+            value: "+63 922 896 2503"
+            linkTo: "callto:+639228962503"
+            icon:
+              prefix: "fas"
+              iconName: "mobile-alt"
+          - title: "Address"
+            value: "Tanauan City, Batangas, Philippines 4232"
+            linkTo: "https://www.google.com/maps/place/Tanauan,+Batangas/@14.0912399,121.0738416,13z"
+            icon:
+              prefix: "fas"
+              iconName: "map-marker-alt"
+  - title: "Divider"
+    meta:
+      displayHeader: false
+    content:
+      type: "divider"
+      value:
+        logo:
+          link: "https://napjose.ph"
+          linkTitle: "Go to personal site of Nap Joseph Calub"
+  - title: "Work Experience"
+    icon:
+      prefix: "fas"
+      iconName: "briefcase"
+    content:
+      type: "work-experience"
+      value:
+        items:
+          - title: "Oracle"
+            url: "https://www.oracle.com/"
+            address: "33/F Zuellig Building, Makati Avenue Corner Paseo de Roxas, Metro Manila, Makati City, Philippines 1225"
+            image:
+              source: "static"
+              path: "/company-logos/oracle.png"
+              title: "Oracle Logo"
+            roles:
+              - title: "Senior UI Engineer"
+                canadaClassification: "2 - 21 - 217 - 2175 - Web designers and developers"
+                startDate: "2021-10"
+                description: "I implement additional frontend features for the next-generation student information system: Oracle Higher Education Student Cloud."
+          - title: "Concentrix"
+            url: "https://www.concentrix.com/"
+            address: "Tera Tower, Bridgetowne, C5, Eulogio Rodriguez Jr. Ave, Quezon City, Metro Manila, Philippines 1110"
+            image:
+              source: "static"
+              path: "/company-logos/concentrix.png"
+              title: "Concentrix Logo"
+            roles:
+              - title: "Business Apps Developer"
+                canadaClassification: "2 - 21 - 217 - 2173 - Software engineers and designers"
+                startDate: "2018-05"
+                endDate: "2021-05"
+                description: "I created and maintained business-critical applications using a mixture of Python, Go, and TypeScript (Angular) for our client's Network Operations Center. I also analyzed large data sets from Cloud SQL and BigQuery, and created interactive dashboards using Data Studio."
+          - title: "Cognizant"
+            url: "https://www.cognizant.com/"
+            address: "8/10 Upper McKinley Bldg, Fort Bonifacio, Taguig City, Metro Manila, Philippines 1635"
+            image:
+              source: "static"
+              path: "/company-logos/cognizant.png"
+              title: "Cognizant Logo"
+            roles:
+              - title: "Senior Process Executive"
+                canadaClassification: "2 - 22 - 228 - 2282 - User support technicians"
+                startDate: "2017-08"
+                endDate: "2018-04"
+                description: "I helped big companies across APAC to improve their current Google Ads (previously Google AdWords) and Google Analytics setup, and helped them implement Dynamic Remarketing on their websites using Google Tag Manager."
+          - title: "Bell Telecommunication Phils, Inc."
+            url: "http://www.belltel.ph/"
+            address: "3F 808 Bldg, Meralco Ave cor. Gen. Lim St., Brgy. San Antonio, Pasig City, Metro Manila, Philippines 1603"
+            image:
+              source: "static"
+              path: "/company-logos/belltel.jpg"
+              title: "Bell Telecommunication Phils, Inc. Logo"
+            roles:
+              - title: "Database Administrator"
+                canadaClassification: "2 - 21 - 217 - 2172 - Database analysts and data administrators"
+                startDate: "2017-01"
+                endDate: "2017-08"
+                description: "I created and managed the system for splitting, handing over, and disposal of our telecommunications network assets to PLDT and Globe Telecom. Additionally, I have also worked with external project managers by generating the daily reports and presentations to check the overall status of the operation."
+          - title: "Self-Employed"
+            url: "https://napjose.ph/"
+            address: "513 Yakal St, Mt View Subd, Brgy 3, Tanauan City, Batangas, Philippines 4232"
+            image:
+              source: "static"
+              path: "/company-logos/napjoseph.png"
+              title: "Nap Joseph Logo"
+            roles:
+              - title: "Freelance IT Consultant"
+                canadaClassification: "2 - 21 - 217 - 2171 - Information systems analysts and consultants"
+                startDate: "2016-01"
+                endDate: "2016-12"
+                description: "I created web and mobile solutions based on my customer's needs and specifications. I offered my clients a comprehensive range of services; from creating simple company websites to deploying full-fledged information systems."
+          - title: "Ateneo de Davao University"
+            url: "https://www.addu.edu.ph/"
+            address: "E. Jacinto Street, Davao City, Davao del Sur, Philippines 8016"
+            image:
+              source: "static"
+              path: "/company-logos/addu.png"
+              title: "Ateneo de Davao University Seal"
+            roles:
+              - title: "Instructor, Information Systems Department"
+                canadaClassification: "4 - 40 - 401 - 4011 - University professors and lecturers"
+                startDate: "2014-06"
+                endDate: "2014-11"
+                description: "I was a part-time instructor in the Information Systems department of the Computer Studies cluster, teaching Fundamentals of Computer Software & Applications. In my free time, I trained students in web and mobile app development and gave talks about the latest technology trends."
+          - title: "Ingenuity Global Consulting"
+            url: "https://ingenuity.ph/"
+            address: "3F, 1.18 Centron Building, Elpidio Quirino Ave, Davao City, Davao del Sur, Philippines 8000"
+            image:
+              source: "static"
+              path: "/company-logos/ingenuity.png"
+              title: "Ingenuity Logo"
+            roles:
+              - title: "Software Developer"
+                canadaClassification: "2 - 21 - 217 - 2174 - Computer programmers and interactive media developers"
+                startDate: "2013-09"
+                endDate: "2016-01"
+                description: "I created web applications using Python (Django and Flask) and front-end frameworks like AngularJS, Chaplin.js, and Bootstrap. I also created and deployed cross-platform mobile applications using Appcelerator Titanium, which served thousands of daily users. As a way to give back to the community, I also facilitated the training of high school students to create web applications using Python/Django, to improve their school's current information systems."
+  - title: "Skills"
+    icon:
+      prefix: "fas"
+      iconName: "layer-group"
+    content:
+      type: "skills"
+      value:
+        meta:
+          defaults:
+            maxRating: 10
+        items:
+          - title: "Programming Languages"
+            meta:
+              show: true
+            items:
+              - title: "Go"
+                rating: 9
+                meta:
+                  show: true
+              - title: "Python"
+                rating: 5
+                meta:
+                  show: true
+              - title: "TypeScript"
+                rating: 9
+                meta:
+                  show: true
+              - title: "JavaScript"
+                rating: 7
+                meta:
+                  show: true
+              - title: "Google Apps Script"
+                rating: 4
+                meta:
+                  show: false
+              - title: "Java"
+                rating: 2
+                meta:
+                  show: false
+              - title: "PHP"
+                rating: 2
+                meta:
+                  show: false
+              - title: "Visual C#"
+                rating: 2
+                meta:
+                  show: false
+              - title: "C++"
+                rating: 2
+                meta:
+                  show: false
+              - title: "Dart"
+                rating: 3
+                meta:
+                  show: false
+          - title: "Other Technologies and Frameworks"
+            meta:
+              show: true
+            items:
+              - title: "Django"
+                rating: 6
+                meta:
+                  show: true
+              - title: "Angular"
+                rating: 8
+                meta:
+                  show: true
+              - title: "React"
+                rating: 8
+                meta:
+                  show: true
+              - title: "Next.js"
+                rating: 8
+                meta:
+                  show: true
+              - title: "Sass"
+                rating: 8
+                meta:
+                  show: true
+              - title: "Protocol Buffers"
+                rating: 8
+                meta:
+                  show: true
+              - title: "gRPC"
+                rating: 8
+                meta:
+                  show: true
+              - title: "WordPress"
+                rating: 4
+                meta:
+                  show: false
+              - title: "Flask"
+                rating: 5
+                meta:
+                  show: true
+              - title: "Flutter"
+                rating: 2
+                meta:
+                  show: false
+              - title: "Oracle JET"
+                rating: 8
+                meta:
+                  show: true
+          - title: "Source Code Management"
+            meta:
+              show: true
+            items:
+              - title: "Git"
+                rating: 10
+                meta:
+                  show: true
+              - title: "Mercurial"
+                rating: 10
+                meta:
+                  show: true
+              - title: "Bazel"
+                rating: 7
+                meta:
+                  show: true
+              - title: "Rush"
+                rating: 7
+                meta:
+                  show: true
+          - title: "Databases"
+            meta:
+              show: true
+            items:
+              - title: "PostgreSQL"
+                rating: 9
+                meta:
+                  show: true
+              - title: "Cloud SQL"
+                rating: 9
+                meta:
+                  show: true
+              - title: "MySQL"
+                rating: 9
+                meta:
+                  show: true
+              - title: "MongoDB"
+                rating: 7
+                meta:
+                  show: true
+              - title: "BigQuery"
+                rating: 7
+                meta:
+                  show: true
+          - title: "Applications"
+            meta:
+              show: false
+            items:
+              - title: "Microsoft Office Suite"
+                rating: 9
+                meta:
+                  show: false
+              - title: "Adobe Photoshop"
+                rating: 7
+                meta:
+                  show: false
+              - title: "Adobe Illustrator"
+                rating: 6
+                meta:
+                  show: false
+              - title: "Adobe Premiere"
+                rating: 6
+                meta:
+                  show: false
+              - title: "Google Data Studio"
+                rating: 10
+                meta:
+                  show: false
+              - title: "Figma"
+                rating: 6
+                meta:
+                  show: false
+              - title: "Sketch"
+                rating: 4
+                meta:
+                  show: false
+  - title: "Projects"
+    icon:
+      prefix: "fas"
+      iconName: "heart"
+    content:
+      type: "projects"
+      value:
+        items:
+          - title: "Oracle Higher Education Student Cloud"
+            linkTo: "https://www.oracle.com/ph/industries/government/education/higher-education/student-cloud/"
+            meta:
+              show: true
+            dates:
+              start: "2021-10"
+            tags:
+              - "Chai"
+              - "Git"
+              - "Jenkins"
+              - "KnockoutJS"
+              - "lodash"
+              - "Oracle ADF"
+              - "Oracle JET"
+              - "Sass"
+              - "Selenium"
+              - "Sinon JS"
+              - "TypeScript"
+            roles:
+              - "Implemented additional features while ensuring at least 90% unit test code coverage and having fully automated tests for the acceptance criterias."
+          - title: "Professional CV"
+            linkTo: "https://github.com/napjoseph/mono-rush/tree/main/personal/calub"
+            meta:
+              show: true
+            dates:
+              start: "2021-07"
+              end: "2021-08"
+            tags:
+              - "Font Awesome"
+              - "Framer Motion"
+              - "Git"
+              - "GitHub Pages"
+              - "js-yaml"
+              - "Next.js"
+              - "React"
+              - "Rush"
+              - "Sass"
+              - "Tailwind CSS"
+              - "TypeScript"
+              - "Valtio"
+            roles:
+              - "Created a tool that can generate shareable and interactive online portfolios using Next.js and Tailwind CSS."
+          - title: "Personal Website"
+            linkTo: "https://github.com/napjoseph/mono-rush/tree/main/personal/napjoseph"
+            meta:
+              show: true
+            dates:
+              start: "2021-07"
+              end: "2021-08"
+            tags:
+              - "Chakra UI"
+              - "Font Awesome"
+              - "Framer Motion"
+              - "Git"
+              - "GitHub Pages"
+              - "MDX"
+              - "next-mdx-remote"
+              - "Next.js"
+              - "React"
+              - "Remark"
+              - "Rush"
+              - "TypeScript"
+              - "Utterances"
+            roles:
+              - "Created my personal website using open-source tools such as Next.js and Chakra UI."
+          - title: "Bulk Upload Tool for Network Asset Lifecycle Data"
+            meta:
+              show: true
+            dates:
+              start: "2021-01"
+              end: "2021-05"
+            tags:
+              - "Angular"
+              - "Bazel"
+              - "BigQuery"
+              - "Cloud SQL"
+              - "Docker"
+              - "Go"
+              - "Google App Engine"
+              - "Google Cloud Platform"
+              - "Google Cloud Storage"
+              - "Google Cloud Tasks"
+              - "Google Drive API"
+              - "Google File Picker API"
+              - "gRPC"
+              - "Jasmine"
+              - "Material Design"
+              - "Mercurial"
+              - "MySQL"
+              - "NgRx"
+              - "PostgreSQL"
+              - "Python"
+              - "Sass"
+              - "TypeScript"
+            roles:
+              - "Created workflows that fetch external data to be used as a single source of truth for the network fleet."
+              - "Created a bulk upload tool that parses different lifecycle data for various vendors and network assets."
+              - "Created workflows that re-exports the data to be used in internal tools and dashboards."
+            relatedTo:
+              - type: "work-experience"
+                key: "Concentrix"
+          - title: "Google Drive Files Scanner and Ticket Filer"
+            meta:
+              show: true
+            dates:
+              start: "2020-12"
+              end: "2021-01"
+            tags:
+              - "Go"
+              - "Google Cloud Platform"
+              - "Google Cloud Storage"
+              - "Google Drive API"
+              - "gRPC"
+              - "Mercurial"
+              - "Protocol Buffers"
+            roles:
+              - "Designed and created a command-line tool that can automatically scan the shared Google Drive files for terms that needs to be updated, and then file the appropriate tickets for the change."
+            relatedTo:
+              - type: "work-experience"
+                key: "Concentrix"
+          - title: "Maintenance/Support and Upkeep for Aging Projects"
+            meta:
+              show: true
+            dates:
+              start: "2020-05"
+              end: "2020-12"
+            tags:
+              - "Angular"
+              - "Bazel"
+              - "BigQuery"
+              - "Cloud SQL"
+              - "Docker"
+              - "Go"
+              - "Google App Engine"
+              - "Google Chart API"
+              - "Google Cloud Bigtable"
+              - "Google Cloud Platform"
+              - "Google Cloud Storage"
+              - "Google Cloud Tasks"
+              - "gRPC"
+              - "Jasmine"
+              - "Material Design"
+              - "Mercurial"
+              - "MySQL"
+              - "NgRx"
+              - "Sass"
+              - "TypeScript"
+            roles:
+              - "Created libraries to easily query internal data sources in Go."
+              - "Fixed data source errors by using the BigQuery to Dremel migrater tool."
+              - "Migrated the external dependencies of different applications to use the latest stable version."
+              - "Improved code coverage and documentation and implemented CI release pipelines for deploying to App Engine."
+              - "Researched and implemented new deployment strategies enforced by the GCP organization."
+            relatedTo:
+              - type: "work-experience"
+                key: "Concentrix"
+          - title: "BigQuery Migrater"
+            meta:
+              show: true
+            dates:
+              start: "2020-05"
+              end: "2020-07"
+            tags:
+              - "BigQuery"
+              - "Docker"
+              - "Go"
+              - "gRPC"
+              - "Google Cloud Platform"
+              - "Mercurial"
+            roles:
+              - "Continued the implementation of the BigQuery data migrater and importer."
+            relatedTo:
+              - type: "work-experience"
+                key: "Concentrix"
+          - title: "Performance Dashboard for Service Providers"
+            meta:
+              show: true
+            dates:
+              start: "2019-11"
+              end: "2020-04"
+            tags:
+              - "Angular"
+              - "Bazel"
+              - "BigQuery"
+              - "Cloud SQL"
+              - "Docker"
+              - "Go"
+              - "Google App Engine"
+              - "Google Chart API"
+              - "Google Cloud Bigtable"
+              - "Google Cloud Platform"
+              - "Google Cloud Storage"
+              - "Google Cloud Tasks"
+              - "gRPC"
+              - "Jasmine"
+              - "Material Design"
+              - "Mercurial"
+              - "MySQL"
+              - "NgRx"
+              - "Sass"
+              - "TypeScript"
+            roles:
+              - "Maintained and refactored the legacy codebase to the latest Angular version and increased unit test coverage."
+              - "Added support for new data sources for the Service Provider data."
+              - "Added calculation and visualization for each ISP and their promised vs actual SLA."
+            relatedTo:
+              - type: "work-experience"
+                key: "Concentrix"
+          - title: "Dashboard for Corporate Network Team"
+            meta:
+              show: true
+            dates:
+              start: "2019-09"
+              end: "2019-09"
+            tags:
+              - "Angular"
+              - "Bazel"
+              - "Google App Engine"
+              - "Google Cloud Platform"
+              - "Jasmine"
+              - "Material Design"
+              - "Mercurial"
+              - "MySQL"
+              - "NgRx"
+              - "Sass"
+              - "TypeScript"
+            roles:
+              - "Implemented table filters and download data option and other UI fixes."
+          - title: "Critical Email Notifiers for Down or Non-Compliant Devices"
+            meta:
+              show: true
+            dates:
+              start: "2019-07"
+              end: "2019-09"
+            tags:
+              - "Bazel"
+              - "Docker"
+              - "Go"
+              - "gRPC"
+              - "Mercurial"
+              - "Protocol Buffers"
+            roles:
+              - "Created tools that sends daily email notifications that compiles actionable network device alerts."
+            relatedTo:
+              - type: "work-experience"
+                key: "Concentrix"
+          - title: "Dashboard for Tracking Operating System Compliance"
+            meta:
+              show: true
+            dates:
+              start: "2019-05"
+              end: "2020-06"
+            tags:
+              - "Bazel"
+              - "BigQuery"
+              - "Docker"
+              - "Google Data Studio"
+              - "gRPC"
+              - "Mercurial"
+              - "MySQL"
+            roles:
+              - "Fully migrated the previous internal Dremel data sources and dashboard to use BigQuery and Data Studio."
+            relatedTo:
+              - type: "work-experience"
+                key: "Concentrix"
+          - title: "Dashboard for Tracking Network Assets Lifecyle"
+            meta:
+              show: true
+            dates:
+              start: "2018-06"
+              end: "2019-07"
+            tags:
+              - "Angular"
+              - "Bazel"
+              - "BigQuery"
+              - "Cloud SQL"
+              - "Docker"
+              - "Go"
+              - "Google App Engine"
+              - "Google Chart API"
+              - "Google Cloud Platform"
+              - "Google Cloud Storage"
+              - "Google Cloud Tasks"
+              - "gRPC"
+              - "Jasmine"
+              - "Material Design"
+              - "Mercurial"
+              - "MySQL"
+              - "NgRx"
+              - "Python"
+              - "Sass"
+              - "TypeScript"
+            roles:
+              - "Maintained a legacy dashboard for visualizing and managing the lifecycle data of devices in our client's enterprise network."
+              - "Refactored the code to use the latest Angular version and added unit tests to both the Go backend and TypeScript frontend."
+              - "Migrated the old task runners using Python to use Go App Engine Cron and Cloud Tasks."
+              - "Added support for different realms other than the corporate and production network."
+              - "Added support for adding remediation dates, NPI dates, and part number data for each asset model."
+            relatedTo:
+              - type: "work-experience"
+                key: "Concentrix"
+          - title: "diksiyonaryo-ph scraper"
+            linkTo: "https://github.com/njncalub/diksiyonaryo-ph"
+            meta:
+              show: true
+            dates:
+              start: "2018-04"
+              end: "2018-05"
+            tags:
+              - "apistar"
+              - "docopt"
+              - "gunicorn"
+              - "Heroku"
+              - "MongoDB"
+              - "pipfile"
+              - "Python"
+              - "robobrowser"
+            roles:
+              - "Created a command-line utility to scrape and analyze the data from KWF's Diksiyonaryo (filipino dictionary) website and to enable more advanced search queries."
+          - title: "Assets Handover Management Dashboard"
+            meta:
+              show: true
+            dates:
+              start: "2017-01"
+              end: "2017-09"
+            tags:
+              - "Bootstrap"
+              - "Django Allauth"
+              - "django-excel"
+              - "django-excel"
+              - "django-import-export"
+              - "Django"
+              - "editpyxl"
+              - "Git"
+              - "Google Maps API"
+              - "openpyxl"
+              - "PostgreSQL"
+              - "Python"
+            roles:
+              - "Developed a web application for handling the splitting, handing over, and disposal program of telecommunication assets to external shareholders."
+              - "Created a utility tool to import, clean, and process huge XLSX files to manage the list of assets information."
+            relatedTo:
+              - type: "work-experience"
+                key: "Bell Telecommunication Phils, Inc."
+          - title: "Allstars Infosys"
+            meta:
+              show: true
+            dates:
+              start: "2016-02"
+              end: "2016-05"
+            tags:
+              - "Bootstrap"
+              - "Django Allauth"
+              - "Django MPTT"
+              - "Django REST Framework"
+              - "Django"
+              - "Git"
+              - "PostgreSQL"
+              - "Python"
+              - "Recaptcha2"
+            roles:
+              - "Developed and deployed a members information system for a local networking group."
+              - "Used a trinary tree network diagram to visualize each member's downlines to help plan recruitment strategies."
+            relatedTo:
+              - type: "work-experience"
+                key: "Self-Employed"
+          - title: "ResuMaker"
+            meta:
+              show: true
+            dates:
+              start: "2016-01"
+              end: "2016-02"
+            tags:
+              - "Bootstrap"
+              - "Git"
+              - "GitHub Pages"
+              - "Handlebars.js"
+              - "html2canvas"
+              - "html2pdf"
+              - "HTML5"
+              - "jspdf"
+            roles:
+              - "Developed and deployed a members information system for a local networking group."
+              - "Used a trinary tree network diagram to visualize each member's downlines to help plan recruitment strategies."
+          - title: "Engage - Employee Recognition Platform"
+            meta:
+              show: true
+            dates:
+              start: "2015-09"
+              end: "2016-01"
+            tags:
+              - "AngularJS"
+              - "Django OAuth Toolkit"
+              - "Django REST Framework"
+              - "Django"
+              - "Docker"
+              - "Jenkins"
+              - "Mercurial"
+              - "PostgreSQL"
+              - "Python"
+              - "Sentry"
+            roles:
+              - "Managed a team to refactor and redesign the internal version of the web application for commercial use."
+              - "Worked directly with the project manager and product owners regarding the project requirements and specifications."
+            relatedTo:
+              - type: "work-experience"
+                key: "Ingenuity Global Consulting"
+          - title: "Hybrid Mobile Applications"
+            meta:
+              show: true
+            dates:
+              start: "2015-03"
+              end: "2015-10"
+            tags:
+              - "CoffeeScript"
+              - "Django REST Framework"
+              - "Django"
+              - "Google API"
+              - "Instagram API"
+              - "Mercurial"
+              - "Parse.com API"
+              - "Python"
+              - "Redis Cluster"
+              - "Redis"
+              - "Sass"
+              - "Titanium"
+              - "Twitter API"
+            roles:
+              - "Worked with a team to create iOS and Android applications to buy Twitter, Instagram, and YouTube followers."
+              - "Refactored the REST API servers, integrated various social APIs to the mobile apps, and used Redis/Redis Clusters for managing the followers set."
+            relatedTo:
+              - type: "work-experience"
+                key: "Ingenuity Global Consulting"
+          - title: "Amber"
+            meta:
+              show: true
+            dates:
+              start: "2015-07"
+              end: "2015-10"
+            tags:
+              - "CoffeeScript"
+              - "Django REST Framework"
+              - "Django"
+              - "Google API"
+              - "Instagram API"
+              - "Mercurial"
+              - "Parse"
+              - "Python"
+              - "Redis"
+              - "Sass"
+              - "Titanium"
+              - "Twitter API"
+            roles:
+              - "Helped fix bugs on the Django backend and created new views for a mobile RSS feed reader."
+            relatedTo:
+              - type: "work-experience"
+                key: "Ingenuity Global Consulting"
+          - title: "Various Web Development Projects II"
+            meta:
+              show: true
+            dates:
+              start: "2014-10"
+              end: "2014-11"
+            tags:
+              - "django-import-export"
+              - "Django"
+              - "Mercurial"
+              - "NodeJS"
+              - "openpyxl"
+              - "PostgreSQL"
+              - "Python"
+              - "Sass"
+              - "Semantic UI"
+            roles:
+              - "Used NodeJS for sending real-time push notifications to connected clients."
+              - "Implemented an importer automatically fetch and clean the map data from the World Bank API to show different color ranges to an interactive map."
+            relatedTo:
+              - type: "work-experience"
+                key: "Ingenuity Global Consulting"
+          - title: "Not In My Country"
+            meta:
+              show: true
+            dates:
+              start: "2014-10"
+              end: "2014-11"
+            tags:
+              - "django-import-export"
+              - "Django"
+              - "Grunt"
+              - "Mercurial"
+              - "openpyxl"
+              - "PostgreSQL"
+              - "Python"
+            roles:
+              - "Implemented map data showing different color ranges based on existing data from the World Bank API."
+            relatedTo:
+              - type: "work-experience"
+                key: "Ingenuity Global Consulting"
+          - title: "F45 Playoffs"
+            meta:
+              show: true
+            dates:
+              start: "2014-09"
+              end: "2015-01"
+            tags:
+              - "CoffeeScript"
+              - "Facebook API"
+              - "Mercurial"
+              - "Parse.com API"
+              - "Sass"
+              - "Titanium"
+            roles:
+              - "Used Titanium to create a HIIT circuit training application for iOS and Android."
+              - "Used parse.com for storing user data and managing authentication."
+            relatedTo:
+              - type: "work-experience"
+                key: "Ingenuity Global Consulting"
+          - title: "Various Web Development Projects"
+            meta:
+              show: true
+            dates:
+              start: "2014-04"
+              end: "2014-09"
+            tags:
+              - "AngularJS"
+              - "Apache Solr"
+              - "ChaplinJS"
+              - "Django Haystack"
+              - "Django"
+              - "Flask"
+              - "Git"
+              - "Grunt"
+              - "Gulp"
+              - "Mercurial"
+              - "MongoDB"
+              - "PostgreSQL"
+              - "Sass"
+            roles:
+              - "Migrated a legacy system using Django 1.4 to the latest supported version."
+              - "Implemented the formatting of chapters to an original story/fanfic publication site."
+              - "Implemented the login/registration and timeline features for a digital sports network."
+            relatedTo:
+              - type: "work-experience"
+                key: "Ingenuity Global Consulting"
+          - title: "Theodore Rosebelt WordPress Theme"
+            meta:
+              show: true
+            dates:
+              start: "2013-05"
+              end: "2013-06"
+            tags:
+              - "PHP"
+              - "WordPress"
+            roles:
+              - "Created a WordPress theme for an online flower shop as part of a workshop."
+          - title: "The Hidden Cloud Academy for the Overlooked Skills"
+            meta:
+              show: true
+            dates:
+              start: "2012-11"
+              end: "2014-02"
+            tags:
+              - "django-tastypie"
+              - "Django"
+              - "Git"
+              - "HTML5"
+              - "JavaScript"
+              - "LimeJS"
+              - "NimbusBase"
+              - "SQLite"
+              - "PythonAnywhere"
+              - "REST"
+              - "south"
+            roles:
+              - "Created a project incorporating game-based learning with existing cloud services to improve reading speed and comprehension as part of my undergraduate thesis."
+          - title: "JPLAUREL Academic Information System"
+            meta:
+              show: true
+            dates:
+              start: "2012-06"
+              end: "2013-03"
+            tags:
+              - "Crystal Reports"
+              - "MySQL"
+              - "Visual C#"
+            roles:
+              - "Worked with a team to create an Academic Information System (AIS) for the Jose P. Laurel Sr. Elementary School."
+          - title: "The King’s Number"
+            meta:
+              show: true
+            dates:
+              start: "2011-08"
+              end: "2011-10"
+            tags:
+              - "C++"
+            roles:
+              - "Created a number game incorporating the set theory of discrete mathematics, presented as part of the requirements for the MATH422C course."
+  - title: "Educational Background"
+    meta:
+      avoidPageBreak: true
+    icon:
+      prefix: "fas"
+      iconName: "graduation-cap"
+    content:
+      type: "education"
+      value:
+        items:
+          - title: "Bachelor of Science in Information Technology"
+            dates:
+              start: "2010-06"
+              end: "2014-03"
+            from:
+              name: "Ateneo de Davao University"
+              address: "E. Jacinto Street, 8016 Davao City, Philippines"
+              url: "https://www.addu.edu.ph/"
+  - title: "Certifications"
+    icon:
+      prefix: "fas"
+      iconName: "certificate"
+    content:
+      type: "certifications"
+      value:
+        meta:
+          subHeaderItems:
+            - "issuingOrganization"
+            - "issuedDate"
+            - "credentialId"
+          credentialTypeMapping:
+            - key: "professional_certificate"
+              displayName: "Professional Certificate"
+            - key: "course"
+              displayName: "Course"
+            - key: "skills_track"
+              displayName: "Skills Track"
+          issuingOrganizationMapping:
+            - key: "coursera.org"
+              displayName: "Coursera"
+              url: "https://coursera.org"
+            - key: "datacamp.com"
+              displayName: "DataCamp"
+              url: "https://datacamp.com"
+        items:
+          - title: "Data Literacy Fundamentals"
+            credentialType: "skills_track"
+            credentialId: "acd0bfac9cb4fabd2f57d54d96e8002a1ed8c835"
+            credentialUrl: "https://www.datacamp.com/tracks/data-literacy-fundamentals"
+            issuingOrganization: "datacamp.com"
+            verificationUrl: "https://www.datacamp.com/statement-of-accomplishment/track/acd0bfac9cb4fabd2f57d54d96e8002a1ed8c835"
+            issuedDate: "2021-11-13"
+            children:
+              - title: "Data Science for Everyone"
+                credentialType: "course"
+                credentialId: "1c151a59ed098ab5beb75f6cfaa2ab9dc35c226a"
+                credentialUrl: "https://www.datacamp.com/courses/data-science-for-everyone"
+                issuingOrganization: "datacamp.com"
+                verificationUrl: "https://www.datacamp.com/statement-of-accomplishment/course/1c151a59ed098ab5beb75f6cfaa2ab9dc35c226a"
+                issuedDate: "2021-11-09"
+              - title: "Machine Learning for Everyone"
+                credentialType: "course"
+                credentialId: "ef1255d833164117e729f41422462986f506327e"
+                credentialUrl: "https://www.datacamp.com/courses/machine-learning-for-everyone"
+                issuingOrganization: "datacamp.com"
+                verificationUrl: "https://www.datacamp.com/statement-of-accomplishment/course/ef1255d833164117e729f41422462986f506327e"
+                issuedDate: "2021-11-13"
+              - title: "Data Visualization for Everyone"
+                credentialType: "course"
+                credentialId: "a856a8d14c7b687953e8fb6679db2954927cadf1"
+                credentialUrl: "https://www.datacamp.com/courses/data-visualization-for-everyone"
+                issuingOrganization: "datacamp.com"
+                verificationUrl: "https://www.datacamp.com/statement-of-accomplishment/course/a856a8d14c7b687953e8fb6679db2954927cadf1"
+                issuedDate: "2021-11-13"
+              - title: "Data Engineering for Everyone"
+                credentialType: "course"
+                credentialId: "e9fed5d70a2bf5094026a55c4ff9e816e8350bdc"
+                credentialUrl: "https://www.datacamp.com/courses/data-engineering-for-everyone"
+                issuingOrganization: "datacamp.com"
+                verificationUrl: "https://www.datacamp.com/statement-of-accomplishment/course/e9fed5d70a2bf5094026a55c4ff9e816e8350bdc"
+                issuedDate: "2021-11-10"
+              - title: "Cloud Computing for Everyone"
+                credentialType: "course"
+                credentialId: "23aedaa6763657dd511a88d96ba087edc7c2772e"
+                credentialUrl: "https://www.datacamp.com/courses/cloud-computing-for-everyone"
+                issuingOrganization: "datacamp.com"
+                verificationUrl: "https://www.datacamp.com/statement-of-accomplishment/course/23aedaa6763657dd511a88d96ba087edc7c2772e"
+                issuedDate: "2021-11-12"
+          - title: "Software Design as an Element of the Software Development Lifecycle"
+            credentialType: "course"
+            credentialId: "NUGK5HXQ4VNQ"
+            credentialUrl: "https://www.coursera.org/learn/software-design-development-life-cycle"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://www.coursera.org/account/accomplishments/verify/NUGK5HXQ4VNQ"
+            issuedDate: "2021-02-16"
+          - title: "Developing a Google SRE Culture"
+            credentialType: "course"
+            credentialId: "QPYWTPHJESN7"
+            credentialUrl: "https://www.coursera.org/learn/developing-a-google-sre-culture"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://www.coursera.org/account/accomplishments/verify/QPYWTPHJESN7"
+            issuedDate: "2021-06-01"
+          - title: "Foundations of Project Management"
+            credentialType: "course"
+            credentialId: "K4FC86YWLSHE"
+            credentialUrl: "https://www.coursera.org/learn/project-management-foundations"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://www.coursera.org/account/accomplishments/verify/K4FC86YWLSHE"
+            issuedDate: "2021-05-25"
+          - title: "Serverless Data Processing with Dataflow: Foundations"
+            credentialType: "course"
+            credentialId: "A7MY6YU63SFW"
+            credentialUrl: "https://www.coursera.org/learn/serverless-data-processing-with-dataflow-foundations"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://www.coursera.org/account/accomplishments/verify/A7MY6YU63SFW"
+            issuedDate: "2021-06-16"
+          - title: "Software Design as an Abstraction"
+            credentialType: "course"
+            credentialId: "TE2JEQKVDXNH"
+            credentialUrl: "https://www.coursera.org/learn/software-design-abstraction"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://www.coursera.org/account/accomplishments/verify/TE2JEQKVDXNH"
+            issuedDate: "2021-02-16"
+          - title: "COVID-19 Contact Tracing"
+            credentialType: "course"
+            credentialId: "25KU2XHXQVNU"
+            credentialUrl: "https://www.coursera.org/learn/covid-19-contact-tracing"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://www.coursera.org/account/accomplishments/verify/25KU2XHXQVNU"
+            issuedDate: "2020-10-24"
+          - title: "Learning How to Learn: Powerful mental tools to help you master tough subjects"
+            credentialType: "course"
+            credentialId: "K2PMED9L8GVF"
+            credentialUrl: "https://www.coursera.org/learn/learning-how-to-learn"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://www.coursera.org/account/accomplishments/verify/K2PMED9L8GVF"
+            issuedDate: "2020-10-14"
+            meta:
+              show: false
+          - title: "Preparing for Google Cloud Certification: Cloud Architect"
+            credentialType: "professional_certificate"
+            credentialId: "RP52RKJKAPWP"
+            credentialUrl: "https://www.coursera.org/professional-certificates/gcp-cloud-architect"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://coursera.org/verify/professional-cert/RP52RKJKAPWP"
+            issuedDate: "2020-11-12"
+            children:
+              - title: "Google Cloud Platform Fundamentals: Core Infrastructure"
+                credentialType: "course"
+                credentialId: "FJVKU6YG3AMQ"
+                credentialUrl: "https://www.coursera.org/learn/gcp-fundamentals"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/FJVKU6YG3AMQ"
+                issuedDate: "2020-10-24"
+                gradeAchieved: "100.00%"
+              - title: "Architecting with Google Kubernetes Engine: Foundations"
+                credentialType: "course"
+                credentialId: "T6QX2VPZLAFL"
+                credentialUrl: "https://www.coursera.org/learn/foundations-google-kubernetes-engine-gke"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/T6QX2VPZLAFL"
+                issuedDate: "2020-11-12"
+                gradeAchieved: "97.50%"
+              - title: "Essential Google Cloud Infrastructure: Foundation"
+                credentialType: "course"
+                credentialId: "RUREKYTLPMQ6"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-foundation"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/RUREKYTLPMQ6"
+                issuedDate: "2020-10-25"
+                gradeAchieved: "100.00%"
+              - title: "Reliable Google Cloud Infrastructure: Design and Process"
+                credentialType: "course"
+                credentialId: "7HCE2QQV72ER"
+                credentialUrl: "https://www.coursera.org/learn/cloud-infrastructure-design-process"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/7HCE2QQV72ER"
+                issuedDate: "2020-11-10"
+                gradeAchieved: "100.00%"
+              - title: "Essential Google Cloud Infrastructure: Core Services"
+                credentialType: "course"
+                credentialId: "SC6BN4WTNJKH"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-core-services"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/SC6BN4WTNJKH"
+                issuedDate: "2020-10-28"
+                gradeAchieved: "100.00%"
+              - title: "Elastic Google Cloud Infrastructure: Scaling and Automation"
+                credentialType: "course"
+                credentialId: "YG594ATAFYRZ"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-scaling-automation"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/YG594ATAFYRZ"
+                issuedDate: "2020-11-01"
+                gradeAchieved: "100.00%"
+              - title: "Preparing for the Google Cloud Professional Cloud Architect Exam"
+                credentialType: "course"
+                credentialId: "Q4E3EAJEXX2P"
+                credentialUrl: "https://www.coursera.org/learn/preparing-cloud-professional-cloud-architect-exam"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/Q4E3EAJEXX2P"
+                issuedDate: "2020-11-11"
+                gradeAchieved: "100.00%"
+          - title: "Preparing for Google Cloud Certification: Cloud Engineer"
+            credentialType: "professional_certificate"
+            credentialId: "KXWQQ4SSHZAE"
+            credentialUrl: "https://www.coursera.org/specializations/cloud-engineering-gcp"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://coursera.org/verify/professional-cert/KXWQQ4SSHZAE"
+            issuedDate: "2020-11-05"
+            children:
+              - title: "Google Cloud Platform Fundamentals: Core Infrastructure"
+                credentialType: "course"
+                credentialId: "FJVKU6YG3AMQ"
+                credentialUrl: "https://www.coursera.org/learn/gcp-fundamentals"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/FJVKU6YG3AMQ"
+                issuedDate: "2020-10-24"
+                gradeAchieved: "100.00%"
+              - title: "Essential Google Cloud Infrastructure: Foundation"
+                credentialType: "course"
+                credentialId: "RUREKYTLPMQ6"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-foundation"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/RUREKYTLPMQ6"
+                issuedDate: "2020-10-25"
+                gradeAchieved: "100.00%"
+              - title: "Preparing for the Google Cloud Associate Cloud Engineer Exam"
+                credentialType: "course"
+                credentialId: "RM3D3JDPEYAS"
+                credentialUrl: "https://www.coursera.org/learn/preparing-cloud-associate-cloud-engineer-exam"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/RM3D3JDPEYAS"
+                issuedDate: "2020-11-05"
+                gradeAchieved: "100.00%"
+              - title: "Essential Google Cloud Infrastructure: Core Services"
+                credentialType: "course"
+                credentialId: "SC6BN4WTNJKH"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-core-services"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/SC6BN4WTNJKH"
+                issuedDate: "2020-10-28"
+                gradeAchieved: "100.00%"
+              - title: "Elastic Google Cloud Infrastructure: Scaling and Automation"
+                credentialType: "course"
+                credentialId: "YG594ATAFYRZ"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-scaling-automation"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/YG594ATAFYRZ"
+                issuedDate: "2020-11-01"
+                gradeAchieved: "100.00%"
+          - title: "Developing Applications with Google Cloud Platform"
+            credentialType: "specialization"
+            credentialId: "8CLG5Z3HEH5U"
+            credentialUrl: "https://www.coursera.org/specializations/developing-apps-gcp"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://coursera.org/verify/specialization/8CLG5Z3HEH5U"
+            issuedDate: "2021-05-23"
+            children:
+              - title: "Google Cloud Platform Fundamentals: Core Infrastructure"
+                credentialType: "course"
+                credentialId: "FJVKU6YG3AMQ"
+                credentialUrl: "https://www.coursera.org/learn/gcp-fundamentals"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/FJVKU6YG3AMQ"
+                issuedDate: "2020-10-24"
+                gradeAchieved: "100.00%"
+              - title: "Getting Started With Application Development"
+                credentialType: "course"
+                credentialId: "ARFC48GCLFPE"
+                credentialUrl: "https://www.coursera.org/learn/getting-started-app-development"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/ARFC48GCLFPE"
+                issuedDate: "2021-05-20"
+                gradeAchieved: "100.00%"
+              - title: "Securing and Integrating Components of your Application"
+                credentialType: "course"
+                credentialId: "2XGDRY2SF5X5"
+                credentialUrl: "https://www.coursera.org/learn/securing-integrating-components-app"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/2XGDRY2SF5X5"
+                issuedDate: "2021-05-22"
+                gradeAchieved: "100.00%"
+              - title: "App Deployment, Debugging, and Performance"
+                credentialType: "course"
+                credentialId: "NLYY95FKUJ2J"
+                credentialUrl: "https://www.coursera.org/learn/app-deployment-debugging-performance"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/NLYY95FKUJ2J"
+                issuedDate: "2021-05-23"
+                gradeAchieved: "100.00%"
+          - title: "Architecting with Google Compute Engine"
+            credentialType: "specialization"
+            credentialId: "LXUCG6D5WY4B"
+            credentialUrl: "https://www.coursera.org/specializations/gcp-architecture"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://coursera.org/verify/specialization/LXUCG6D5WY4B"
+            issuedDate: "2020-11-10"
+            children:
+              - title: "Google Cloud Platform Fundamentals: Core Infrastructure"
+                credentialType: "course"
+                credentialId: "FJVKU6YG3AMQ"
+                credentialUrl: "https://www.coursera.org/learn/gcp-fundamentals"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/FJVKU6YG3AMQ"
+                issuedDate: "2020-10-24"
+                gradeAchieved: "100.00%"
+              - title: "Essential Google Cloud Infrastructure: Foundation"
+                credentialType: "course"
+                credentialId: "RUREKYTLPMQ6"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-foundation"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/RUREKYTLPMQ6"
+                issuedDate: "2020-10-25"
+                gradeAchieved: "100.00%"
+              - title: "Reliable Google Cloud Infrastructure: Design and Process"
+                credentialType: "course"
+                credentialId: "7HCE2QQV72ER"
+                credentialUrl: "https://www.coursera.org/learn/cloud-infrastructure-design-process"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/7HCE2QQV72ER"
+                issuedDate: "2020-11-10"
+                gradeAchieved: "100.00%"
+              - title: "Essential Google Cloud Infrastructure: Core Services"
+                credentialType: "course"
+                credentialId: "SC6BN4WTNJKH"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-core-services"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/SC6BN4WTNJKH"
+                issuedDate: "2020-10-28"
+                gradeAchieved: "100.00%"
+              - title: "Elastic Google Cloud Infrastructure: Scaling and Automation"
+                credentialType: "course"
+                credentialId: "YG594ATAFYRZ"
+                credentialUrl: "https://www.coursera.org/learn/gcp-infrastructure-scaling-automation"
+                issuingOrganization: "coursera.org"
+                verificationUrl: "https://coursera.org/verify/YG594ATAFYRZ"
+                issuedDate: "2020-11-01"
+                gradeAchieved: "100.00%"
+  - title: "Events Attended or Participated On"
+    icon:
+      prefix: "far"
+      iconName: "calendar-alt"
+    content:
+      type: "events"
+      value:
+        items:
+          - title: "UX+"
+            role: "Participant"
+            address: "SMX Convention Center Aura, SM Aura, BGC, Taguig City, Philippines"
+            dates:
+              start: "2019-08"
+          - title: "Graphika Manila 2019"
+            role: "Participant"
+            address: "SMX Convention Center, Mall of Asia Complex, Pasay, Philippines"
+            dates:
+              start: "2019-02"
+          - title: "PyCon Philippines 2018"
+            role: "Participant"
+            address: "iACADEMY, H.V. Dela Costa, Makati, Metro Manila, Philippines"
+            dates:
+              start: "2018-02"
+          - title: "Cryptors Cybersecurity: Web Hacking Seminar"
+            role: "Participant"
+            address: "Cryptors Cybersecurity, Rakso One, 6F, Ricogen Bldg, 112 Aguirre St, Legaspi Village, Makati City, Philippines"
+            dates:
+              start: "2017-10"
+          - title: "4th Startup Weekend Davao"
+            role: "Organizer"
+            address: "PLDT-Smart Regional Office, Ponciano St, Davao City 8000, Philippines"
+            dates:
+              start: "2015-11"
+          - title: "DTI and PSITE (Philippine Society of Information Technology Educators) Region XI Idea Pitching Competition"
+            role: "Judge"
+            address: "Apo View Hotel, Davao City 8000, Philippines"
+            dates:
+              start: "2015-10"
+          - title: "Campus Devcon during the IT Festival of the BSIT Program of the Philippine Women's College of Davao"
+            role: "Resource Speaker"
+            address: "Philippine Women's College of Davao, University Avenue, Juna Subdivision, 8000 Davao City, Philippines"
+            dates:
+              start: "2015-10"
+          - title: "7th PSITS (Philippine Society of Information Technology Students) Region XII Convention"
+            role: "Resource Speaker"
+            address: "J. Catolico Sr. Avenue, General Santos City, Jose Catolico Sr. Ave, General Santos City, South Cotabato, Philippines"
+            dates:
+              start: "2015-09"
+          - title: "AngelHack Davao 2015"
+            role: "Organizer"
+            address: "PLDT-Smart Regional Office, Ponciano St, Davao City 8000, Philippines"
+            dates:
+              start: "2015-08"
+          - title: "GraphiCon Davao 4"
+            role: "Organizer"
+            address: "SMX Convention Center, SM City Lanang, Davao City 8000, Philippines"
+            dates:
+              start: "2015-07"
+          - title: "1st Philippine Startup Challenge National Finals"
+            role: "Coach"
+            address: "4F, The Linden Suites, 37 San Miguel Ave, Ortigas Center, Pasig, 1600 Metro Manila, Philippines"
+            dates:
+              start: "2014-12"
+          - title: "GraphiCon Davao 3"
+            role: "Participant"
+            address: "Cinema 4, Gaisano Mall of Davao, Davao City 8000, Philippines"
+            dates:
+              start: "2014-12"
+          - title: "GDG DevFest 2014 (Google Developers Group – Davao)"
+            role: "Resource Speaker"
+            address: "PLDT-Smart Regional Office, Ponciano St, Davao City 8000, Philippines"
+            dates:
+              start: "2014-11"
+          - title: "3rd Startup Weekend Davao"
+            role: "Organizer"
+            address: "F213, Finster Building, Ateneo de Davao University, Davao City 8000, Philippines"
+            dates:
+              start: "2014-08"
+          - title: "Multimedia and Mobile Technologies Boot Camp"
+            role: "Resource Speaker"
+            address: "F613 Laboratories, Finster Building, Ateneo de Davao University, Davao City 8000, Philippines"
+            dates:
+              start: "2014-04"
+          - title: "Conference in Computing Research and Software Engineering Projects"
+            role: "Participant"
+            address: "6th Floor, Finster Building, Ateneo de Davao University, Davao City 8000, Philippines"
+            dates:
+              start: "2014-04"
+          - title: "First Ateneo Campus DevCon"
+            role: "Organizer"
+            address: "F213, Finster Building, Ateneo de Davao University, Davao City 8000, Philippines"
+            dates:
+              start: "2014-01"
+          - title: "AngelHack Davao: #Hack2Help"
+            role: "Participant"
+            address: "PLDT-Smart Regional Office, Ponciano St, Davao City 8000, Philippines"
+            dates:
+              start: "2013-11"
+          - title: "National Leadership Development Conference 2013"
+            role: "Participant"
+            address: "Island Cove Hotel and Leisure Park, Binakayan, 4104 Kawit, Cavite, Philippines"
+            dates:
+              start: "2013-10"
+          - title: "Y2B Youth To Business Forum"
+            role: "Participant"
+            address: "Ateneo de Manila University, Katipunan Ave, Quezon City, 1108 Metro Manila, Philippines"
+            dates:
+              start: "2013-10"
+          - title: "2nd Startup Weekend Davao"
+            role: "2nd runner-up, PLYM"
+            address: "F, 1.18 Centron Building, Elpidio Quirino Ave, Davao City, 8000, Davao del Sur, Philippines"
+            dates:
+              start: "2013-08"
+          - title: "Illumedia WordPress Theme Creation Workshop"
+            role: "Participant"
+            address: "3F, HIJ Building, GSIS Matina, Davao City 8000, Philippines"
+            dates:
+              start: "2013-07"
+              end: "2013-08"
+          - title: "GraphiCon Davao 2"
+            role: "Participant"
+            address: "CAP Auditorium, Anda St, Davao City 8000, Philippines"
+            dates:
+              start: "2012-12"
+  - title: "Volunteer Work and Organizations"
+    meta:
+      avoidPageBreak: true
+    icon:
+      prefix: "fas"
+      iconName: "people-carry"
+    content:
+      type: "organizations"
+      value:
+        items:
+          - title: "Davao Graphic Designers Community"
+            url: "https://www.facebook.com/DGDCommunity/"
+            roles:
+              - title: "Core Group Member"
+                dates:
+                  start: "2015-06"
+                  end: "2016-01"
+          - title: "Developers Connect Philippines"
+            url: "https://www.facebook.com/devcondavao"
+            roles:
+              - title: "Volunteer, Mindanao Chapter"
+                dates:
+                  start: "2014-02"
+                  end: "2016-01"
+          - title: "Hackademy"
+            url: "https://www.facebook.com/hackademyPH/"
+            roles:
+              - title: "Teacher"
+                dates:
+                  start: "2015-06"
+                  end: "2015-07"
+          - title: "AIESEC in Davao"
+            url: "https://www.facebook.com/AIESECinDavao"
+            roles:
+              - title: "Director for Information Systems, Marketing and Communications Department"
+                dates:
+                  start: "2012-06"
+                  end: "2014-04"
+              - title: "Logistics Manager and Exchange Participant Director, Project R.A.I.N."
+                dates:
+                  start: "2012-06"
+                  end: "2012-11"
+              - title: "Team Member, Talent Management Department"
+                dates:
+                  start: "2011-04"
+                  end: "2012-04"
+          - title: "Ateneo Circle of Computer Studies Students"
+            url: "https://www.facebook.com/AteneoCircleOfComputerStudiesStudents"
+            roles:
+              - title: "External Vice President"
+                dates:
+                  start: "2013-04"
+                  end: "2014-04"
+              - title: "Treasurer"
+                dates:
+                  start: "2012-04"
+                  end: "2013-04"
+              - title: "Member"
+                dates:
+                  start: "2011-04"
+                  end: "2012-04"
+          - title: "Arrupe Office of Social Formation"
+            url: "https://www.facebook.com/AdDUArrupe"
+            roles:
+              - title: "Arrupe Volunteer"
+                dates:
+                  start: "2012-08"
+                  end: "2014-04"
+              - title: "NSTP Volunteer"
+                dates:
+                  start: "2013-11"
+                  end: "2014-03"
+  - title: "References"
+    meta:
+      avoidPageBreak: true
+    icon:
+      prefix: "fas"
+      iconName: "users"
+    content:
+      type: "character-references"
+      value:
+        items:
+          - title: "Nathaniel Capule"
+            meta:
+              show: true
+            role: "Software Engineer"
+            company:
+              text: "Hexaware Technologies"
+              url: "https://hexaware.com/"
+            email:
+              text: "nmcapule@gmail.com"
+            mobile:
+              text: "+63 916 282 4963"
+          - title: "Kyle Gabriel Oreta"
+            meta:
+              show: true
+            role: "Software Engineer"
+            company:
+              text: "The Dairy Farm Company, Limited-ROHQ"
+              url: "https://www.dairyfarmgroup.com/"
+            email:
+              text: "kyleoreta11@gmail.com"
+            mobile:
+              text: "+63 908 863 9688"
+          - title: "Daryl Ronquillo"
+            meta:
+              show: false
+            role: "Software Engineer"
+            company:
+              text: "Company Confidential"
+            email:
+              text: "darylron@gmail.com"
+            mobile:
+              text: "+63 926 658 4446"
+          - title: "Michelle Ybañez"
+            meta:
+              show: false
+            role: "Ad Operations Officer"
+            company:
+              text: "ABS-CBN Corporation"
+              url: "https://www.abs-cbn.com/"
+            email:
+              text: "ymichelle1992@hotmail.com"
+            mobile:
+              text: "+63 939 921 5278"
+          - title: "Gianina Juanga"
+            meta:
+              show: true
+            role: "Software Engineer"
+            company:
+              text: "Hello Fresh"
+              url: "https://hellofresh.com/"
+            email:
+              text: "gianina.juanga@gmail.com"
+            mobile:
+              text: "+63 917 510 0057"
+          - title: "Ray Marc Marcellones"
+            meta:
+              show: false
+            role: "Software Engineer"
+            company:
+              text: "XTREME-D Inc"
+              url: "https://xtreme-d.net/en/"
+            email:
+              text: "raymarc.marcellones@gmail.com"
+            mobile:
+              text: "+81 704 010 8869"
+          - title: "Tomjan Salavia"
+            meta:
+              show: true
+            role: "Nihongo-skilled Project Coordinator/Bridge SE"
+            company:
+              text: "WeServ Systems International Inc."
+              url: "http://www.weserv.com/"
+            email:
+              text: "tjasalavia@gmail.com"
+            mobile:
+              text: "+63 967 288 2935"
+          - title: "Jefford Ray Mamacus"
+            meta:
+              show: true
+            role: "Head of Research and Training"
+            company:
+              text: "Ingenuity Global Consulting"
+              url: "https://ingenuity.ph"
+            email:
+              text: "jefford@ingenuity.ph"
+            mobile:
+              text: "+63 927 794 0377"
+          - title: "Nerissa Narvaez-Siman"
+            meta:
+              show: true
+            role: "Senior Manager, Business Transformation Office"
+            company:
+              text: "Smart Communications, Inc."
+              url: "https://smart.com.ph"
+            email:
+              text: "nnsiman@smart.com.ph"
+            mobile:
+              text: "+63 939 918 9201"
+          - title: "Michelle P. Banawan, Ph.D."
+            meta:
+              show: false
+            role: "Academic Vice President"
+            company:
+              text: "Ateneo de Davao University"
+              url: "https://addu.edu.ph"
+            email:
+              text: "mpbanawan@addu.edu.ph"
+            mobile:
+              text: "+63 908 524 4402"

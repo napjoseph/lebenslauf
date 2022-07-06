@@ -11,7 +11,7 @@ import { SectionType } from "../models/sections/index.ts";
 export const handler: Handlers<Config> = {
   async GET(_, ctx) {
     const rawData = await Deno.readTextFile(
-      `./src/pro-file.yaml`,
+      `./pro-file.yaml`,
     );
     const data = yamlParse(rawData) as Config;
 

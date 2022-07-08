@@ -33,6 +33,21 @@ export default function Home({ data }: PageProps<Config>) {
     <html>
       <head>
         <StaticHead />
+
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+          integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+          crossOrigin="anonymous"
+          referrerpolicy="no-referrer"
+        >
+        </script>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossOrigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
       </head>
       <body>
         <div class={tw`p-4 mx-auto max-w-screen-lg`}>
@@ -62,15 +77,15 @@ export default function Home({ data }: PageProps<Config>) {
                       (item) => {
                         return (
                           <li class={tw`my-1`}>
-                            <div>
-                              <h3>{item.title}</h3>
-                              <div class={tw`text-xs`}>
-                                <span class={tw`font-semibold text-gray-500`}>
-                                  <a href={item.url} target="_blank">
-                                    {item.value}
-                                  </a>
-                                </span>
-                              </div>
+                            <div class={tw`text-sm`}>
+                              <span class={tw`mr-2 text-gray-700`}>
+                                <i class={item.icon} title={item.title}></i>
+                              </span>
+                              <span class={tw`text-gray-600`}>
+                                <a href={item.url} target="_blank">
+                                  {item.value}
+                                </a>
+                              </span>
                             </div>
                           </li>
                         );

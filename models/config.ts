@@ -96,6 +96,7 @@ export interface PersonalDetailsConfig {
 export interface PersonalDetailsItem {
   title: string;
   value: string;
+  icon: string;
   url: string;
 }
 

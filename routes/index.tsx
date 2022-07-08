@@ -45,7 +45,10 @@ export default function Home({ data }: PageProps<Config>) {
 
           <hr class={tw`my-4`} />
 
-          <div class={tw`grid grid-cols-12 gap-4`}>
+          <div
+            class={tw
+              `grid grid-cols-1 md:grid-cols-12 md:gap-4 print:grid-cols-12 print:gap-4`}
+          >
             <div class={tw`col-span-4`}>
               {/* Personal Details */}
               <div class={tw`my-2`}>

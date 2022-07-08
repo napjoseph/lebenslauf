@@ -43,70 +43,70 @@ sections:
       type: "work-experience"
       value:
         items:
-          - title: "Oracle"
-            url: "https://www.oracle.com/"
-            address: "Makati City, Philippines 1225"
-            roles:
-              - title: "Senior UI Engineer"
-                dates:
-                  startDate: "2021-10"
-                  description: "I implement additional frontend features for the next-generation student information system: Oracle Higher Education Student Cloud."
-          - title: "Concentrix"
-            url: "https://www.concentrix.com/"
-            address: "Quezon City, Philippines 1110"
-            roles:
-              - title: "Business Apps Developer"
-                dates:
-                  startDate: "2018-05"
-                  endDate: "2021-05"
-                description: "I created and maintained business-critical applications using a mixture of Python, Go, and TypeScript (Angular) for our client's Network Operations Center. I also analyzed large data sets from Cloud SQL and BigQuery, and created interactive dashboards using Data Studio."
-          - title: "Cognizant"
-            url: "https://www.cognizant.com/"
-            address: "Taguig City, Philippines 1635"
-            roles:
-              - title: "Senior Process Executive"
-                dates:
-                  startDate: "2017-08"
-                  endDate: "2018-04"
-                description: "I helped big companies across APAC to improve their current Google Ads (previously Google AdWords) and Google Analytics setup, and helped them implement Dynamic Remarketing on their websites using Google Tag Manager."
-          - title: "Bell Telecommunication Phils, Inc."
-            url: "http://www.belltel.ph/"
-            address: "Pasig City, Philippines 1603"
-            roles:
-              - title: "Database Administrator"
-                dates:
-                  startDate: "2017-01"
-                  endDate: "2017-08"
-                description: "I created and managed the system for splitting, handing over, and disposal of our telecommunications network assets to PLDT and Globe Telecom. Additionally, I have also worked with external project managers by generating the daily reports and presentations to check the overall status of the operation."
-          - title: "Self-Employed"
+          - title: "Senior UI Engineer"
+            dates:
+              startDate: "2021-10"
+            company:
+              title: "Oracle"
+              url: "https://www.oracle.com/"
+              address: "Makati City, Philippines 1225"
+            description: "I implement additional frontend features for the next-generation student information system: Oracle Higher Education Student Cloud."
+          - title: "Business Apps Developer"
+            dates:
+              startDate: "2018-05"
+              endDate: "2021-05"
+            company:
+              title: "Concentrix"
+              url: "https://www.concentrix.com/"
+              address: "Quezon City, Philippines 1110"
+            description: "I created and maintained business-critical applications using a mixture of Python, Go, and TypeScript (Angular) for our client's Network Operations Center. I also analyzed large data sets from Cloud SQL and BigQuery, and created interactive dashboards using Data Studio."
+          - title: "Senior Process Executive"
+            dates:
+              startDate: "2017-08"
+              endDate: "2018-04"
+            company:
+              title: "Cognizant"
+              url: "https://www.cognizant.com/"
+              address: "Taguig City, Philippines 1635"
+            description: "I helped big companies across APAC to improve their current Google Ads (previously Google AdWords) and Google Analytics setup, and helped them implement Dynamic Remarketing on their websites using Google Tag Manager."
+          - title: "Database Administrator"
+            dates:
+              startDate: "2017-01"
+              endDate: "2017-08"
+            company:
+              title: "Bell Telecommunication Phils, Inc."
+              url: "http://www.belltel.ph/"
+              address: "Pasig City, Philippines 1603"
+            description: "I created and managed the system for splitting, handing over, and disposal of our telecommunications network assets to PLDT and Globe Telecom. Additionally, I have also worked with external project managers by generating the daily reports and presentations to check the overall status of the operation."
+          - title: "Freelance IT Consultant"
             meta:
               show: false
-            url: "https://napjose.ph/"
-            address: "Tanauan City, Philippines 4232"
-            roles:
-              - title: "Freelance IT Consultant"
-                dates:
-                  startDate: "2016-01"
-                  endDate: "2016-12"
-                description: "I created web and mobile solutions based on my customer's needs and specifications. I offered my clients a comprehensive range of services; from creating simple company websites to deploying full-fledged information systems."
-          - title: "Ateneo de Davao University"
-            url: "https://www.addu.edu.ph/"
-            address: "Davao City, Philippines 8016"
-            roles:
-              - title: "Instructor, Information Systems Department"
-                dates:
-                  startDate: "2014-06"
-                  endDate: "2014-11"
-                description: "I was a part-time instructor in the Information Systems department of the Computer Studies cluster, teaching Fundamentals of Computer Software & Applications. In my free time, I trained students in web and mobile app development and gave talks about the latest technology trends."
-          - title: "Ingenuity Global Consulting"
-            url: "https://ingenuity.ph/"
-            address: "Davao City, Philippines 8000"
-            roles:
-              - title: "Software Developer"
-                dates:
-                  startDate: "2013-09"
-                  endDate: "2016-01"
-                description: "I created web applications using Python (Django and Flask) and front-end frameworks like AngularJS, Chaplin.js, and Bootstrap. I also created and deployed cross-platform mobile applications using Appcelerator Titanium, which served thousands of daily users. As a way to give back to the community, I also facilitated the training of high school students to create web applications using Python/Django, to improve their school's current information systems."
+            dates:
+              startDate: "2016-01"
+              endDate: "2016-12"
+            company:
+              title: "Self-Employed"
+              url: "https://napjose.ph/"
+              address: "Tanauan City, Philippines 4232"
+            description: "I created web and mobile solutions based on my customer's needs and specifications. I offered my clients a comprehensive range of services; from creating simple company websites to deploying full-fledged information systems."
+          - title: "Instructor, Information Systems Department"
+            dates:
+              startDate: "2014-06"
+              endDate: "2014-11"
+            company:
+              title: "Ateneo de Davao University"
+              url: "https://www.addu.edu.ph/"
+              address: "Davao City, Philippines 8016"
+            description: "I was a part-time instructor in the Information Systems department of the Computer Studies cluster, teaching Fundamentals of Computer Software & Applications. In my free time, I trained students in web and mobile app development and gave talks about the latest technology trends."
+          - title: "Software Developer"
+            dates:
+              startDate: "2013-09"
+              endDate: "2016-01"
+            company:
+              title: "Ingenuity Global Consulting"
+              url: "https://ingenuity.ph/"
+              address: "Davao City, Philippines 8000"
+            description: "I created web applications using Python (Django and Flask) and front-end frameworks like AngularJS, Chaplin.js, and Bootstrap. I also created and deployed cross-platform mobile applications using Appcelerator Titanium, which served thousands of daily users. As a way to give back to the community, I also facilitated the training of high school students to create web applications using Python/Django, to improve their school's current information systems."
   - meta:
       title: "Educational Background"
       container: "left"

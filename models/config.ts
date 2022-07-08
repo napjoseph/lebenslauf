@@ -56,22 +56,20 @@ export interface WorkExperienceConfig {
 export interface WorkExperienceItem {
   title: string;
   meta?: WorkExperienceItemMeta;
-  url: string;
-  address: string;
-  roles: WorkExperienceRole[];
-}
-
-export interface WorkExperienceItemMeta {
-  show?: boolean;
-}
-
-export interface WorkExperienceRole {
-  title: string;
   dates: {
     startDate: string;
     endDate: string;
   };
+  company: {
+    title: string;
+    url: string;
+    address: string;
+  };
   description: string;
+}
+
+export interface WorkExperienceItemMeta {
+  show?: boolean;
 }
 
 export interface EducationConfig {

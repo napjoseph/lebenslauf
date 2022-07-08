@@ -54,32 +54,30 @@ export default function Home({ data }: PageProps<Config>) {
                   (item) => {
                     return (
                       <li class={tw`my-2`}>
-                        <div>
-                          <h3>
-                            <a href={item.url} target="_blank">{item.title}</a>
-                          </h3>
-                          <div class={tw`text-xs`}>
-                            <span class={tw`text-gray-500`}>
-                              {item.address}
-                            </span>
+                        <div class={tw`flex justify-between`}>
+                          <div>
+                            <h3>{item.title}</h3>
+                            <div
+                              class={tw`text-xs text-gray-500 italic`}
+                            >
+                              {item.dates.startDate} to{" "}
+                              {item.dates.endDate || "present"}
+                            </div>
                           </div>
-                          <ul class={tw`ml-8 list-disc`}>
-                            {(item.roles || []).map(
-                              (roleItem) => {
-                                return (
-                                  <li class={tw`my-1 text-xs`}>
-                                    <h4>{roleItem.title}</h4>
-                                    <div
-                                      class={tw`text-xs text-gray-500 italic`}
-                                    >
-                                      {roleItem.dates.startDate} to{" "}
-                                      {roleItem.dates.endDate || "present"}
-                                    </div>
-                                  </li>
-                                );
-                              },
-                            )}
-                          </ul>
+                          <div class={tw`grow`}></div>
+                          <div class={tw`text-gray-500 text-right`}>
+                            <a href={item.company.url} target="_blank">
+                              {item.company.title}
+                            </a>
+                            <div class={tw`text-xs`}>
+                              {item.company.address}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class={tw`text-xs text-gray-500 text-justify my-2`}
+                        >
+                          {item.description}
                         </div>
                       </li>
                     );

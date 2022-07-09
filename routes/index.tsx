@@ -66,7 +66,7 @@ export default function Home({ data }: PageProps<Config>) {
           >
             <div class={tw`col-span-4`}>
               {/* Personal Details */}
-              <div class={tw`my-2`}>
+              <div class={tw`mb-2`}>
                 <h2 class={tw`text-xl font-bold uppercase mb-2`}>
                   {personalDetails?.meta?.title || ""}
                 </h2>
@@ -95,7 +95,7 @@ export default function Home({ data }: PageProps<Config>) {
               </div>
 
               {/* Educational Background */}
-              <div class={tw`my-2`}>
+              <div class={tw`mb-2`}>
                 <h2 class={tw`text-xl font-bold uppercase mb-2`}>
                   {educationalBackground?.meta?.title || ""}
                 </h2>
@@ -131,7 +131,7 @@ export default function Home({ data }: PageProps<Config>) {
             </div>
             <div class={tw`col-span-8`}>
               {/* Work Experience */}
-              <div class={tw`my-2`}>
+              <div class={tw`mb-2`}>
                 <h2 class={tw`text-xl font-bold uppercase mb-2`}>
                   {workExperience?.meta?.title || ""}
                 </h2>
@@ -144,8 +144,8 @@ export default function Home({ data }: PageProps<Config>) {
                     ).map(
                       (item) => {
                         return (
-                          <li class={tw`my-2`}>
-                            <div class={tw`flex justify-between`}>
+                          <li class={tw`mb-2`}>
+                            <div class={tw`flex justify-between gap-2`}>
                               <div>
                                 <h3>{item.title}</h3>
                                 <div
@@ -155,7 +155,6 @@ export default function Home({ data }: PageProps<Config>) {
                                   {item.dates.endDate || "present"}
                                 </div>
                               </div>
-                              <div class={tw`grow`}></div>
                               <div
                                 class={tw`text-gray-500 text-right text-xs`}
                               >
@@ -169,7 +168,7 @@ export default function Home({ data }: PageProps<Config>) {
                             </div>
                             <div
                               class={tw
-                                `text-xs text-gray-500 text-justify my-2`}
+                                `text-xs text-gray-500 text-justify mt-2`}
                             >
                               {item.description}
                             </div>

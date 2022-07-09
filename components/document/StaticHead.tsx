@@ -1,11 +1,9 @@
 /** @jsx h */
-import { Fragment, h } from "preact";
+import { Fragment, FunctionalComponent, h } from "preact";
 
-export default function StaticHead() {
+const StaticHead: FunctionalComponent = () => {
   return (
     <Fragment>
-      <title>Lebenslauf - Nap Joseph Calub</title>
-
       <link rel="manifest" href={"/manifest.json"} />
 
       <link
@@ -31,4 +29,6 @@ export default function StaticHead() {
       <meta name="theme-color" content="#ffffff" />
     </Fragment>
   );
-}
+};
+
+export default StaticHead;

@@ -1,5 +1,7 @@
 {
   "imports": {
+    "@columnSpan": "./utils/columnSpan.ts",
+    "@dateUtils": "./utils/dateUtils.ts",
     "@twind": "./utils/twind.ts",
     "$fresh/": "https://deno.land/x/fresh@1.0.0/",
     "date-fns": "https://esm.sh/date-fns@2.28.0",

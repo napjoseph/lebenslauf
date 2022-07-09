@@ -1,12 +1,14 @@
 /** @jsx h */
-import { h } from "preact";
+import { FunctionalComponent, h } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { tw } from "@twind";
 import { parse as parseYaml } from "yaml";
-import { format as formatDate, parseISO as parseDate } from "date-fns";
 
-import StaticHead from "../islands/StaticHead.tsx";
-import { Config, SectionType } from "../models/config.ts";
+import { tw } from "@twind";
+import { columnSpan } from "@columnSpan";
+
+import { Config, Section } from "../models/config.ts";
+import StaticHead from "../components/document/StaticHead.tsx";
+import SectionComponent from "../components/sections/SectionComponent.tsx";
 
 export const handler: Handlers<Config> = {
   async GET(_, ctx) {
@@ -19,28 +21,32 @@ export const handler: Handlers<Config> = {
   },
 };
 
-/** Returns a Date in human-readable format. */
-const toReadableDate = (dateString: string): string => {
-  return formatDate(parseDate(dateString), "MMMM yyyy");
-};
+const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
+  const containersMap: Map<string, Section[]> = new Map();
+  const containersWidthMap: Map<string, number> = new Map();
+  const containerKeys: string[] = [];
+  (data.meta.body?.containers || []).forEach((item) => {
+    containerKeys.push(item.id);
+    containersMap.set(item.id, []);
+    containersWidthMap.set(item.id, item.width);
+  });
+  if (containersMap.size === 0) {
+    containerKeys.push("default");
+    containersMap.set("default", []);
+  }
+  const defaultContainer = containersMap.keys().next().value;
 
-export default function Home({ data }: PageProps<Config>) {
-  const personalDetails = data.sections.find((section) =>
-    section.content.type === SectionType.PERSONAL_DETAILS
-  );
-  const educationalBackground = data.sections.find((section) =>
-    section.content.type === SectionType.EDUCATION
-  );
-  const languages = data.sections.find((section) =>
-    section.content.type === SectionType.LANGUAGES
-  );
-  const workExperience = data.sections.find((section) =>
-    section.content.type === SectionType.WORK_EXPERIENCE
-  );
+  data.sections.forEach((section) => {
+    const key = section.meta?.container || defaultContainer;
+    const value = containersMap.get(key) || [];
+    containersMap.set(key, [...value, section]);
+  });
 
   return (
     <html>
       <head>
+        <title>{data.meta.head?.title || ""}</title>
+
         <StaticHead />
 
         <script
@@ -59,12 +65,13 @@ export default function Home({ data }: PageProps<Config>) {
         />
       </head>
       <body>
-        <div class={tw`p-4 mx-auto max-w-screen-lg`}>
+        <main class={tw`p-4 mx-auto max-w-screen-lg`}>
+          {/* Header */}
           <div class={tw`text-center`}>
             <h1 class={tw`text-4xl font-bold uppercase`}>
-              {data.meta!.body!.header!.title}
+              {data.meta.body!.header!.title}
             </h1>
-            <div>{data.meta!.body!.header!.subtitle}</div>
+            <div>{data.meta.body!.header!.subtitle}</div>
           </div>
 
           <hr class={tw`my-4`} />
@@ -73,156 +80,22 @@ export default function Home({ data }: PageProps<Config>) {
             class={tw
               `grid grid-cols-1 md:grid-cols-12 md:gap-4 print:grid-cols-12 print:gap-4`}
           >
-            <div class={tw`col-span-4`}>
-              {/* Personal Details */}
-              <div class={tw`mb-2`}>
-                <h2 class={tw`text-xl font-bold uppercase mb-2`}>
-                  {personalDetails?.meta?.title || ""}
-                </h2>
-                <ul>
-                  {(personalDetails?.content.type ===
-                          SectionType.PERSONAL_DETAILS &&
-                      personalDetails?.content.value.items || []).map(
-                      (item) => {
-                        return (
-                          <li class={tw`my-1`}>
-                            <div class={tw`text-sm`}>
-                              <span class={tw`mr-2 text-gray-700`}>
-                                <i class={item.icon} title={item.title}></i>
-                              </span>
-                              <span class={tw`text-gray-600`}>
-                                <a href={item.url} target="_blank">
-                                  {item.value}
-                                </a>
-                              </span>
-                            </div>
-                          </li>
-                        );
-                      },
-                    )}
-                </ul>
-              </div>
-
-              {/* Educational Background */}
-              <div class={tw`mb-2`}>
-                <h2 class={tw`text-xl font-bold uppercase mb-2`}>
-                  {educationalBackground?.meta?.title || ""}
-                </h2>
-                <ul>
-                  {(educationalBackground?.content.type ===
-                          SectionType.EDUCATION &&
-                      educationalBackground?.content.value.items || []).map(
-                      (item) => {
-                        return (
-                          <li>
-                            <div>
-                              <h3>{item.title}</h3>
-                              <div class={tw`text-xs text-gray-500`}>
-                                <div class={tw`font-semibold`}>
-                                  <a href={item.from.url} target="_blank">
-                                    {item.from.name}
-                                  </a>
-                                </div>
-                                <div>
-                                  {item.from.address}
-                                </div>
-                                <div class={tw`text-xs text-gray-500`}>
-                                  {toReadableDate(item.dates.startDate)} to{" "}
-                                  {toReadableDate(item.dates.endDate)}
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        );
-                      },
-                    )}
-                </ul>
-              </div>
-
-              {/* Languages */}
-              <div class={tw`mb-2`}>
-                <h2 class={tw`text-xl font-bold uppercase mb-2`}>
-                  {languages?.meta?.title || ""}
-                </h2>
-                <ul>
-                  {(languages?.content.type ===
-                          SectionType.LANGUAGES &&
-                      languages?.content.value.items || []).map(
-                      (item) => {
-                        return (
-                          <li class={tw`mb-2`}>
-                            <div>
-                              <div>{item.title}</div>
-                              <div class={tw`text-gray-500 text-xs`}>
-                                {item.description}
-                              </div>
-                            </div>
-                          </li>
-                        );
-                      },
-                    )}
-                </ul>
-              </div>
-            </div>
-            <div class={tw`col-span-8`}>
-              {/* Work Experience */}
-              <div class={tw`mb-2`}>
-                <h2 class={tw`text-xl font-bold uppercase mb-2`}>
-                  {workExperience?.meta?.title || ""}
-                </h2>
-                <ul>
-                  {(workExperience?.content.type ===
-                          SectionType.WORK_EXPERIENCE &&
-                      workExperience?.content.value.items || []).filter((
-                      item,
-                    ) => item.meta?.show ?? true
-                    ).map(
-                      (item) => {
-                        return (
-                          <li class={tw`mb-2`}>
-                            <div class={tw`flex justify-between gap-2`}>
-                              <div>
-                                <h3>{item.title}</h3>
-                                <div
-                                  class={tw`text-xs text-gray-500`}
-                                >
-                                  {toReadableDate(item.dates.startDate)} to{" "}
-                                  {item.dates.endDate
-                                    ? toReadableDate(item.dates.endDate)
-                                    : "present"}
-                                </div>
-                              </div>
-                              <div
-                                class={tw`text-gray-500 text-right text-xs`}
-                              >
-                                <a
-                                  href={item.company.url}
-                                  target="_blank"
-                                  class={tw`font-semibold`}
-                                >
-                                  {item.company.title}
-                                </a>
-                                <div class={tw`text-xs`}>
-                                  {item.company.address}
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class={tw
-                                `text-xs text-gray-500 text-justify mt-2`}
-                            >
-                              {item.description}
-                            </div>
-                          </li>
-                        );
-                      },
-                    )}
-                </ul>
-              </div>
-            </div>
+            {containerKeys.map((key) => {
+              const sections = containersMap.get(key) || [];
+              const width = containersWidthMap.get(key) || 0;
+              return (
+                <div class={columnSpan(width)}>
+                  {(sections || []).map((section) => {
+                    return <SectionComponent section={section} />;
+                  })}
+                </div>
+              );
+            })}
           </div>
-        </div>
+        </main>
       </body>
     </html>
   );
-}
+};
+
+export default HomePage;

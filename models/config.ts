@@ -112,6 +112,6 @@ export interface PersonalDetailsItem {
 }
 
 export interface Config {
-  meta?: Meta;
+  meta: Meta;
   sections: Section[];
 }

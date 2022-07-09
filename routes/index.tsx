@@ -156,7 +156,7 @@ export default function Home({ data }: PageProps<Config>) {
                               <div>
                                 <h3>{item.title}</h3>
                                 <div
-                                  class={tw`text-xs text-gray-500 italic`}
+                                  class={tw`text-xs text-gray-500`}
                                 >
                                   {toReadableDate(item.dates.startDate)} to{" "}
                                   {item.dates.endDate
@@ -167,7 +167,11 @@ export default function Home({ data }: PageProps<Config>) {
                               <div
                                 class={tw`text-gray-500 text-right text-xs`}
                               >
-                                <a href={item.company.url} target="_blank">
+                                <a
+                                  href={item.company.url}
+                                  target="_blank"
+                                  class={tw`font-semibold`}
+                                >
                                   {item.company.title}
                                 </a>
                                 <div class={tw`text-xs`}>

@@ -1,0 +1,11 @@
+* {
+  /* outline mode */
+  /*
+  box-sizing: border-box;
+  outline: 1px solid limegreen !important;
+  */
+
+  /* transparent background mode */
+  box-sizing: border-box;
+  background: rgb(0 100 0 / 0.05) !important;
+}

@@ -33,6 +33,7 @@ export enum SectionType {
   EDUCATION = "education",
   PERSONAL_DETAILS = "personal-details",
   WORK_EXPERIENCE = "work-experience",
+  LANGUAGES = "languages",
 }
 
 export interface SectionMeta {
@@ -46,7 +47,8 @@ export interface Section {
   content:
     | { type: SectionType.EDUCATION; value: EducationConfig }
     | { type: SectionType.PERSONAL_DETAILS; value: PersonalDetailsConfig }
-    | { type: SectionType.WORK_EXPERIENCE; value: WorkExperienceConfig };
+    | { type: SectionType.WORK_EXPERIENCE; value: WorkExperienceConfig }
+    | { type: SectionType.LANGUAGES; value: LanguagesConfig };
 }
 
 export interface WorkExperienceConfig {
@@ -87,6 +89,15 @@ export interface EducationItem {
     address: string;
     url: string;
   };
+}
+
+export interface LanguagesConfig {
+  items: LanguagesItem[];
+}
+
+export interface LanguagesItem {
+  title: string;
+  description: string;
 }
 
 export interface PersonalDetailsConfig {

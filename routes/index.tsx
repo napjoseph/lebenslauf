@@ -31,6 +31,9 @@ export default function Home({ data }: PageProps<Config>) {
   const educationalBackground = data.sections.find((section) =>
     section.content.type === SectionType.EDUCATION
   );
+  const languages = data.sections.find((section) =>
+    section.content.type === SectionType.LANGUAGES
+  );
   const workExperience = data.sections.find((section) =>
     section.content.type === SectionType.WORK_EXPERIENCE
   );
@@ -127,6 +130,31 @@ export default function Home({ data }: PageProps<Config>) {
                                   {toReadableDate(item.dates.startDate)} to{" "}
                                   {toReadableDate(item.dates.endDate)}
                                 </div>
+                              </div>
+                            </div>
+                          </li>
+                        );
+                      },
+                    )}
+                </ul>
+              </div>
+
+              {/* Languages */}
+              <div class={tw`mb-2`}>
+                <h2 class={tw`text-xl font-bold uppercase mb-2`}>
+                  {languages?.meta?.title || ""}
+                </h2>
+                <ul>
+                  {(languages?.content.type ===
+                          SectionType.LANGUAGES &&
+                      languages?.content.value.items || []).map(
+                      (item) => {
+                        return (
+                          <li class={tw`mb-2`}>
+                            <div>
+                              <div>{item.title}</div>
+                              <div class={tw`text-gray-500 text-xs`}>
+                                {item.description}
                               </div>
                             </div>
                           </li>

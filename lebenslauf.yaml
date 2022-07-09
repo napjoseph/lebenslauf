@@ -127,3 +127,15 @@ sections:
               name: "Ateneo de Davao University"
               address: "Davao City, Philippines 8016"
               url: "https://www.addu.edu.ph/"
+  - meta:
+      title: "Languages"
+      container: "left"
+      show: true
+    content:
+      type: "languages"
+      value:
+        items:
+          - title: "English"
+            description: "Full professional proficiency"
+          - title: "Filipino"
+            description: "Native or bilingual proficiency"

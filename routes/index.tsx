@@ -2,7 +2,8 @@
 import { h } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { tw } from "@twind";
-import { parse as yamlParse } from "yaml";
+import { parse as parseYaml } from "yaml";
+import { format as formatDate, parseISO as parseDate } from "date-fns";
 
 import StaticHead from "../islands/StaticHead.tsx";
 import { Config, SectionType } from "../models/config.ts";
@@ -12,10 +13,15 @@ export const handler: Handlers<Config> = {
     const rawData = await Deno.readTextFile(
       `./lebenslauf.yaml`,
     );
-    const data = yamlParse(rawData) as Config;
+    const data = parseYaml(rawData) as Config;
 
     return ctx.render(data);
   },
+};
+
+/** Returns a Date in human-readable format. */
+const toReadableDate = (dateString: string): string => {
+  return formatDate(parseDate(dateString), "MMMM yyyy");
 };
 
 export default function Home({ data }: PageProps<Config>) {
@@ -118,7 +124,8 @@ export default function Home({ data }: PageProps<Config>) {
                                   {item.from.address}
                                 </div>
                                 <div class={tw`text-xs text-gray-500`}>
-                                  {item.dates.startDate} to {item.dates.endDate}
+                                  {toReadableDate(item.dates.startDate)} to{" "}
+                                  {toReadableDate(item.dates.endDate)}
                                 </div>
                               </div>
                             </div>
@@ -151,8 +158,10 @@ export default function Home({ data }: PageProps<Config>) {
                                 <div
                                   class={tw`text-xs text-gray-500 italic`}
                                 >
-                                  {item.dates.startDate} to{" "}
-                                  {item.dates.endDate || "present"}
+                                  {toReadableDate(item.dates.startDate)} to{" "}
+                                  {item.dates.endDate
+                                    ? toReadableDate(item.dates.endDate)
+                                    : "present"}
                                 </div>
                               </div>
                               <div

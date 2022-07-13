@@ -53,7 +53,12 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
                       {item.company.title}
                     </a>
                     <div class={tw`text-xs`}>
-                      {item.company.address}
+                      <a
+                        href={`https://www.google.com/maps/place/${item.company.address}`}
+                        target="_blank"
+                      >
+                        {item.company.address}
+                      </a>
                     </div>
                   </div>
                 </div>

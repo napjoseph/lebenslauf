@@ -31,7 +31,12 @@ const EducationSection: FunctionalComponent<EducationSectionProps> = (
                       </a>
                     </div>
                     <div>
-                      {item.from.address}
+                      <a
+                        href={`https://www.google.com/maps/place/${item.from.address}`}
+                        target="_blank"
+                      >
+                        {item.from.address}
+                      </a>
                     </div>
                     <div class={tw`text-xs text-gray-500`}>
                       {toReadableDate(item.dates.startDate)} to{" "}

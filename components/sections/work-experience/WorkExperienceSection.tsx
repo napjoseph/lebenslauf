@@ -2,7 +2,7 @@
 import { Fragment, FunctionalComponent, h } from "preact";
 
 import { tw } from "@twind";
-import { toReadableDate } from "@dateUtils";
+import { toReadableDate, toReadableDuration } from "@dateUtils";
 
 import { WorkExperienceConfig } from "../../../models/config.ts";
 
@@ -14,6 +14,8 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
   { config },
 ) => {
   if (!config.items) return null;
+
+  const now = new Date().toISOString();
 
   return (
     <Fragment>
@@ -29,6 +31,10 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
                     <h3>{item.title}</h3>
                     <div
                       class={tw`text-xs text-gray-500`}
+                      title={toReadableDuration(
+                        item.dates.startDate,
+                        item.dates.endDate ?? now,
+                      )}
                     >
                       {toReadableDate(item.dates.startDate)} to{" "}
                       {item.dates.endDate

@@ -113,7 +113,7 @@ sections:
             description: "I created web applications using Python (Django and Flask) and front-end frameworks like AngularJS, Chaplin.js, and Bootstrap. I also created and deployed cross-platform mobile applications using Appcelerator Titanium, which served thousands of daily users. As a way to give back to the community, I also facilitated the training of high school students to create web applications using Python/Django, to improve their school's current information systems."
   - meta:
       title: "Educational Background"
-      container: "left"
+      container: "right"
       show: true
     content:
       type: "education"
@@ -127,6 +127,186 @@ sections:
               name: "Ateneo de Davao University"
               address: "Davao City, Philippines 8016"
               url: "https://www.addu.edu.ph/"
+  - meta:
+      title: "Skills"
+      container: "left"
+      show: true
+    content:
+      type: "skills"
+      value:
+        meta:
+          useProficiencyMap: true
+          sortBy: "rating"
+          orderBy: "desc"
+        items:
+          - title: "Programming Languages"
+            meta:
+              show: true
+            items:
+              - title: "Go"
+                rating: 9
+                meta:
+                  show: true
+              - title: "Python"
+                rating: 5
+                meta:
+                  show: true
+              - title: "TypeScript"
+                rating: 9
+                meta:
+                  show: true
+              - title: "JavaScript"
+                rating: 7
+                meta:
+                  show: true
+              - title: "Google Apps Script"
+                rating: 4
+                meta:
+                  show: false
+              - title: "Java"
+                rating: 2
+                meta:
+                  show: false
+              - title: "PHP"
+                rating: 2
+                meta:
+                  show: false
+              - title: "Visual C#"
+                rating: 2
+                meta:
+                  show: false
+              - title: "C++"
+                rating: 2
+                meta:
+                  show: false
+              - title: "Dart"
+                rating: 3
+                meta:
+                  show: false
+          - title: "Other Technologies and Frameworks"
+            meta:
+              show: true
+            items:
+              - title: "Django"
+                rating: 6
+                meta:
+                  show: true
+              - title: "Angular"
+                rating: 8
+                meta:
+                  show: true
+              - title: "React"
+                rating: 8
+                meta:
+                  show: true
+              - title: "Next.js"
+                rating: 8
+                meta:
+                  show: true
+              - title: "Sass"
+                rating: 8
+                meta:
+                  show: true
+              - title: "Protocol Buffers"
+                rating: 8
+                meta:
+                  show: true
+              - title: "gRPC"
+                rating: 8
+                meta:
+                  show: true
+              - title: "WordPress"
+                rating: 4
+                meta:
+                  show: false
+              - title: "Flask"
+                rating: 5
+                meta:
+                  show: true
+              - title: "Flutter"
+                rating: 2
+                meta:
+                  show: false
+              - title: "Oracle JET"
+                rating: 8
+                meta:
+                  show: true
+          - title: "Source Code Management"
+            meta:
+              show: true
+            items:
+              - title: "Git"
+                rating: 10
+                meta:
+                  show: true
+              - title: "Mercurial"
+                rating: 10
+                meta:
+                  show: true
+              - title: "Bazel"
+                rating: 7
+                meta:
+                  show: true
+              - title: "Rush"
+                rating: 7
+                meta:
+                  show: true
+          - title: "Databases"
+            meta:
+              show: true
+            items:
+              - title: "PostgreSQL"
+                rating: 9
+                meta:
+                  show: true
+              - title: "Cloud SQL"
+                rating: 9
+                meta:
+                  show: true
+              - title: "MySQL"
+                rating: 9
+                meta:
+                  show: true
+              - title: "MongoDB"
+                rating: 7
+                meta:
+                  show: true
+              - title: "BigQuery"
+                rating: 7
+                meta:
+                  show: true
+          - title: "Applications"
+            meta:
+              show: false
+            items:
+              - title: "Microsoft Office Suite"
+                rating: 9
+                meta:
+                  show: false
+              - title: "Adobe Photoshop"
+                rating: 7
+                meta:
+                  show: false
+              - title: "Adobe Illustrator"
+                rating: 6
+                meta:
+                  show: false
+              - title: "Adobe Premiere"
+                rating: 6
+                meta:
+                  show: false
+              - title: "Google Data Studio"
+                rating: 10
+                meta:
+                  show: false
+              - title: "Figma"
+                rating: 6
+                meta:
+                  show: false
+              - title: "Sketch"
+                rating: 4
+                meta:
+                  show: false
   - meta:
       title: "Languages"
       container: "left"

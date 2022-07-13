@@ -6,6 +6,7 @@ import { Section, SectionType } from "../../models/config.ts";
 import EducationSection from "./education/EducationSection.tsx";
 import LanguagesSection from "./languages/LanguagesSection.tsx";
 import PersonalDetailsSection from "./personal-details/PersonalDetailsSection.tsx";
+import SkillsSection from "./skills/SkillsSection.tsx";
 import WorkExperienceSection from "./work-experience/WorkExperienceSection.tsx";
 
 interface SectionComponentProps {
@@ -35,6 +36,11 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
     case SectionType.WORK_EXPERIENCE:
       content = section.meta?.show
         ? <WorkExperienceSection config={section.content.value} />
+        : null;
+      break;
+    case SectionType.SKILLS:
+      content = section.meta?.show
+        ? <SkillsSection config={section.content.value} />
         : null;
       break;
   }

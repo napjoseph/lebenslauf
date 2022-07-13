@@ -31,9 +31,10 @@ export interface Meta {
 
 export enum SectionType {
   EDUCATION = "education",
-  PERSONAL_DETAILS = "personal-details",
-  WORK_EXPERIENCE = "work-experience",
   LANGUAGES = "languages",
+  PERSONAL_DETAILS = "personal-details",
+  SKILLS = "skills",
+  WORK_EXPERIENCE = "work-experience",
 }
 
 export interface SectionMeta {
@@ -46,9 +47,10 @@ export interface Section {
   meta?: SectionMeta;
   content:
     | { type: SectionType.EDUCATION; value: EducationConfig }
+    | { type: SectionType.LANGUAGES; value: LanguagesConfig }
     | { type: SectionType.PERSONAL_DETAILS; value: PersonalDetailsConfig }
-    | { type: SectionType.WORK_EXPERIENCE; value: WorkExperienceConfig }
-    | { type: SectionType.LANGUAGES; value: LanguagesConfig };
+    | { type: SectionType.SKILLS; value: SkillsConfig }
+    | { type: SectionType.WORK_EXPERIENCE; value: WorkExperienceConfig };
 }
 
 export interface WorkExperienceConfig {
@@ -89,6 +91,77 @@ export interface EducationItem {
     address: string;
     url: string;
   };
+}
+
+export interface SkillsConfig {
+  meta?: SkillsConfigMeta;
+  items: SkillsItem[];
+}
+
+export interface SkillsConfigMeta {
+  useProficiencyMap?: boolean;
+  proficiencyMap?: SkillsConfigProficiencyMap;
+  sortBy?: SkillsConfigSortBy;
+  orderBy?: SkillsConfigOrderBy;
+}
+
+export interface SkillsConfigProficiencyMap {
+  [key: string]: number | string;
+  1: string;
+  2: string;
+  3: string;
+  4: string;
+  5: string;
+  6: string;
+  7: string;
+  8: string;
+  9: string;
+  10: string;
+}
+
+export const DEFAULT_SKILLS_CONFIG_PROFICIENCY_MAP: SkillsConfigProficiencyMap =
+  {
+    "1": "Beginner",
+    "2": "Beginner",
+    "3": "Basic",
+    "4": "Basic",
+    "5": "Intermediate",
+    "6": "Intermediate",
+    "7": "Advanced",
+    "8": "Advanced",
+    "9": "Expert",
+    "10": "Expert",
+  };
+
+export enum SkillsConfigSortBy {
+  TITLE = "title",
+  RATING = "rating",
+  NONE = "none",
+}
+
+export enum SkillsConfigOrderBy {
+  ASCENDING = "asc",
+  DESCENDING = "desc",
+}
+
+export interface SkillsItem {
+  title: string;
+  meta?: SkillsItemMeta;
+  items: SkillsItemChild[];
+}
+
+export interface SkillsItemMeta {
+  show?: boolean;
+}
+
+export interface SkillsItemChild {
+  title: string;
+  meta?: SkillsItemChildMeta;
+  rating: number;
+}
+
+export interface SkillsItemChildMeta {
+  show?: boolean;
 }
 
 export interface LanguagesConfig {

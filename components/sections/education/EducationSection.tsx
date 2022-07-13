@@ -2,7 +2,7 @@
 import { Fragment, FunctionalComponent, h } from "preact";
 
 import { tw } from "@twind";
-import { toReadableDate } from "@dateUtils";
+import { toReadableDate, toReadableDuration } from "@dateUtils";
 
 import { EducationConfig } from "../../../models/config.ts";
 
@@ -14,6 +14,8 @@ const EducationSection: FunctionalComponent<EducationSectionProps> = (
   { config },
 ) => {
   if (!config.items) return null;
+
+  const now = new Date().toISOString();
 
   return (
     <Fragment>
@@ -38,7 +40,13 @@ const EducationSection: FunctionalComponent<EducationSectionProps> = (
                         {item.from.address}
                       </a>
                     </div>
-                    <div class={tw`text-xs text-gray-500`}>
+                    <div
+                      class={tw`text-xs text-gray-500`}
+                      title={toReadableDuration(
+                        item.dates.startDate,
+                        item.dates.endDate ?? now,
+                      )}
+                    >
                       {toReadableDate(item.dates.startDate)} to{" "}
                       {toReadableDate(item.dates.endDate)}
                     </div>

@@ -46,8 +46,8 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
   }
 
   return (
-    <div class={tw`mb-2`}>
-      <h2 class={tw`text-xl font-bold uppercase mb-2`}>
+    <div class={tw`mb-3`}>
+      <h2 class={tw`text-xl font-bold uppercase mb-1`}>
         {section?.meta?.title || ""}
       </h2>
       {content && content}

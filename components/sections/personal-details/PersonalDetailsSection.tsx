@@ -21,7 +21,7 @@ const PersonalDetailsSection: FunctionalComponent<PersonalDetailsSectionProps> =
           {(config.items || []).map(
             (item) => {
               return (
-                <li class={tw`my-1`}>
+                <li class={tw`mb-1`}>
                   <div class={tw`text-sm`}>
                     <span class={tw`mr-2 text-gray-700`}>
                       <i class={item.icon} title={item.title}></i>

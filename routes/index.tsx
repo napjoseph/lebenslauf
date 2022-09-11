@@ -65,7 +65,7 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
         />
       </head>
       <body>
-        <main class={tw`p-4 mx-auto max-w-screen-lg`}>
+        <main class={tw`p-4 mx-auto max-w-screen-a4`}>
           {/* Header */}
           <div class={tw`text-center`}>
             <h1 class={tw`text-4xl font-bold uppercase`}>
@@ -78,7 +78,7 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
 
           <div
             class={tw
-              `grid grid-cols-1 md:grid-cols-12 md:gap-4 print:grid-cols-12 print:gap-4`}
+              `grid grid-cols-1 md:grid-cols-12 md:gap-6 print:grid-cols-12 print:gap-6`}
           >
             {containerKeys.map((key) => {
               const sections = containersMap.get(key) || [];

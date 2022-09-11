@@ -1,6 +1,6 @@
 meta:
   head:
-    title: "Lebenslauf - Nap Joseph Calub"
+    title: "Nap Joseph Calub"
     author: "Nap Joseph Calub"
     description: "Curriculum Vitae of Nap Joseph Calub"
   body:
@@ -54,7 +54,7 @@ sections:
               title: "Oracle"
               url: "https://www.oracle.com/"
               address: "Makati City, Philippines 1225"
-            description: "I implement additional frontend features for the next-generation student information system: Oracle Higher Education Student Cloud."
+            description: "I worked with hundreds of developers across multiple countries to improve Oracle's Higher Education Student Cloud information system. I developed new frontend features using Oracle JavaScript Extension Toolkit (JET), and new backend features using Oracle Application Development Framework (ADF). As part of the requirements, I ensured all our repositories had at least 90% code coverage by writing unit tests using Mocha, Chai.js, and Sinon.JS. I also guaranteed that our features met all acceptance criteria in the specifications by creating functional tests using Selenium. Lastly, to reduce technical debt, I also migrated legacy vanilla JavaScript modules to use TypeScript."
           - title: "Business Apps Developer"
             dates:
               startDate: "2018-05"
@@ -63,7 +63,7 @@ sections:
               title: "Concentrix"
               url: "https://www.concentrix.com/"
               address: "Quezon City, Philippines 1110"
-            description: "I created and maintained business-critical applications using a mixture of Python, Go, and TypeScript (Angular) for our client's Network Operations Center. I also analyzed large data sets from Cloud SQL and BigQuery, and created interactive dashboards using Data Studio."
+            description: "I worked as a vendor at Google, creating and maintaining business-critical Network Operations Center dashboards and tools using Python, Go, Angular, TypeScript, Google Cloud Platform, gRPC, Protocol Buffers, and other internal technologies. I also analyzed large data sets from Cloud SQL, Bigtable, and BigQuery and created interactive dashboards using Data Studio and PLX Dashboard. After only three months, I earned an internal Go and TypeScript Readability certification to attest that a developer understands Google's best practices and coding style for a given language, given to only a select few in the Philippines. I worked closely with stakeholders and the technical project manager to ensure project deadlines and proposed different Project Requirements Documents (PRD) for new project initiatives."
           - title: "Senior Process Executive"
             dates:
               startDate: "2017-08"
@@ -72,7 +72,7 @@ sections:
               title: "Cognizant"
               url: "https://www.cognizant.com/"
               address: "Taguig City, Philippines 1635"
-            description: "I helped big companies across APAC to improve their current Google Ads (previously Google AdWords) and Google Analytics setup, and helped them implement Dynamic Remarketing on their websites using Google Tag Manager."
+            description: "I helped notable brands across Asia-Pacific to improve their current Google Ads (previously Google AdWords) and Google Analytics setup and helped them implement Dynamic Remarketing on their websites using Google Tag Manager."
           - title: "Database Administrator"
             dates:
               startDate: "2017-01"
@@ -81,7 +81,7 @@ sections:
               title: "Bell Telecommunication Phils, Inc."
               url: "http://www.belltel.ph/"
               address: "Pasig City, Philippines 1603"
-            description: "I created and managed the system for splitting, handing over, and disposal of our telecommunications network assets to PLDT and Globe Telecom. Additionally, I have also worked with external project managers by generating the daily reports and presentations to check the overall status of the operation."
+            description: "I was hired as a database consultant to help split, hand over, and dispose of the telecommunications network assets to PLDT and Globe Telecom. As the existing database was in the form of multiple spreadsheet files with no unified format, I led a team of analysts to consolidate, normalize, de-duplicate, clean, and verify entries. To ensure data accuracy, I developed an internal web application using Python and Django to improve the current manual data entry and verification process. Lastly, I also worked with external project managers by generating daily reports and presentations to check the overall status of the operation."
           - title: "Freelance IT Consultant"
             meta:
               show: false
@@ -92,7 +92,7 @@ sections:
               title: "Self-Employed"
               url: "https://napjose.ph/"
               address: "Tanauan City, Philippines 4232"
-            description: "I created web and mobile solutions based on my customer's needs and specifications. I offered my clients a comprehensive range of services; from creating simple company websites to deploying full-fledged information systems."
+            description: "I created web and mobile solutions based on my customer's needs and specifications. I offered my clients a comprehensive range of services, from creating simple company websites using WordPress to deploying full-fledged information systems using Python and Django."
           - title: "Instructor, Information Systems Department"
             dates:
               startDate: "2014-06"
@@ -110,25 +110,9 @@ sections:
               title: "Ingenuity Global Consulting"
               url: "https://ingenuity.ph/"
               address: "Davao City, Philippines 8000"
-            description: "I created web applications using Python (Django and Flask) and front-end frameworks like AngularJS, Chaplin.js, and Bootstrap. I also created and deployed cross-platform mobile applications using Appcelerator Titanium, which served thousands of daily users. As a way to give back to the community, I also facilitated the training of high school students to create web applications using Python/Django, to improve their school's current information systems."
+            description: "I developed web applications using Python, Django, Flask, and front-end frameworks like AngularJS, Chaplin.js, and Bootstrap. I also created and deployed cross-platform mobile applications using Appcelerator Titanium, serving thousands of daily active users. As part of the company initiative to give back to the community, I also facilitated training boot camps for high school students to develop web applications using Python and Django."
   - meta:
-      title: "Educational Background"
-      container: "right"
-      show: true
-    content:
-      type: "education"
-      value:
-        items:
-          - title: "Bachelor of Science in Information Technology"
-            dates:
-              startDate: "2010-06"
-              endDate: "2014-03"
-            from:
-              name: "Ateneo de Davao University"
-              address: "Davao City, Philippines 8016"
-              url: "https://www.addu.edu.ph/"
-  - meta:
-      title: "Skills"
+      title: "Tech Stack"
       container: "left"
       show: true
     content:
@@ -231,26 +215,6 @@ sections:
                 rating: 8
                 meta:
                   show: true
-          - title: "Source Code Management"
-            meta:
-              show: true
-            items:
-              - title: "Git"
-                rating: 10
-                meta:
-                  show: true
-              - title: "Mercurial"
-                rating: 10
-                meta:
-                  show: true
-              - title: "Bazel"
-                rating: 7
-                meta:
-                  show: true
-              - title: "Rush"
-                rating: 7
-                meta:
-                  show: true
           - title: "Databases"
             meta:
               show: true
@@ -272,6 +236,26 @@ sections:
                 meta:
                   show: true
               - title: "BigQuery"
+                rating: 7
+                meta:
+                  show: true
+          - title: "Source Code Management"
+            meta:
+              show: true
+            items:
+              - title: "Git"
+                rating: 10
+                meta:
+                  show: true
+              - title: "Mercurial"
+                rating: 10
+                meta:
+                  show: true
+              - title: "Bazel"
+                rating: 7
+                meta:
+                  show: true
+              - title: "Rush"
                 rating: 7
                 meta:
                   show: true
@@ -319,3 +303,19 @@ sections:
             description: "Full professional proficiency"
           - title: "Filipino"
             description: "Native or bilingual proficiency"
+  - meta:
+      title: "Educational Background"
+      container: "left"
+      show: true
+    content:
+      type: "education"
+      value:
+        items:
+          - title: "Bachelor of Science in Information Technology"
+            dates:
+              startDate: "2010-06"
+              endDate: "2014-03"
+            from:
+              name: "Ateneo de Davao University"
+              address: "Davao City, Philippines 8016"
+              url: "https://www.addu.edu.ph/"

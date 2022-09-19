@@ -64,9 +64,8 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
           referrerpolicy="no-referrer"
         />
       </head>
-      <body>
-        <main class={tw`p-4 mx-auto max-w-screen-a4`}>
-          {/* Header */}
+      <body class={tw`bg-gray-700 print:bg-white xs:m-2 md:m-3 lg:m-5`}>
+        <main class={tw`p-4 mx-auto max-w-screen-a4 bg-white`}>
           <div class={tw`text-center`}>
             <h1 class={tw`text-4xl font-bold uppercase`}>
               {data.meta.body!.header!.title}

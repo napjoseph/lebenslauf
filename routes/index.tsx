@@ -6,7 +6,13 @@ import { parse as parseYaml } from "yaml";
 import { tw } from "@twind";
 import { columnSpan } from "@columnSpan";
 
-import { Config, Section } from "../models/config.ts";
+import {
+  Config,
+  DEFAULT_CONTAINER_ID,
+  DEFAULT_META_BODY_CONTAINER_DATA,
+  DEFAULT_META_BODY_PAGE_DATA,
+  Section,
+} from "../models/config.ts";
 import StaticHead from "../components/document/StaticHead.tsx";
 import SectionComponent from "../components/sections/SectionComponent.tsx";
 
@@ -22,25 +28,45 @@ export const handler: Handlers<Config> = {
 };
 
 const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
-  const containersMap: Map<string, Section[]> = new Map();
-  const containersWidthMap: Map<string, number> = new Map();
-  const containerKeys: string[] = [];
-  (data.meta.body?.containers || []).forEach((item) => {
-    containerKeys.push(item.id);
-    containersMap.set(item.id, []);
-    containersWidthMap.set(item.id, item.width);
-  });
-  if (containersMap.size === 0) {
-    containerKeys.push("default");
-    containersMap.set("default", []);
-  }
-  const defaultContainer = containersMap.keys().next().value;
+  /** Saves all the possible widths for easier consumption. */
+  const widthsMap: Map<string, number> = new Map();
+  /** A list of all the pages, and the containers per page. */
+  const pagesData: Map<string, Section[]>[] = [];
+
+  (data.meta.body?.pages || [DEFAULT_META_BODY_PAGE_DATA]).forEach(
+    (page, index) => {
+      const containersMap: Map<string, Section[]> = new Map();
+      (page.containers ?? [DEFAULT_META_BODY_CONTAINER_DATA]).forEach(
+        (container) => {
+          const key = `${index + 1}--${container.id}`;
+          containersMap.set(key, []);
+          widthsMap.set(key, container.width);
+        },
+      );
+      pagesData.push(containersMap);
+    },
+  );
+
+  const defaultContainer = pagesData[0].keys().next().value;
 
   data.sections.forEach((section) => {
-    const key = section.meta?.container || defaultContainer;
-    const value = containersMap.get(key) || [];
-    containersMap.set(key, [...value, section]);
+    let page = 1;
+    let key = defaultContainer;
+
+    if (section.meta?.container !== undefined) {
+      const container = section.meta?.container || DEFAULT_CONTAINER_ID;
+      page = section.meta?.page || 1;
+      key = `${page}--${container}`;
+    }
+
+    const value = pagesData[page - 1].get(key) || [];
+    pagesData[page - 1].set(key, [...value, section]);
   });
+
+  const plainWidths = Object.fromEntries(widthsMap.entries());
+  const plainPages = Array.from(pagesData).map((content) =>
+    Object.fromEntries(content.entries())
+  );
 
   return (
     <html>
@@ -65,32 +91,54 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
         />
       </head>
       <body class={tw`bg-gray-700 print:bg-white xs:m-2 md:m-3 lg:m-5`}>
-        <main class={tw`p-4 mx-auto max-w-screen-a4 bg-white`}>
-          <div class={tw`text-center`}>
-            <h1 class={tw`text-4xl font-bold uppercase`}>
-              {data.meta.body!.header!.title}
-            </h1>
-            <div>{data.meta.body!.header!.subtitle}</div>
-          </div>
+        <main
+          class={tw`mx-auto lg:w-a4 flex flex-col xs:space-y-2 md:space-y-3 lg:space-y-5`}
+        >
+          {plainPages.map((_containersMap, index) => {
+            return (
+              <article
+                class={tw`p-4 bg-white lg:h-a4`}
+              >
+                <div>
+                  {Array.from(pagesData[index].keys()).map((key) => {
+                    const width = widthsMap.get(key) || 0;
+                    // Only process full width.
+                    // TODO: Make this cleaner.
+                    if (width !== 12) return;
 
-          <hr class={tw`my-4`} />
+                    const sections = pagesData[index].get(key) || [];
 
-          <div
-            class={tw
-              `grid grid-cols-1 md:grid-cols-12 md:gap-6 print:grid-cols-12 print:gap-6`}
-          >
-            {containerKeys.map((key) => {
-              const sections = containersMap.get(key) || [];
-              const width = containersWidthMap.get(key) || 0;
-              return (
-                <div class={columnSpan(width)}>
-                  {(sections || []).map((section) => {
-                    return <SectionComponent section={section} />;
+                    return (
+                      <div class={columnSpan(width)}>
+                        {(sections || []).map((section) => {
+                          return <SectionComponent section={section} />;
+                        })}
+                      </div>
+                    );
                   })}
                 </div>
-              );
-            })}
-          </div>
+                <div
+                  class={tw`grid grid-cols-1 md:grid-cols-12 md:gap-6 print:grid-cols-12 print:gap-6`}
+                >
+                  {Array.from(pagesData[index].keys()).map((key) => {
+                    const width = widthsMap.get(key) || 0;
+                    // Don't process full width.
+                    // TODO: Make this cleaner.
+                    if (width === 12) return;
+
+                    const sections = pagesData[index].get(key) || [];
+                    return (
+                      <div class={columnSpan(width)}>
+                        {(sections || []).map((section) => {
+                          return <SectionComponent section={section} />;
+                        })}
+                      </div>
+                    );
+                  })}
+                </div>
+              </article>
+            );
+          })}
         </main>
       </body>
     </html>

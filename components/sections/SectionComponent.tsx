@@ -3,6 +3,8 @@ import { FunctionalComponent, h, JSX } from "preact";
 import { tw } from "@twind";
 
 import { Section, SectionType } from "../../models/config.ts";
+import HeaderSection from "./header/HeaderSection.tsx";
+import DividerSection from "./divider/DividerSection.tsx";
 import EducationSection from "./education/EducationSection.tsx";
 import LanguagesSection from "./languages/LanguagesSection.tsx";
 import PersonalDetailsSection from "./personal-details/PersonalDetailsSection.tsx";
@@ -18,6 +20,16 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
 ) => {
   let content: JSX.Element | null = null;
   switch (section.content.type) {
+    case SectionType.HEADER:
+      content = section.meta?.show
+        ? <HeaderSection config={section.content.value} />
+        : null;
+      break;
+    case SectionType.DIVIDER:
+      content = section.meta?.show
+        ? <DividerSection config={section.content.value} />
+        : null;
+      break;
     case SectionType.EDUCATION:
       content = section.meta?.show
         ? <EducationSection config={section.content.value} />
@@ -46,12 +58,17 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
   }
 
   return (
-    <div class={tw`mb-3`}>
-      <h2 class={tw`text-xl font-bold uppercase mb-1`}>
-        {section?.meta?.title || ""}
-      </h2>
+    <section class={tw`mb-3`}>
+      {(section?.meta?.title || "").trim() !== ""
+        ? (
+          <h2 class={tw`text-xl font-bold uppercase mb-1`}>
+            {section?.meta?.title || ""}
+          </h2>
+        )
+        : null}
+
       {content && content}
-    </div>
+    </section>
   );
 };
 

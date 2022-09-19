@@ -4,17 +4,34 @@ meta:
     author: "Nap Joseph Calub"
     description: "Curriculum Vitae of Nap Joseph Calub"
   body:
-    header:
-      title: "Nap Joseph Calub"
-      subtitle: "Senior Software Engineer"
-    containers:
-      - id: "left"
-        width: 4
-      - id: "right"
-        width: 8
+    pages:
+      - containers:
+          - id: "top"
+            width: 12
+          - id: "left"
+            width: 4
+          - id: "right"
+            width: 8
     sectionHeaders:
       uppercase: true
 sections:
+  - meta:
+      title: ""
+      container: "top"
+      show: true
+    content:
+      type: "header"
+      value:
+        title: "Nap Joseph Calub"
+        subtitle: "Senior Software Engineer"
+  - meta:
+      title: ""
+      container: "top"
+      show: true
+    content:
+      type: "divider"
+      value:
+        url: "https://napjose.ph"
   - meta:
       title: "Personal Details"
       container: "left"

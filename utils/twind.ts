@@ -14,11 +14,16 @@ export const config: Configuration = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
-      "a4": "210mm",
     },
     extend: {
       screens: {
         print: { raw: "print" },
+      },
+      width: {
+        "a4": "210mm",
+      },
+      height: {
+        "a4": "297mm",
       },
     },
   },

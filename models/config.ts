@@ -5,14 +5,12 @@ export interface MetaHeadData {
 }
 
 export interface MetaBodyData {
-  header: MetaBodyHeaderData;
-  containers: MetaBodyContainerData[];
+  pages: MetaBodyPageData[];
   sectionHeaders: MetaBodySectionHeadersData;
 }
 
-export interface MetaBodyHeaderData {
-  title: string;
-  subtitle: string;
+export interface MetaBodyPageData {
+  containers: MetaBodyContainerData[];
 }
 
 export interface MetaBodyContainerData {
@@ -30,6 +28,8 @@ export interface Meta {
 }
 
 export enum SectionType {
+  HEADER = "header",
+  DIVIDER = "divider",
   EDUCATION = "education",
   LANGUAGES = "languages",
   PERSONAL_DETAILS = "personal-details",
@@ -39,6 +39,7 @@ export enum SectionType {
 
 export interface SectionMeta {
   title?: string;
+  page?: number;
   container?: string;
   show?: boolean;
 }
@@ -46,6 +47,8 @@ export interface SectionMeta {
 export interface Section {
   meta?: SectionMeta;
   content:
+    | { type: SectionType.HEADER; value: HeaderConfig }
+    | { type: SectionType.DIVIDER; value: DividerConfig }
     | { type: SectionType.EDUCATION; value: EducationConfig }
     | { type: SectionType.LANGUAGES; value: LanguagesConfig }
     | { type: SectionType.PERSONAL_DETAILS; value: PersonalDetailsConfig }
@@ -74,6 +77,15 @@ export interface WorkExperienceItem {
 
 export interface WorkExperienceItemMeta {
   show?: boolean;
+}
+
+export interface HeaderConfig {
+  title: string;
+  subtitle: string;
+}
+
+export interface DividerConfig {
+  url: string;
 }
 
 export interface EducationConfig {
@@ -188,3 +200,14 @@ export interface Config {
   meta: Meta;
   sections: Section[];
 }
+
+export const DEFAULT_CONTAINER_ID = "default";
+
+export const DEFAULT_META_BODY_CONTAINER_DATA: MetaBodyContainerData = {
+  id: DEFAULT_CONTAINER_ID,
+  width: 12,
+};
+
+export const DEFAULT_META_BODY_PAGE_DATA: MetaBodyPageData = {
+  containers: [DEFAULT_META_BODY_CONTAINER_DATA],
+};

@@ -50,6 +50,7 @@ sections:
           - title: "Senior UI Engineer"
             dates:
               startDate: "2021-10"
+              endDate: "2022-09"
             company:
               title: "Oracle"
               url: "https://www.oracle.com/"

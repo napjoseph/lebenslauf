@@ -25,8 +25,8 @@ sections:
         items:
           - title: "Website"
             icon: "fa-solid fa-globe-asia fa-fw"
-            value: "napjose.ph/calub"
-            url: "https://napjose.ph/calub"
+            value: "napjose.ph"
+            url: "https://napjose.ph"
           - title: "Email"
             icon: "fa-solid fa-envelope fa-fw"
             value: "hello@napjose.ph"

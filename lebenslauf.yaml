@@ -31,7 +31,7 @@ sections:
     content:
       type: "divider"
       value:
-        url: "https://napjose.ph"
+        url: "https://napjose.ph/calub"
   - meta:
       title: "Personal Details"
       container: "left"
@@ -48,14 +48,14 @@ sections:
             icon: "fa-solid fa-envelope fa-fw"
             value: "hello@napjose.ph"
             url: "mailto:hello@napjose.ph"
-          - title: "Mobile"
-            icon: "fa-solid fa-mobile-alt fa-fw"
+          - title: "WhatsApp"
+            icon: "fa-brands fa-whatsapp fa-fw"
             value: "+63 922 896 2503"
             url: "callto:+639228962503"
           - title: "Address"
             icon: "fa-solid fa-map-marker-alt fa-fw"
-            value: "Tanauan City, Philippines 4232"
-            url: "https://www.google.com/maps/place/Tanauan,+Batangas/@14.0912399,121.0738416,13z"
+            value: "Singapore"
+            url: "https://www.google.com/maps/place/Singapore"
   - meta:
       title: "Work Experience"
       container: "right"

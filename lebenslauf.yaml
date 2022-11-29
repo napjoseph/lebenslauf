@@ -233,6 +233,10 @@ sections:
                 rating: 8
                 meta:
                   show: true
+              - title: "Deno"
+                rating: 8
+                meta:
+                  show: false
           - title: "Databases"
             meta:
               show: true
@@ -250,11 +254,15 @@ sections:
                 meta:
                   show: true
               - title: "MongoDB"
-                rating: 7
+                rating: 6
                 meta:
                   show: true
               - title: "BigQuery"
                 rating: 7
+                meta:
+                  show: true
+              - title: "Neo4j"
+                rating: 9
                 meta:
                   show: true
           - title: "Source Code Management"
@@ -276,7 +284,7 @@ sections:
               - title: "Rush"
                 rating: 7
                 meta:
-                  show: true
+                  show: false
           - title: "Applications"
             meta:
               show: false

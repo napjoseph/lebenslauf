@@ -19,6 +19,7 @@ sections:
       title: ""
       container: "top"
       show: true
+      marginBottom: 0.25
     content:
       type: "header"
       value:
@@ -28,10 +29,12 @@ sections:
       title: ""
       container: "top"
       show: true
+      marginBottom: 0.25
     content:
       type: "divider"
       value:
         url: "https://napjose.ph/calub"
+        title: "View detailed portfolio of Nap Joseph Calub"
   - meta:
       title: "Personal Details"
       container: "left"
@@ -77,7 +80,7 @@ sections:
               title: "Concentrix"
               url: "https://www.concentrix.com/"
               address: "Quezon City, Philippines 1110"
-            description: "I worked as a vendor at Google, creating and maintaining business-critical Network Operations Center dashboards and tools using Python, Go, Angular, TypeScript, Google Cloud Platform, gRPC, Protocol Buffers, and other internal technologies. I also analyzed large data sets from Cloud SQL, Bigtable, and BigQuery and created interactive dashboards using Data Studio and PLX Dashboard. After only three months, I earned an internal Go and TypeScript Readability certification to attest that a developer understands Google's best practices and coding style for a given language, given to only a select few in the Philippines. I worked closely with stakeholders and the technical project manager to ensure project deadlines and proposed different Project Requirements Documents (PRD) for new project initiatives."
+            description: "I worked as a vendor at Google, creating and maintaining business-critical Network Operations Center dashboards and tools using Python, Go, Angular, TypeScript, Google Cloud Platform, gRPC, Protocol Buffers, and some internal technologies. I also analyzed large data sets from Cloud SQL, Bigtable, and BigQuery and created interactive dashboards using Data Studio and PLX Dashboard. After only three months, I earned an internal Go and TypeScript Readability certification to attest that a developer understands Google's best practices and coding style for a given language, given to only a select few in the Philippines. I worked closely with stakeholders and the technical project manager to ensure project deadlines and proposed different Project Requirements Documents (PRD) for new project initiatives."
           - title: "Senior Process Executive"
             dates:
               startDate: "2017-08"

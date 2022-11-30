@@ -63,7 +63,7 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
                   </div>
                 </div>
                 <div
-                  class={tw`text-xs text-gray-500 text-justify mt-2`}
+                  class={tw`text-xs text-gray-600 text-justify mt-2`}
                 >
                   {item.description}
                 </div>

@@ -19,6 +19,7 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
   { section },
 ) => {
   let content: JSX.Element | null = null;
+  const marginBottom = section.meta?.marginBottom ?? 1;
   switch (section.content.type) {
     case SectionType.HEADER:
       content = section.meta?.show
@@ -58,7 +59,7 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
   }
 
   return (
-    <section class={tw`mb-3`}>
+    <section style={`margin-bottom: ${marginBottom}rem`}>
       {(section?.meta?.title || "").trim() !== ""
         ? (
           <h2 class={tw`text-xl font-bold uppercase mb-1`}>

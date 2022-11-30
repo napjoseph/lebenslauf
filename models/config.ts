@@ -42,6 +42,7 @@ export interface SectionMeta {
   page?: number;
   container?: string;
   show?: boolean;
+  marginBottom?: number;
 }
 
 export interface Section {
@@ -85,6 +86,7 @@ export interface HeaderConfig {
 }
 
 export interface DividerConfig {
+  title: string;
   url: string;
 }
 
@@ -158,6 +160,7 @@ export enum SkillsConfigOrderBy {
 
 export interface SkillsItem {
   title: string;
+  url: string;
   meta?: SkillsItemMeta;
   items: SkillsItemChild[];
 }

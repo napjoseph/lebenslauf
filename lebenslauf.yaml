@@ -51,11 +51,7 @@ sections:
           - title: "WhatsApp"
             icon: "fa-brands fa-whatsapp fa-fw"
             value: "+63 922 896 2503"
-            url: "callto:+639228962503"
-          - title: "Address"
-            icon: "fa-solid fa-map-marker-alt fa-fw"
-            value: "Singapore"
-            url: "https://www.google.com/maps/place/Singapore"
+            url: "https://wa.me/639228962503"
   - meta:
       title: "Work Experience"
       container: "right"
@@ -236,7 +232,7 @@ sections:
               - title: "Deno"
                 rating: 8
                 meta:
-                  show: false
+                  show: true
           - title: "Databases"
             meta:
               show: true

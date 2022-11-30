@@ -27,7 +27,11 @@ const PersonalDetailsSection: FunctionalComponent<PersonalDetailsSectionProps> =
                       <i class={item.icon} title={item.title}></i>
                     </span>
                     <span class={tw`text-gray-600`}>
-                      <a href={item.url} target="_blank">
+                      <a
+                        href={item.url}
+                        title={item.description}
+                        target="_blank"
+                      >
                         {item.value}
                       </a>
                     </span>

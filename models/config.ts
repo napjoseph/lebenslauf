@@ -35,10 +35,12 @@ export enum SectionType {
   PERSONAL_DETAILS = "personal-details",
   SKILLS = "skills",
   WORK_EXPERIENCE = "work-experience",
+  CERTIFICATIONS = "certifications",
 }
 
 export interface SectionMeta {
   title?: string;
+  description?: string;
   page?: number;
   container?: string;
   show?: boolean;
@@ -54,7 +56,77 @@ export interface Section {
     | { type: SectionType.LANGUAGES; value: LanguagesConfig }
     | { type: SectionType.PERSONAL_DETAILS; value: PersonalDetailsConfig }
     | { type: SectionType.SKILLS; value: SkillsConfig }
-    | { type: SectionType.WORK_EXPERIENCE; value: WorkExperienceConfig };
+    | { type: SectionType.WORK_EXPERIENCE; value: WorkExperienceConfig }
+    | { type: SectionType.CERTIFICATIONS; value: CertificationsConfig };
+}
+
+export type CertificationsSubHeaderTypes =
+  | "credentialType"
+  | "credentialId"
+  | "offeredBy"
+  | "issuingOrganization"
+  | "issuedDate"
+  | "gradeAchieved";
+
+export interface CertificationsIssuingOrganizationMapping {
+  key: string;
+  displayName: string;
+  url?: string;
+}
+
+export interface CertificationsOfferedByMapping {
+  key: string;
+  displayName: string;
+  url?: string;
+}
+
+export interface CertificationsCredentialTypeMapping {
+  key: string;
+  displayName: string;
+}
+
+export interface CertificationsMeta {
+  subHeaderItems?: CertificationsSubHeaderTypes[];
+  issuingOrganizationMapping?: CertificationsIssuingOrganizationMapping[];
+  offeredByMapping?: CertificationsOfferedByMapping[];
+  credentialTypeMapping?: CertificationsCredentialTypeMapping[];
+}
+
+export const DEFAULT_CERTIFICATIONS_META: CertificationsMeta = {
+  subHeaderItems: [
+    "credentialType",
+    "credentialId",
+    "offeredBy",
+    "issuingOrganization",
+    "issuedDate",
+    "gradeAchieved",
+  ],
+  offeredByMapping: [],
+  issuingOrganizationMapping: [],
+  credentialTypeMapping: [],
+};
+
+export interface CertificationsConfig {
+  meta?: CertificationsMeta;
+  items: CertificationsItem[];
+}
+
+export interface CertificationsItem {
+  title: string;
+  meta?: CertificationsItemMeta;
+  credentialType?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  offeredBy?: string;
+  issuingOrganization?: string;
+  verificationUrl?: string;
+  issuedDate?: string;
+  gradeAchieved?: string;
+  children?: CertificationsItem[];
+}
+
+export interface CertificationsItemMeta {
+  show?: boolean;
 }
 
 export interface WorkExperienceConfig {

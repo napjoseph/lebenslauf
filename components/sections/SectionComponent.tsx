@@ -2,6 +2,8 @@
 import { FunctionalComponent, h, JSX } from "preact";
 import { tw } from "@twind";
 
+import Linkify from "https://esm.sh/linkify-react@4.0.2";
+
 import { Section, SectionType } from "../../models/config.ts";
 import HeaderSection from "./header/HeaderSection.tsx";
 import DividerSection from "./divider/DividerSection.tsx";
@@ -10,6 +12,7 @@ import LanguagesSection from "./languages/LanguagesSection.tsx";
 import PersonalDetailsSection from "./personal-details/PersonalDetailsSection.tsx";
 import SkillsSection from "./skills/SkillsSection.tsx";
 import WorkExperienceSection from "./work-experience/WorkExperienceSection.tsx";
+import CertificationsSection from "./certifications/CertificationsSection.tsx";
 
 interface SectionComponentProps {
   section: Section;
@@ -56,7 +59,14 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
         ? <SkillsSection config={section.content.value} />
         : null;
       break;
+    case SectionType.CERTIFICATIONS:
+      content = section.meta?.show
+        ? <CertificationsSection config={section.content.value} />
+        : null;
+      break;
   }
+
+  const sectionDescription = (section?.meta?.description || "").trim();
 
   return (
     <section style={{ marginBottom: `${marginBottom}rem` }}>
@@ -68,8 +78,31 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
         )
         : null}
 
+      {sectionDescription !== ""
+        ? (
+          <div class={tw`text-xs mb-1`}>
+            <Linkify
+              as="p"
+              options={{ defaultProtocol: "https", render: renderLink }}
+            >
+              {sectionDescription}
+            </Linkify>
+          </div>
+        )
+        : null}
+
       {content && content}
     </section>
+  );
+};
+
+// deno-lint-ignore no-explicit-any
+const renderLink = ({ attributes, content }: any) => {
+  const { href, ...props } = attributes;
+  return (
+    <a href={href} class={tw`font-medium`} {...props} target="_blank">
+      {content}
+    </a>
   );
 };
 

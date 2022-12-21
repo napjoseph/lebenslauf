@@ -123,11 +123,13 @@
     "https://deno.land/x/media_types@v2.10.2/mod.ts": "d63583b978d32eff8b76e1ae5d83cba2fb27baa90cc1bcb0ad15a06122ea8c19",
     "https://deno.land/x/semver@v1.4.0/mod.ts": "c3e08f7f0a3e625015ecc9a46cf79a9dc3f081f3c5b3037d3c49c0773e58d265",
     "https://esm.sh/date-fns@2.28.0": "1d69d7762d682e2aa56e39193871f8d0e2ec728571dadad2a58f74ac06e72326",
+    "https://esm.sh/linkify-react@4.0.2": "9f08277ff5e94532f39daca3b8106e8ec3572eff960b3e224bcff9775a90ee75",
     "https://esm.sh/preact-render-to-string@5.2.0?deps=preact@10.8.1": "905edfc27353a9e4f549ffc238a6f1f1caf7cda32b561fc8bf71a8cdc70ced70",
     "https://esm.sh/preact@10.8.1": "18386a9b119b02627665e6f559fc3e7315b5e43184a243717301d0b60c58d188",
     "https://esm.sh/preact@10.8.1/hooks": "96fdb4679eefff407e2eef409700db9d1b422c94e64ee4b7a93b75f59e0e85d3",
     "https://esm.sh/stable/preact@10.8.1/deno/hooks.js": "f9a17e28bd21e488b2e8e003e28a78c5d8368bdaf380ecf3cfbb8824c292b542",
     "https://esm.sh/stable/preact@10.8.1/deno/preact.js": "77ae111725c02c4d6c0719fff6fdeadad45141dbf06f61aaef74b65308061e59",
+    "https://esm.sh/stable/react@18.2.0/deno/react.js": "806868069cfdb815e028419cf07ebc7a7bcba7f9e31dec9e3a045b9f8e82c1ed",
     "https://esm.sh/twind@0.16.17": "b33c6ccb772e14c9f40cc9e4abce2eb70f5f74c4544931c1e051479915f78f5a",
     "https://esm.sh/twind@0.16.17/sheets": "0da0869bdad8d92ededec54da7cc3451af8f5d7a6e93e19305c6252702d73a9f",
     "https://esm.sh/v92/date-fns@2.28.0/deno/date-fns.js": "5203b29c62928419d1b72175c71d799d2ae9f0caac1902d2a4556b632fa04fb5",
@@ -144,6 +146,8 @@
     "https://esm.sh/v94/twind@0.16.17/deno/twind.js": "e9eedc9ad34213fdd517a239b55749d97d32f14915372964443a05df8482f713",
     "https://esm.sh/v94/twind@0.16.17/sheets/sheets.d.ts": "a20d7516796588f6a1deb705d3ee84ec4cf7f4e1c08f9da2716514c886aa2cc3",
     "https://esm.sh/v94/twind@0.16.17/twind.d.ts": "7dcc541ecb8cf8199b63c2303e4bd378d043ae591706542c9f55ff39d0e15cf7",
+    "https://esm.sh/v99/linkify-react@4.0.2/deno/linkify-react.js": "1c392ddd7beb1cd29a92986b6bfd922c8daa701ea8a142f65082ba5c49436c83",
+    "https://esm.sh/v99/linkifyjs@4.0.2/deno/linkifyjs.js": "5c2b738da5fb0acb9ceeb6a927c9b0284f27b8657617b782853612d40b6ba600",
     "https://unpkg.com/esbuild-wasm@0.14.39/esm/browser.js": "d9c7265172400e472ff8ca82fe426ba981bc09c83187c91682373d3dbd22c062"
   }
 }

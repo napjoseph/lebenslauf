@@ -6,8 +6,11 @@ import {
 } from "date-fns";
 
 /** Returns a Date in human-readable format. */
-export const toReadableDate = (dateString: string): string => {
-  return formatDate(parseDate(dateString), "MMMM yyyy");
+export const toReadableDate = (
+  dateString: string,
+  formatString = "MMMM yyyy",
+): string => {
+  return formatDate(parseDate(dateString), formatString);
 };
 
 /** Returns a Duration in human-readable format. */

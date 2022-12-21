@@ -87,7 +87,7 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
 
       {sectionFooter !== ""
         ? (
-          <div class={tw`text-xs mt-6 text-right bottom-0`}>
+          <div class={tw`text-xs mt-5 text-right`}>
             <Linkify
               as="p"
               options={{ defaultProtocol: "https", render: renderLink }}

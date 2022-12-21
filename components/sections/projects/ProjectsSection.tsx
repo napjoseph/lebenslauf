@@ -17,9 +17,6 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
 
   const now = new Date().toISOString();
 
-  const datesPrefix = "Dates: ";
-  const tagsPrefix = "Technologies used: ";
-
   return (
     <Fragment>
       <ul class={tw`list-square ml-6`}>
@@ -34,48 +31,54 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
                         <h3>{item.title}</h3>
                       </a>
                     </div>
-                    {item.dates.start !== "" && (
-                      <div
-                        class={tw`text-xs text-gray-500 font-semibold`}
-                        title={toReadableDuration(
-                          item.dates.start,
-                          item.dates.end ?? now,
-                        )}
-                      >
-                        {toReadableDate(item.dates.start)} to{" "}
-                        {toReadableDate(item.dates.end ?? now)}
-                      </div>
-                    )}
+                    <div
+                      class={tw`text-xs text-gray-500`}
+                    >
+                      {item.dates.start !== "" && (
+                        <span
+                          class={tw`font-semibold`}
+                          title={toReadableDuration(
+                            item.dates.start,
+                            item.dates.end ?? now,
+                          )}
+                        >
+                          {toReadableDate(item.dates.start)} to{" "}
+                          {toReadableDate(item.dates.end ?? now)}
+                        </span>
+                      )}
 
-                    {item.tags && (
-                      <div
-                        class={tw`text-xs text-gray-500`}
-                      >
-                        <ul class={tw`inline`}>
-                          {[...item.tags]
-                            .sort((a, b) => {
-                              return a.toLowerCase().localeCompare(
-                                b.toLowerCase(),
-                              );
-                            })
-                            .map((tag, index) => {
-                              return (
-                                <li
-                                  key={index}
-                                  class={tw`inline-block`}
-                                >
-                                  <span class={tw`italic`}>
-                                    {tag}
-                                  </span>
-                                  {index !== item.tags.length - 1 && (
-                                    <span class={tw`mr-1`}>,</span>
-                                  )}
-                                </li>
-                              );
-                            })}
-                        </ul>
-                      </div>
-                    )}
+                      {item.dates.start !== "" && item.tags && (
+                        <span class={tw`mx-1`}>|</span>
+                      )}
+
+                      {item.tags && (
+                        <span>
+                          <ul class={tw`inline`}>
+                            {[...item.tags]
+                              .sort((a, b) => {
+                                return a.toLowerCase().localeCompare(
+                                  b.toLowerCase(),
+                                );
+                              })
+                              .map((tag, index) => {
+                                return (
+                                  <li
+                                    key={index}
+                                    class={tw`inline-block`}
+                                  >
+                                    <span class={tw`italic`}>
+                                      {tag}
+                                    </span>
+                                    {index !== item.tags.length - 1 && (
+                                      <span class={tw`mr-1`}>,</span>
+                                    )}
+                                  </li>
+                                );
+                              })}
+                          </ul>
+                        </span>
+                      )}
+                    </div>
                   </div>
 
                   {item.roles && (

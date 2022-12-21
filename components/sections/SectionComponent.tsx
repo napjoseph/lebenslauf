@@ -1,8 +1,7 @@
 /** @jsx h */
 import { FunctionalComponent, h, JSX } from "preact";
 import { tw } from "@twind";
-
-import Linkify from "https://esm.sh/linkify-react@4.0.2";
+import Linkify from "linkify-react";
 
 import { Section, SectionType } from "../../models/config.ts";
 import HeaderSection from "./header/HeaderSection.tsx";
@@ -13,6 +12,7 @@ import PersonalDetailsSection from "./personal-details/PersonalDetailsSection.ts
 import SkillsSection from "./skills/SkillsSection.tsx";
 import WorkExperienceSection from "./work-experience/WorkExperienceSection.tsx";
 import CertificationsSection from "./certifications/CertificationsSection.tsx";
+import ProjectsSection from "./projects/ProjectsSection.tsx";
 
 interface SectionComponentProps {
   section: Section;
@@ -64,9 +64,14 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
         ? <CertificationsSection config={section.content.value} />
         : null;
       break;
+    case SectionType.PROJECTS:
+      content = section.meta?.show
+        ? <ProjectsSection config={section.content.value} />
+        : null;
+      break;
   }
 
-  const sectionDescription = (section?.meta?.description || "").trim();
+  const sectionFooter = (section?.meta?.footer || "").trim();
 
   return (
     <section style={{ marginBottom: `${marginBottom}rem` }}>
@@ -78,20 +83,20 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
         )
         : null}
 
-      {sectionDescription !== ""
+      {content && content}
+
+      {sectionFooter !== ""
         ? (
-          <div class={tw`text-xs mb-1`}>
+          <div class={tw`text-xs mt-6 text-right bottom-0`}>
             <Linkify
               as="p"
               options={{ defaultProtocol: "https", render: renderLink }}
             >
-              {sectionDescription}
+              {sectionFooter}
             </Linkify>
           </div>
         )
         : null}
-
-      {content && content}
     </section>
   );
 };

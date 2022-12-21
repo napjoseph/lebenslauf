@@ -14,9 +14,9 @@ meta:
             width: 8
       - containers:
           - id: "left"
-            width: 4
+            width: 5
           - id: "right"
-            width: 8
+            width: 7
     sectionHeaders:
       uppercase: true
 sections:
@@ -358,12 +358,135 @@ sections:
               address: "Davao City, Philippines 8016"
               url: "https://www.addu.edu.ph/"
   - meta:
+      title: "Recent Projects"
+      page: 2
+      container: "left"
+      show: true
+    content:
+      type: "projects"
+      value:
+        items:
+          - title: "The Wandering Inndex"
+            linkTo: "https://inndex.omg.lol"
+            meta:
+              show: true
+            dates:
+              start: "2022-11"
+            tags:
+              - "Deno"
+              - "TypeScript"
+              - "Fresh"
+              - "Charts.js"
+              - "twind"
+              - "preact"
+              - "SurrealDB"
+              - "SVG"
+              - "Neo4j"
+            roles:
+              - "Used graph databases to create a fan-made index of Named Entities for one of the longest pieces of fiction written in English."
+          - title: "Oracle Higher Education Student Cloud"
+            linkTo: "https://www.oracle.com/ph/industries/government/education/higher-education/student-cloud/"
+            meta:
+              show: true
+            dates:
+              start: "2021-10"
+              end: "2022-09"
+            tags:
+              - "Chai"
+              - "Git"
+              - "Jenkins"
+              - "KnockoutJS"
+              - "lodash"
+              - "Oracle ADF"
+              - "Oracle JET"
+              - "Sass"
+              - "Selenium"
+              - "Sinon JS"
+              - "TypeScript"
+            roles:
+              - "Implemented additional features while ensuring at least 90% unit test code coverage and having fully automated tests for the acceptance criterias."
+          - title: "Performance Dashboard for Service Providers"
+            meta:
+              show: true
+            dates:
+              start: "2019-11"
+              end: "2020-04"
+            tags:
+              - "Angular"
+              - "Bazel"
+              - "BigQuery"
+              - "Cloud SQL"
+              - "Docker"
+              - "Go"
+              - "Google App Engine"
+              - "Google Chart API"
+              - "Google Cloud Bigtable"
+              - "Google Cloud Platform"
+              - "Google Cloud Storage"
+              - "Google Cloud Tasks"
+              - "gRPC"
+              - "Jasmine"
+              - "Material Design"
+              - "Mercurial"
+              - "MySQL"
+              - "NgRx"
+              - "Sass"
+              - "TypeScript"
+            roles:
+              - "Maintained and refactored the legacy codebase to the latest Angular version and increased unit test coverage."
+              - "Added support for new data sources for the Service Provider data."
+              - "Added calculation and visualization for each ISP and their promised vs actual SLA."
+          - title: "BigQuery Migrater"
+            meta:
+              show: true
+            dates:
+              start: "2020-05"
+              end: "2020-07"
+            tags:
+              - "BigQuery"
+              - "Docker"
+              - "Go"
+              - "gRPC"
+              - "Google Cloud Platform"
+              - "Mercurial"
+            roles:
+              - "Continued the implementation of the BigQuery data migrater and importer."
+          - title: "Dashboard for Tracking Network Assets Lifecyle"
+            meta:
+              show: true
+            dates:
+              start: "2018-06"
+              end: "2019-07"
+            tags:
+              - "Angular"
+              - "Bazel"
+              - "BigQuery"
+              - "Cloud SQL"
+              - "Docker"
+              - "Go"
+              - "Google App Engine"
+              - "Google Chart API"
+              - "Google Cloud Platform"
+              - "Google Cloud Storage"
+              - "Google Cloud Tasks"
+              - "gRPC"
+              - "Jasmine"
+              - "Material Design"
+              - "Mercurial"
+              - "MySQL"
+              - "NgRx"
+              - "Python"
+              - "Sass"
+              - "TypeScript"
+            roles:
+              - "Maintained a legacy dashboard for visualizing and managing the lifecycle data of devices in our client's enterprise network."
+              - "Refactored the code to use the latest Angular version and added unit tests to both the Go backend and TypeScript frontend."
+              - "Migrated the old task runners using Python to use Go App Engine Cron and Cloud Tasks."
+              - "Added support for different realms other than the corporate and production network."
+              - "Added support for adding remediation dates, NPI dates, and part number data for each asset model."
+  - meta:
       title: "Featured Certifications"
-      description: "See full list at napjose.ph/calub."
-      descriptionLinksMapping:
-        - key: "napjose.ph/calub"
-          displayName: "napjose.ph/calub"
-          url: "https://napjose.ph/calub"
+      footer: "See full list at napjose.ph/calub."
       page: 2
       container: "right"
       show: true

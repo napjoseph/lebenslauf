@@ -36,11 +36,12 @@ export enum SectionType {
   SKILLS = "skills",
   WORK_EXPERIENCE = "work-experience",
   CERTIFICATIONS = "certifications",
+  PROJECTS = "projects",
 }
 
 export interface SectionMeta {
   title?: string;
-  description?: string;
+  footer?: string;
   page?: number;
   container?: string;
   show?: boolean;
@@ -57,7 +58,8 @@ export interface Section {
     | { type: SectionType.PERSONAL_DETAILS; value: PersonalDetailsConfig }
     | { type: SectionType.SKILLS; value: SkillsConfig }
     | { type: SectionType.WORK_EXPERIENCE; value: WorkExperienceConfig }
-    | { type: SectionType.CERTIFICATIONS; value: CertificationsConfig };
+    | { type: SectionType.CERTIFICATIONS; value: CertificationsConfig }
+    | { type: SectionType.PROJECTS; value: ProjectsConfig };
 }
 
 export type CertificationsSubHeaderTypes =
@@ -270,6 +272,26 @@ export interface PersonalDetailsItem {
   value: string;
   icon: string;
   url: string;
+}
+
+export interface ProjectsConfig {
+  items: ProjectsItem[];
+}
+
+export interface ProjectsItem {
+  title: string;
+  meta?: ProjectsItemMeta;
+  linkTo?: string;
+  dates: {
+    start: string;
+    end?: string;
+  };
+  tags: string[];
+  roles: string[];
+}
+
+export interface ProjectsItemMeta {
+  show?: boolean;
 }
 
 export interface Config {

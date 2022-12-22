@@ -249,7 +249,7 @@ export interface SkillsItemChild {
   title: string;
   meta?: SkillsItemChildMeta;
   rating: number;
-  years: number;
+  totalMonths: number;
 }
 
 export interface SkillsItemChildMeta {

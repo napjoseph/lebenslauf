@@ -31,3 +31,35 @@ export const toReadableDuration = (
     },
   );
 };
+
+/** Calculates the total usage based on the number of months. */
+export const calculateTotalUsage = (totalMonths: number): string => {
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  const items: string[] = [];
+  if (years !== 0) {
+    items.push(addUnits(years, "year", "years"));
+  }
+  if (months !== 0) {
+    items.push(addUnits(months, "month", "months"));
+  }
+
+  return items.join(" and ");
+};
+
+/** Returns the number with proper units. */
+export const addUnits = (
+  someNumber: number,
+  unitSingular: string,
+  unitPlural: string,
+): string => {
+  switch (someNumber) {
+    case 0:
+      return "";
+    case 1:
+      return `${someNumber} ${unitSingular}`;
+    default:
+      return `${someNumber} ${unitPlural}`;
+  }
+};

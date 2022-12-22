@@ -11,6 +11,7 @@ import {
   SkillsConfigSortBy,
   SkillsItemChild,
 } from "../../../models/config.ts";
+import { calculateTotalUsage } from "../../../utils/dateUtils.ts";
 
 interface SkillsSectionProps {
   config: SkillsConfig;
@@ -31,8 +32,7 @@ const SkillsSection: FunctionalComponent<SkillsSectionProps> = (
     SkillsConfigOrderBy.ASCENDING;
 
   const showInfo = (item: SkillsItemChild): string => {
-    if (useYears && item.years === 1) return `${item.years} year`;
-    if (useYears && item.years !== 1) return `${item.years} years`;
+    if (useYears) return calculateTotalUsage(item.totalMonths);
     if (useProficiencyMap) return `${proficiencyMap[item.rating]}`;
     return `${item.rating}`;
   };

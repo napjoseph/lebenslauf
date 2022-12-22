@@ -21,13 +21,21 @@ const SkillsSection: FunctionalComponent<SkillsSectionProps> = (
 ) => {
   if (!config.items) return null;
 
-  const useProficiencyMap = config.meta?.useProficiencyMap || false;
+  const useYears = config.meta?.useYears ?? false;
+  const useProficiencyMap = config.meta?.useProficiencyMap ?? false;
   const proficiencyMap: SkillsConfigProficiencyMap =
     config.meta?.proficiencyMap ?? DEFAULT_SKILLS_CONFIG_PROFICIENCY_MAP;
-  const sortBy: SkillsConfigSortBy = config.meta?.sortBy ||
+  const sortBy: SkillsConfigSortBy = config.meta?.sortBy ??
     SkillsConfigSortBy.NONE;
-  const orderBy: SkillsConfigOrderBy = config.meta?.orderBy ||
+  const orderBy: SkillsConfigOrderBy = config.meta?.orderBy ??
     SkillsConfigOrderBy.ASCENDING;
+
+  const showInfo = (item: SkillsItemChild): string => {
+    if (useYears && item.years === 1) return `${item.years} year`;
+    if (useYears && item.years !== 1) return `${item.years} years`;
+    if (useProficiencyMap) return `${proficiencyMap[item.rating]}`;
+    return `${item.rating}`;
+  };
 
   const sortCategoryItems: (a: SkillsItemChild, b: SkillsItemChild) => number =
     (
@@ -78,9 +86,7 @@ const SkillsSection: FunctionalComponent<SkillsSectionProps> = (
                                 {item.title}
                               </span>
                               <span title={`${item.rating} out of 10`}>
-                                {useProficiencyMap
-                                  ? proficiencyMap[item.rating]
-                                  : item.rating}
+                                {showInfo(item)}
                               </span>
                             </li>
                           );

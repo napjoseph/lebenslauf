@@ -189,6 +189,7 @@ export interface SkillsConfig {
 export interface SkillsConfigMeta {
   useProficiencyMap?: boolean;
   proficiencyMap?: SkillsConfigProficiencyMap;
+  useYears?: boolean;
   sortBy?: SkillsConfigSortBy;
   orderBy?: SkillsConfigOrderBy;
 }
@@ -224,6 +225,7 @@ export const DEFAULT_SKILLS_CONFIG_PROFICIENCY_MAP: SkillsConfigProficiencyMap =
 export enum SkillsConfigSortBy {
   TITLE = "title",
   RATING = "rating",
+  YEARS = "years",
   NONE = "none",
 }
 
@@ -247,6 +249,7 @@ export interface SkillsItemChild {
   title: string;
   meta?: SkillsItemChildMeta;
   rating: number;
+  years: number;
 }
 
 export interface SkillsItemChildMeta {

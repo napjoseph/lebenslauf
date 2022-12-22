@@ -152,6 +152,7 @@ sections:
           useProficiencyMap: true
           sortBy: "rating"
           orderBy: "desc"
+          useYears: true
         items:
           - title: "Programming Languages"
             meta:
@@ -159,42 +160,52 @@ sections:
             items:
               - title: "Go"
                 rating: 9
+                years: 3
                 meta:
                   show: true
               - title: "Python"
                 rating: 5
+                years: 4
                 meta:
                   show: true
               - title: "TypeScript"
                 rating: 9
+                years: 6
                 meta:
                   show: true
               - title: "JavaScript"
                 rating: 7
+                years: 8
                 meta:
                   show: true
               - title: "Google Apps Script"
                 rating: 4
+                years: 3
                 meta:
                   show: false
               - title: "Java"
                 rating: 2
+                years: 2
                 meta:
                   show: false
               - title: "PHP"
                 rating: 2
+                years: 1
                 meta:
                   show: false
               - title: "Visual C#"
                 rating: 2
+                years: 0.5
                 meta:
                   show: false
               - title: "C++"
                 rating: 2
+                years: 0.5
                 meta:
                   show: false
               - title: "Dart"
                 rating: 3
+                years: 0.5
                 meta:
                   show: false
           - title: "Other Technologies and Frameworks"
@@ -203,50 +214,62 @@ sections:
             items:
               - title: "Django"
                 rating: 6
+                years: 4
                 meta:
                   show: true
               - title: "Angular"
                 rating: 8
+                years: 4
                 meta:
                   show: true
               - title: "React"
                 rating: 8
+                years: 3
                 meta:
                   show: true
               - title: "Next.js"
                 rating: 8
+                years: 2
                 meta:
                   show: true
               - title: "Sass"
                 rating: 8
+                years: 6
                 meta:
                   show: true
               - title: "Protocol Buffers"
                 rating: 8
+                years: 3
                 meta:
                   show: true
               - title: "gRPC"
                 rating: 8
+                years: 3
                 meta:
                   show: true
               - title: "WordPress"
                 rating: 4
+                years: 1
                 meta:
                   show: false
               - title: "Flask"
                 rating: 5
+                years: 1
                 meta:
                   show: true
               - title: "Flutter"
                 rating: 2
+                years: 0.5
                 meta:
                   show: false
               - title: "Oracle JET"
                 rating: 8
+                years: 1
                 meta:
                   show: true
               - title: "Deno"
                 rating: 8
+                years: 1
                 meta:
                   show: true
           - title: "Databases"
@@ -255,26 +278,32 @@ sections:
             items:
               - title: "PostgreSQL"
                 rating: 9
+                years: 4
                 meta:
                   show: true
               - title: "Cloud SQL"
                 rating: 9
+                years: 3
                 meta:
                   show: true
               - title: "MySQL"
                 rating: 9
+                years: 8
                 meta:
                   show: true
               - title: "MongoDB"
                 rating: 6
+                years: 2
                 meta:
                   show: true
               - title: "BigQuery"
                 rating: 7
+                years: 3
                 meta:
                   show: true
               - title: "Neo4j"
                 rating: 9
+                years: 1
                 meta:
                   show: true
           - title: "Source Code Management"
@@ -283,18 +312,22 @@ sections:
             items:
               - title: "Git"
                 rating: 10
+                years: 10
                 meta:
                   show: true
               - title: "Mercurial"
                 rating: 10
+                years: 5
                 meta:
                   show: true
               - title: "Bazel"
                 rating: 7
+                years: 3
                 meta:
                   show: true
               - title: "Rush"
                 rating: 7
+                years: 1
                 meta:
                   show: false
           - title: "Applications"
@@ -303,30 +336,37 @@ sections:
             items:
               - title: "Microsoft Office Suite"
                 rating: 9
+                years: 10
                 meta:
                   show: false
               - title: "Adobe Photoshop"
                 rating: 7
+                years: 4
                 meta:
                   show: false
               - title: "Adobe Illustrator"
                 rating: 6
+                years: 4
                 meta:
                   show: false
               - title: "Adobe Premiere"
                 rating: 6
+                years: 4
                 meta:
                   show: false
               - title: "Google Data Studio"
                 rating: 10
+                years: 4
                 meta:
                   show: false
               - title: "Figma"
                 rating: 6
+                years: 2
                 meta:
                   show: false
               - title: "Sketch"
                 rating: 4
+                years: 1
                 meta:
                   show: false
   - meta:

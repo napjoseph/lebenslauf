@@ -83,7 +83,7 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
 
                   {item.roles && (
                     <div>
-                      <ul class={tw`mt-1 ml-8 list-square`}>
+                      <ul class={tw`mt-1 ml-6 list-square`}>
                         {item.roles.map((role, index) => {
                           return (
                             <li key={index} class={tw`leading-4`}>

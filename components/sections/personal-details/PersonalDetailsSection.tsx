@@ -18,7 +18,7 @@ const PersonalDetailsSection: FunctionalComponent<PersonalDetailsSectionProps> =
     return (
       <Fragment>
         <ul>
-          {(config.items || []).map(
+          {(config.items || []).filter((item) => item.meta?.show ?? true).map(
             (item) => {
               return (
                 <li class={tw`mb-1`}>

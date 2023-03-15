@@ -60,9 +60,16 @@ sections:
             description: "Send Nap Joseph Calub an email"
           - title: "WhatsApp"
             icon: "fa-brands fa-whatsapp fa-fw"
+            value: "+63 922 896 2503"
+            url: "https://wa.me/639228962503"
+            description: "Add Nap Joseph Calub on WhatsApp"
+          - title: "WhatsApp"
+            icon: "fa-brands fa-whatsapp fa-fw"
             value: "+65 8374 8954"
             url: "https://wa.me/6583748954"
             description: "Add Nap Joseph Calub on WhatsApp"
+            meta:
+              show: false
           - title: "GitHub"
             icon: "fa-brands fa-github fa-fw"
             value: "github.com/njncalub"

@@ -275,6 +275,11 @@ export interface PersonalDetailsItem {
   value: string;
   icon: string;
   url: string;
+  meta?: PersonalDetailsItemMeta;
+}
+
+export interface PersonalDetailsItemMeta {
+  show?: boolean;
 }
 
 export interface ProjectsConfig {

@@ -1,9 +1,6 @@
-/** @jsx h */
-import { FunctionalComponent, h } from "preact";
+import { FunctionalComponent } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { parse as parseYaml } from "yaml";
-
-import { tw } from "@twind";
 import { columnSpan } from "@columnSpan";
 
 import {
@@ -90,14 +87,14 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
           referrerpolicy="no-referrer"
         />
       </head>
-      <body class={tw`bg-gray-700 print:bg-white xs:m-2 md:m-3 lg:m-5`}>
+      <body class="bg-gray-700 print:bg-white xs:m-2 md:m-3 lg:m-5">
         <main
-          class={tw`mx-auto lg:w-a4 flex flex-col xs:space-y-2 md:space-y-3 lg:space-y-5`}
+          class="mx-auto lg:w-a4 flex flex-col xs:space-y-2 md:space-y-3 lg:space-y-5"
         >
           {plainPages.map((_containersMap, index) => {
             return (
               <article
-                class={tw`p-4 bg-white lg:h-a4`}
+                class="p-4 bg-white lg:h-a4"
               >
                 <div>
                   {Array.from(pagesData[index].keys()).map((key) => {
@@ -118,7 +115,7 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
                   })}
                 </div>
                 <div
-                  class={tw`grid grid-cols-1 md:grid-cols-12 md:gap-6 print:grid-cols-12 print:gap-6`}
+                  class="grid grid-cols-1 md:grid-cols-12 md:gap-6 print:grid-cols-12 print:gap-6"
                 >
                   {Array.from(pagesData[index].keys()).map((key) => {
                     const width = widthsMap.get(key) || 0;

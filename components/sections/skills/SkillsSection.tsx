@@ -1,8 +1,4 @@
-/** @jsx h */
-import { Fragment, FunctionalComponent, h } from "preact";
-
-import { tw } from "@twind";
-
+import { FunctionalComponent } from "preact";
 import {
   DEFAULT_SKILLS_CONFIG_PROFICIENCY_MAP,
   SkillsConfig,
@@ -66,23 +62,23 @@ const SkillsSection: FunctionalComponent<SkillsSectionProps> = (
     };
 
   return (
-    <Fragment>
+    <>
       <ul>
         {(config.items || []).filter((category) => category.meta?.show ?? true)
           .map(
             (category) => {
               return (
-                <li class={tw`mb-2`}>
+                <li class="mb-2">
                   <div>
                     <h3>{category.title}</h3>
-                    <div class={tw`text-xs text-gray-500`}>
+                    <div class="text-xs text-gray-500">
                       <ul>
                         {(category.items || []).filter((item) =>
                           item.meta?.show ?? true
                         ).sort(sortCategoryItems).map((item) => {
                           return (
-                            <li class={tw`flex justify-between gap-2`}>
-                              <span class={tw`font-semibold`}>
+                            <li class="flex justify-between gap-2">
+                              <span class="font-semibold">
                                 {item.title}
                               </span>
                               <span title={`${item.rating} out of 10`}>
@@ -99,7 +95,7 @@ const SkillsSection: FunctionalComponent<SkillsSectionProps> = (
             },
           )}
       </ul>
-    </Fragment>
+    </>
   );
 };
 

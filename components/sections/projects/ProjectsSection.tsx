@@ -1,7 +1,4 @@
-/** @jsx h */
-import { Fragment, FunctionalComponent, h } from "preact";
-
-import { tw } from "@twind";
+import { FunctionalComponent } from "preact";
 import { toReadableDate, toReadableDuration } from "@dateUtils";
 
 import { ProjectsConfig } from "../../../models/config.ts";
@@ -18,25 +15,23 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
   const now = new Date().toISOString();
 
   return (
-    <Fragment>
-      <ul class={tw`list-square ml-6`}>
+    <>
+      <ul class="list-square ml-6">
         {(config.items || []).map(
           (item) => {
             return (
               <li>
                 <div>
                   <div>
-                    <div class={tw`text-gray-900`}>
+                    <div class="text-gray-900">
                       <a href={item.linkTo} target="_blank">
                         <h3>{item.title}</h3>
                       </a>
                     </div>
-                    <div
-                      class={tw`text-xs text-gray-500`}
-                    >
+                    <div class="text-xs text-gray-500">
                       {item.dates.start !== "" && (
                         <span
-                          class={tw`font-semibold`}
+                          class="font-semibold"
                           title={toReadableDuration(
                             item.dates.start,
                             item.dates.end ?? now,
@@ -48,12 +43,12 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
                       )}
 
                       {item.dates.start !== "" && item.tags && (
-                        <span class={tw`mx-1`}>|</span>
+                        <span class="mx-1">|</span>
                       )}
 
                       {item.tags && (
                         <span>
-                          <ul class={tw`inline`}>
+                          <ul class="inline">
                             {[...item.tags]
                               .sort((a, b) => {
                                 return a.toLowerCase().localeCompare(
@@ -64,13 +59,13 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
                                 return (
                                   <li
                                     key={index}
-                                    class={tw`inline-block`}
+                                    class="inline-block"
                                   >
-                                    <span class={tw`italic`}>
+                                    <span class="italic">
                                       {tag}
                                     </span>
                                     {index !== item.tags.length - 1 && (
-                                      <span class={tw`mr-1`}>,</span>
+                                      <span class="mr-1">,</span>
                                     )}
                                   </li>
                                 );
@@ -83,11 +78,11 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
 
                   {item.roles && (
                     <div>
-                      <ul class={tw`mt-1 ml-6 list-square`}>
+                      <ul class="mt-1 ml-6 list-square">
                         {item.roles.map((role, index) => {
                           return (
-                            <li key={index} class={tw`leading-4`}>
-                              <span class={tw`text-xs`}>{role}</span>
+                            <li key={index} class="leading-4">
+                              <span class="text-xs">{role}</span>
                             </li>
                           );
                         })}
@@ -100,7 +95,7 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
           },
         )}
       </ul>
-    </Fragment>
+    </>
   );
 };
 

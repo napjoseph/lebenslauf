@@ -1,7 +1,4 @@
-/** @jsx h */
-import { Fragment, FunctionalComponent, h } from "preact";
-
-import { tw } from "@twind";
+import { FunctionalComponent } from "preact";
 import { toReadableDate, toReadableDuration } from "@dateUtils";
 
 import { WorkExperienceConfig } from "../../../models/config.ts";
@@ -18,19 +15,19 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
   const now = new Date().toISOString();
 
   return (
-    <Fragment>
+    <>
       <ul>
         {(config.items || []).filter((
           item,
         ) => item.meta?.show ?? true).map(
           (item) => {
             return (
-              <li class={tw`mb-2`}>
-                <div class={tw`flex justify-between gap-2`}>
+              <li class="mb-2">
+                <div class="flex justify-between gap-2">
                   <div>
                     <h3>{item.title}</h3>
                     <div
-                      class={tw`text-xs text-gray-500`}
+                      class="text-xs text-gray-500"
                       title={toReadableDuration(
                         item.dates.startDate,
                         item.dates.endDate ?? now,
@@ -42,17 +39,15 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
                         : "present"}
                     </div>
                   </div>
-                  <div
-                    class={tw`text-gray-500 text-right text-xs`}
-                  >
+                  <div class="text-gray-500 text-right text-xs">
                     <a
                       href={item.company.url}
                       target="_blank"
-                      class={tw`font-semibold`}
+                      class="font-semibold"
                     >
                       {item.company.title}
                     </a>
-                    <div class={tw`text-xs`}>
+                    <div class="text-xs">
                       <a
                         href={`https://www.google.com/maps/place/${item.company.address}`}
                         target="_blank"
@@ -62,9 +57,7 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
                     </div>
                   </div>
                 </div>
-                <div
-                  class={tw`text-xs text-gray-600 text-justify mt-2`}
-                >
+                <div class="text-xs text-gray-600 text-justify mt-2">
                   {item.description}
                 </div>
               </li>
@@ -72,7 +65,7 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
           },
         )}
       </ul>
-    </Fragment>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import { tw } from "@twind";
+import { tw } from "twind";
 
 /**
  * Returns the proper column span.

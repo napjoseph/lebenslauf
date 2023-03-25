@@ -1,9 +1,8 @@
-/** @jsx h */
-import { Fragment, FunctionalComponent, h } from "preact";
+import { FunctionalComponent } from "preact";
 
 const StaticHead: FunctionalComponent = () => {
   return (
-    <Fragment>
+    <>
       <link rel="manifest" href={"/manifest.json"} />
 
       <link
@@ -27,7 +26,7 @@ const StaticHead: FunctionalComponent = () => {
       <link rel="author" href={"/humans.txt"} />
 
       <meta name="theme-color" content="#ffffff" />
-    </Fragment>
+    </>
   );
 };
 

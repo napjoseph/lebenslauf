@@ -424,6 +424,7 @@ sections:
               show: true
             dates:
               start: "2022-11"
+              end: "2022-12"
             tags:
               - "Deno"
               - "TypeScript"

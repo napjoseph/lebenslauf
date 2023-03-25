@@ -1,7 +1,6 @@
-/** @jsx h */
-import { Fragment, FunctionalComponent, h, JSX } from "preact";
+import { FunctionalComponent, JSX } from "preact";
 
-import { tw } from "@twind";
+import { tw } from "twind";
 import { toReadableDate } from "@dateUtils";
 
 import {
@@ -22,9 +21,9 @@ const CertificationsSection: FunctionalComponent<CertificationsSectionProps> = (
   const { meta = DEFAULT_CERTIFICATIONS_META } = config;
 
   return (
-    <Fragment>
+    <>
       <CertificationsList meta={meta} items={config.items} firstLevel={true} />
-    </Fragment>
+    </>
   );
 };
 
@@ -40,8 +39,8 @@ const CertificationsList: FunctionalComponent<CertificationsListProps> = ({
   firstLevel = false,
 }) => {
   return (
-    <Fragment>
-      <ul class={tw`list-square ml-6`}>
+    <>
+      <ul class="list-square ml-6">
         {(items || []).filter((
           item,
         ) => item.meta?.show ?? true).sort((a, b) => {
@@ -76,30 +75,28 @@ const CertificationsList: FunctionalComponent<CertificationsListProps> = ({
             }
 
             return (
-              <li class={tw`text-gray-900`}>
-                <div class={tw`flex justify-between`}>
-                  <div>
-                    {title}
-                    <div class={tw`text-gray-500 text-xs`}>
-                      {createSubHeaderItems(meta, item)}
-                    </div>
-
-                    {item.children && (
-                      <div>
-                        <CertificationsList
-                          meta={meta}
-                          items={item.children}
-                        />
-                      </div>
-                    )}
+              <li class="text-gray-900">
+                <div class="justify-between">
+                  {title}
+                  <div class="text-gray-500 text-xs">
+                    {createSubHeaderItems(meta, item)}
                   </div>
+
+                  {item.children && (
+                    <div>
+                      <CertificationsList
+                        meta={meta}
+                        items={item.children}
+                      />
+                    </div>
+                  )}
                 </div>
               </li>
             );
           },
         )}
       </ul>
-    </Fragment>
+    </>
   );
 };
 
@@ -113,8 +110,8 @@ const createSubHeaderItems = (
       case "credentialType":
         items.push(
           <span>
-            <span class={tw`mr-1`}>Credential Type:</span>
-            <span class={tw`font-medium break-words`}>
+            <span class="mr-1">Credential Type:</span>
+            <span class="font-medium break-words">
               {mapCredentialTypeValue(meta, item)}
             </span>
           </span>,
@@ -122,12 +119,16 @@ const createSubHeaderItems = (
         break;
       case "credentialId":
         if ((item.credentialId || "") !== "") {
+          // Shorten the credential ID if it's too long.
+          // For example, LinkedIn Learning Cert IDs have 64 characters.
+          const credentialId = item.credentialId?.substring(0, 25);
+
           items.push(
-            <span>
-              <span class={tw`mr-1`}>Credential ID:</span>
-              <span class={tw`font-medium break-words`}>
+            <span class="break-words">
+              <span class="mr-1">Credential ID:</span>
+              <span class="font-medium">
                 <a href={item.verificationUrl}>
-                  {item.credentialId}
+                  {credentialId}
                 </a>
               </span>
             </span>,
@@ -138,8 +139,8 @@ const createSubHeaderItems = (
         if ((item.offeredBy || "") !== "") {
           items.push(
             <span>
-              <span class={tw`mr-1`}>Offered By:</span>
-              <span class={tw`font-medium break-words`}>
+              <span class="mr-1">Offered By:</span>
+              <span class="font-medium break-words">
                 {mapOfferedByValue(meta, item)}
               </span>
             </span>,
@@ -149,8 +150,8 @@ const createSubHeaderItems = (
       case "issuingOrganization":
         items.push(
           <span>
-            <span class={tw`mr-1`}>Issuer:</span>
-            <span class={tw`font-medium break-words`}>
+            <span class="mr-1">Issuer:</span>
+            <span class="font-medium break-words">
               {mapIssuingOrganizationValue(meta, item)}
             </span>
           </span>,
@@ -159,8 +160,8 @@ const createSubHeaderItems = (
       case "issuedDate":
         items.push(
           <span>
-            <span class={tw`mr-1`}>Issued Date:</span>
-            <span class={tw`font-medium break-words`}>
+            <span class="mr-1">Issued Date:</span>
+            <span class="font-medium break-words">
               {toReadableDate(item.issuedDate ?? "")}
             </span>
           </span>,
@@ -169,8 +170,8 @@ const createSubHeaderItems = (
       case "gradeAchieved":
         items.push(
           <span>
-            <span class={tw`mr-1`}>Grade Achieved:</span>
-            <span class={tw`font-medium break-words`}>
+            <span class="mr-1">Grade Achieved:</span>
+            <span class="font-medium break-words">
               {item.gradeAchieved}
             </span>
           </span>,
@@ -180,16 +181,16 @@ const createSubHeaderItems = (
   });
 
   return (
-    <Fragment>
+    <>
       {items.map((item, index) => {
         return (
-          <Fragment key={index}>
-            {!!index && <span class={tw`mx-1`}>|</span>}
+          <div key={index} class="inline">
+            {!!index && <span class="mx-1">|</span>}
             {item}
-          </Fragment>
+          </div>
         );
       })}
-    </Fragment>
+    </>
   );
 };
 
@@ -203,11 +204,11 @@ const mapCredentialTypeValue = (
   );
 
   if (results.length === 0) {
-    return <Fragment>{item.credentialType}</Fragment>;
+    return <>{item.credentialType}</>;
   }
 
   const mapping = results[0];
-  return <Fragment>{mapping.displayName}</Fragment>;
+  return <>{mapping.displayName}</>;
 };
 
 const mapIssuingOrganizationValue = (
@@ -220,21 +221,21 @@ const mapIssuingOrganizationValue = (
   );
 
   if (results.length === 0) {
-    return <Fragment>{item.issuingOrganization}</Fragment>;
+    return <>{item.issuingOrganization}</>;
   }
 
   const mapping = results[0];
   if (mapping.url) {
     return (
-      <Fragment>
+      <>
         <a href={mapping.url}>
           {mapping.displayName}
         </a>
-      </Fragment>
+      </>
     );
   }
 
-  return <Fragment>{mapping.displayName}</Fragment>;
+  return <>{mapping.displayName}</>;
 };
 
 const mapOfferedByValue = (
@@ -247,21 +248,21 @@ const mapOfferedByValue = (
   );
 
   if (results.length === 0) {
-    return <Fragment>{item.offeredBy}</Fragment>;
+    return <>{item.offeredBy}</>;
   }
 
   const mapping = results[0];
   if (mapping.url) {
     return (
-      <Fragment>
+      <>
         <a href={mapping.url}>
           {mapping.displayName}
         </a>
-      </Fragment>
+      </>
     );
   }
 
-  return <Fragment>{mapping.displayName}</Fragment>;
+  return <>{mapping.displayName}</>;
 };
 
 export default CertificationsSection;

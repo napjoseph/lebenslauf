@@ -1,10 +1,7 @@
-import { IS_BROWSER } from "$fresh/runtime.ts";
-import { Configuration, setup } from "twind";
+import { Options } from "$fresh/plugins/twind.ts";
 
-export * from "twind";
-export const config: Configuration = {
-  darkMode: "class",
-  mode: "silent",
+export default {
+  selfURL: import.meta.url,
   theme: {
     screens: {
       "2xs": "480px",
@@ -20,13 +17,11 @@ export const config: Configuration = {
         print: { raw: "print" },
       },
       width: {
-        "a4": "210mm",
+        a4: "210mm",
       },
       height: {
-        "a4": "297mm",
+        a4: "297mm",
       },
     },
   },
-};
-
-if (IS_BROWSER) setup(config);
+} as Options;

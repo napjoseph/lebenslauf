@@ -1,5 +1,4 @@
-/** @jsx h */
-import { Fragment, FunctionalComponent, h } from "preact";
+import { FunctionalComponent } from "preact";
 
 interface SiteLogoProps {
   fill?: string;
@@ -17,7 +16,7 @@ const SiteLogo: FunctionalComponent<SiteLogoProps> = ({
   preserveAspectRatio = "xMidYMid meet",
 }) => {
   return (
-    <Fragment>
+    <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
@@ -62,7 +61,7 @@ m-390 -323 c20 -13 82 -50 137 -82 55 -32 144 -84 197 -115 53 -32 111 -65
 17 c15 10 79 47 143 83 l115 66 3 -805 c2 -636 -1 -808 -10 -817z" />
         </g>
       </svg>
-    </Fragment>
+    </>
   );
 };
 

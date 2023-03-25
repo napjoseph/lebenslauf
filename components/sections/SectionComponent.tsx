@@ -1,6 +1,4 @@
-/** @jsx h */
-import { FunctionalComponent, h, JSX } from "preact";
-import { tw } from "@twind";
+import { FunctionalComponent, JSX } from "preact";
 import Linkify from "linkify-react";
 
 import { Section, SectionType } from "../../models/config.ts";
@@ -77,7 +75,7 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
     <section style={{ marginBottom: `${marginBottom}rem` }}>
       {(section?.meta?.title || "").trim() !== ""
         ? (
-          <h2 class={tw`text-xl font-bold uppercase mb-1`}>
+          <h2 class="text-xl font-bold uppercase mb-1">
             {section?.meta?.title || ""}
           </h2>
         )
@@ -87,7 +85,7 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
 
       {sectionFooter !== ""
         ? (
-          <div class={tw`text-xs mt-5 text-right`}>
+          <div class="text-xs mt-5 text-right">
             <Linkify
               as="p"
               options={{ defaultProtocol: "https", render: renderLink }}
@@ -105,7 +103,7 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
 const renderLink = ({ attributes, content }: any) => {
   const { href, ...props } = attributes;
   return (
-    <a href={href} class={tw`font-medium`} {...props} target="_blank">
+    <a href={href} class="font-medium" {...props} target="_blank">
       {content}
     </a>
   );

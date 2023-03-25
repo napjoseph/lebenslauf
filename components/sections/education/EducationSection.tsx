@@ -1,7 +1,4 @@
-/** @jsx h */
-import { Fragment, FunctionalComponent, h } from "preact";
-
-import { tw } from "@twind";
+import { FunctionalComponent } from "preact";
 import { toReadableDate, toReadableDuration } from "@dateUtils";
 
 import { EducationConfig } from "../../../models/config.ts";
@@ -18,7 +15,7 @@ const EducationSection: FunctionalComponent<EducationSectionProps> = (
   const now = new Date().toISOString();
 
   return (
-    <Fragment>
+    <>
       <ul>
         {(config.items || []).map(
           (item) => {
@@ -26,8 +23,8 @@ const EducationSection: FunctionalComponent<EducationSectionProps> = (
               <li>
                 <div>
                   <h3>{item.title}</h3>
-                  <div class={tw`text-xs text-gray-500`}>
-                    <div class={tw`font-semibold`}>
+                  <div class="text-xs text-gray-500">
+                    <div class="font-semibold">
                       <a href={item.from.url} target="_blank">
                         {item.from.name}
                       </a>
@@ -41,7 +38,7 @@ const EducationSection: FunctionalComponent<EducationSectionProps> = (
                       </a>
                     </div>
                     <div
-                      class={tw`text-xs text-gray-500`}
+                      class="text-xs text-gray-500"
                       title={toReadableDuration(
                         item.dates.startDate,
                         item.dates.endDate ?? now,
@@ -57,7 +54,7 @@ const EducationSection: FunctionalComponent<EducationSectionProps> = (
           },
         )}
       </ul>
-    </Fragment>
+    </>
   );
 };
 

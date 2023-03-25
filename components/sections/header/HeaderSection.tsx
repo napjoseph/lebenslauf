@@ -1,8 +1,4 @@
-/** @jsx h */
-import { Fragment, FunctionalComponent, h } from "preact";
-
-import { tw } from "@twind";
-
+import { FunctionalComponent } from "preact";
 import { HeaderConfig } from "../../../models/config.ts";
 
 interface HeaderSectionProps {
@@ -15,16 +11,16 @@ const HeaderSection: FunctionalComponent<HeaderSectionProps> = (
   if (!config) return null;
 
   return (
-    <Fragment>
-      <div class={tw`text-center`}>
-        <h1 class={tw`text-4xl font-bold uppercase`}>
+    <>
+      <div class="text-center">
+        <h1 class="text-4xl font-bold uppercase">
           {config.title}
         </h1>
         {config.subtitle.trim() !== ""
           ? <div>{config.subtitle.trim()}</div>
           : null}
       </div>
-    </Fragment>
+    </>
   );
 };
 

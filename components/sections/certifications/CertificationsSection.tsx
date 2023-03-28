@@ -54,8 +54,8 @@ const CertificationsList: FunctionalComponent<CertificationsListProps> = ({
             let title = (
               <h3
                 class={firstLevel
-                  ? tw`text-gray-900`
-                  : tw`text-gray-900 text-xs`}
+                  ? tw`text-gray-900 leading-snug`
+                  : tw`text-gray-900 leading-snug text-xs`}
               >
                 {item.title}
               </h3>
@@ -64,8 +64,8 @@ const CertificationsList: FunctionalComponent<CertificationsListProps> = ({
               title = (
                 <h3
                   class={firstLevel
-                    ? tw`text-gray-900`
-                    : tw`text-gray-900 text-xs`}
+                    ? tw`text-gray-900 leading-snug`
+                    : tw`text-gray-900 leading-snug text-xs`}
                 >
                   <a href={item.credentialUrl}>
                     {item.title}

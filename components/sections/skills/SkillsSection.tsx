@@ -70,7 +70,7 @@ const SkillsSection: FunctionalComponent<SkillsSectionProps> = (
               return (
                 <li class="mb-2">
                   <div>
-                    <h3>{category.title}</h3>
+                    <h3 class="leading-snug">{category.title}</h3>
                     <div class="text-xs text-gray-500">
                       <ul>
                         {(category.items || []).filter((item) =>

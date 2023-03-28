@@ -25,7 +25,7 @@ const ProjectsSection: FunctionalComponent<ProjectsSectionProps> = (
                   <div>
                     <div class="text-gray-900">
                       <a href={item.linkTo} target="_blank">
-                        <h3>{item.title}</h3>
+                        <h3 class="leading-snug">{item.title}</h3>
                       </a>
                     </div>
                     <div class="text-xs text-gray-500">

@@ -231,12 +231,12 @@ sections:
                   show: true
               - title: "React"
                 rating: 8
-                totalMonths: 36
+                totalMonths: 48
                 meta:
                   show: true
               - title: "Next.js"
                 rating: 8
-                totalMonths: 24
+                totalMonths: 36
                 meta:
                   show: true
               - title: "Sass"
@@ -284,6 +284,16 @@ sections:
                 totalMonths: 12
                 meta:
                   show: false
+              - title: "Docker"
+                rating: 8
+                totalMonths: 24
+                meta:
+                  show: true
+              - title: "Kubernetes"
+                rating: 6
+                totalMonths: 12
+                meta:
+                  show: true
           - title: "Databases"
             meta:
               show: true
@@ -297,7 +307,7 @@ sections:
                 rating: 9
                 totalMonths: 36
                 meta:
-                  show: true
+                  show: false
               - title: "MySQL"
                 rating: 9
                 totalMonths: 96
@@ -320,7 +330,7 @@ sections:
                   show: true
           - title: "Source Code Management"
             meta:
-              show: true
+              show: false
             items:
               - title: "Git"
                 rating: 10
@@ -342,6 +352,20 @@ sections:
                 totalMonths: 12
                 meta:
                   show: false
+          - title: "Cloud Service Providers"
+            meta:
+              show: true
+            items:
+              - title: "Google Cloud Platform"
+                rating: 8
+                totalMonths: 48
+                meta:
+                  show: true
+              - title: "Amazon Web Services"
+                rating: 5
+                totalMonths: 6
+                meta:
+                  show: true
           - title: "Applications"
             meta:
               show: false
@@ -581,7 +605,7 @@ sections:
               url: "https://www.coursera.org/meta"
             - key: "ibm"
               displayName: "IBM"
-              url: "https://www.coursera.org/ibm"
+              url: "https://www.coursera.org/ibm-skills-network"
             - key: "google"
               displayName: "Google"
               url: "https://www.coursera.org/google"
@@ -601,6 +625,15 @@ sections:
               displayName: "(ISC)²"
               url: "https://www.coursera.org/isc2"
         items:
+          - title: "Introduction to Containers w/ Docker, Kubernetes & OpenShift"
+            offeredBy: "ibm"
+            credentialType: "course"
+            credentialId: "SRBFXBNFX2KF"
+            credentialUrl: "https://www.coursera.org/learn/ibm-containers-docker-kubernetes-openshift/"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://coursera.org/verify/SRBFXBNFX2KF"
+            issuedDate: "2023-03-28"
+            gradeAchieved: "100.00%"
           - title: "Certified in Cybersecurity Specialization (5 courses)"
             offeredBy: "isc2"
             credentialType: "specialization"
@@ -681,13 +714,6 @@ sections:
             issuingOrganization: "coursera.org"
             verificationUrl: "https://www.coursera.org/account/accomplishments/verify/TE2JEQKVDXNH"
             issuedDate: "2021-02-16"
-          - title: "Software Architecture: From Developer to Architect"
-            credentialType: "course"
-            credentialId: "dcf4b204624532093869c28de176c68f9efcab8cc0f0d6f3a01f6d0a11612ba4"
-            credentialUrl: "https://www.linkedin.com/learning/software-architecture-from-developer-to-architect"
-            issuingOrganization: "linkedin.com"
-            verificationUrl: "https://www.linkedin.com/learning/certificates/dcf4b204624532093869c28de176c68f9efcab8cc0f0d6f3a01f6d0a11612ba4"
-            issuedDate: "2021-02-12"
           - title: "Figma for UX Design (2018)"
             credentialType: "course"
             credentialId: "b2a57b99cf4a2178897674e790c44ef89721d6e8f72ff1b74cbefde658cc26b7"

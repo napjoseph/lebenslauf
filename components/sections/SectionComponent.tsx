@@ -16,56 +16,56 @@ interface SectionComponentProps {
   section: Section;
 }
 
-const SectionComponent: FunctionalComponent<SectionComponentProps> = (
-  { section },
-) => {
+const SectionComponent: FunctionalComponent<SectionComponentProps> = ({
+  section,
+}) => {
   let content: JSX.Element | null = null;
   const marginBottom = section.meta?.marginBottom ?? 0.5;
   switch (section.content.type) {
     case SectionType.HEADER:
-      content = section.meta?.show
-        ? <HeaderSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <HeaderSection config={section.content.value} />
+      ) : null;
       break;
     case SectionType.DIVIDER:
-      content = section.meta?.show
-        ? <DividerSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <DividerSection config={section.content.value} />
+      ) : null;
       break;
     case SectionType.EDUCATION:
-      content = section.meta?.show
-        ? <EducationSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <EducationSection config={section.content.value} />
+      ) : null;
       break;
     case SectionType.LANGUAGES:
-      content = section.meta?.show
-        ? <LanguagesSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <LanguagesSection config={section.content.value} />
+      ) : null;
       break;
     case SectionType.PERSONAL_DETAILS:
-      content = section.meta?.show
-        ? <PersonalDetailsSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <PersonalDetailsSection config={section.content.value} />
+      ) : null;
       break;
     case SectionType.WORK_EXPERIENCE:
-      content = section.meta?.show
-        ? <WorkExperienceSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <WorkExperienceSection config={section.content.value} />
+      ) : null;
       break;
     case SectionType.SKILLS:
-      content = section.meta?.show
-        ? <SkillsSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <SkillsSection config={section.content.value} />
+      ) : null;
       break;
     case SectionType.CERTIFICATIONS:
-      content = section.meta?.show
-        ? <CertificationsSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <CertificationsSection config={section.content.value} />
+      ) : null;
       break;
     case SectionType.PROJECTS:
-      content = section.meta?.show
-        ? <ProjectsSection config={section.content.value} />
-        : null;
+      content = section.meta?.show ? (
+        <ProjectsSection config={section.content.value} />
+      ) : null;
       break;
   }
 
@@ -73,28 +73,24 @@ const SectionComponent: FunctionalComponent<SectionComponentProps> = (
 
   return (
     <section style={{ marginBottom: `${marginBottom}rem` }}>
-      {(section?.meta?.title || "").trim() !== ""
-        ? (
-          <h2 class="text-xl font-bold uppercase mb-1">
-            {section?.meta?.title || ""}
-          </h2>
-        )
-        : null}
+      {(section?.meta?.title || "").trim() !== "" ? (
+        <h2 class="text-xl font-bold uppercase mb-1 leading-snug">
+          {section?.meta?.title || ""}
+        </h2>
+      ) : null}
 
       {content && content}
 
-      {sectionFooter !== ""
-        ? (
-          <div class="text-xs mt-5 text-right">
-            <Linkify
-              as="p"
-              options={{ defaultProtocol: "https", render: renderLink }}
-            >
-              {sectionFooter}
-            </Linkify>
-          </div>
-        )
-        : null}
+      {sectionFooter !== "" ? (
+        <div class="text-xs mt-5 text-right">
+          <Linkify
+            as="p"
+            options={{ defaultProtocol: "https", render: renderLink }}
+          >
+            {sectionFooter}
+          </Linkify>
+        </div>
+      ) : null}
     </section>
   );
 };

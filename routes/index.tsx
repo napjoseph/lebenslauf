@@ -15,9 +15,7 @@ import SectionComponent from "../components/sections/SectionComponent.tsx";
 
 export const handler: Handlers<Config> = {
   async GET(_, ctx) {
-    const rawData = await Deno.readTextFile(
-      `./lebenslauf.yaml`,
-    );
+    const rawData = await Deno.readTextFile(`./lebenslauf.yaml`);
     const data = parseYaml(rawData) as Config;
 
     return ctx.render(data);
@@ -38,10 +36,10 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
           const key = `${index + 1}--${container.id}`;
           containersMap.set(key, []);
           widthsMap.set(key, container.width);
-        },
+        }
       );
       pagesData.push(containersMap);
-    },
+    }
   );
 
   const defaultContainer = pagesData[0].keys().next().value;
@@ -77,8 +75,7 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
           integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
           crossOrigin="anonymous"
           referrerpolicy="no-referrer"
-        >
-        </script>
+        ></script>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -88,14 +85,10 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
         />
       </head>
       <body class="bg-gray-700 print:bg-white xs:m-2 md:m-3 lg:m-5">
-        <main
-          class="mx-auto lg:w-a4 flex flex-col xs:space-y-2 md:space-y-3 lg:space-y-5"
-        >
+        <main class="mx-auto lg:w-a4 flex flex-col xs:space-y-2 md:space-y-3 lg:space-y-5">
           {plainPages.map((_containersMap, index) => {
             return (
-              <article
-                class="p-4 bg-white lg:h-a4"
-              >
+              <article class="p-4 bg-white lg:h-a4">
                 <div>
                   {Array.from(pagesData[index].keys()).map((key) => {
                     const width = widthsMap.get(key) || 0;
@@ -114,9 +107,7 @@ const HomePage: FunctionalComponent<PageProps<Config>> = ({ data }) => {
                     );
                   })}
                 </div>
-                <div
-                  class="grid grid-cols-1 md:grid-cols-12 md:gap-6 print:grid-cols-12 print:gap-6"
-                >
+                <div class="grid grid-cols-1 md:grid-cols-12 md:gap-6 print:grid-cols-12 print:gap-6">
                   {Array.from(pagesData[index].keys()).map((key) => {
                     const width = widthsMap.get(key) || 0;
                     // Don't process full width.

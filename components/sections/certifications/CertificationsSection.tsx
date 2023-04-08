@@ -1,8 +1,6 @@
 import { FunctionalComponent, JSX } from "preact";
-
 import { tw } from "twind";
 import { toReadableDate } from "@dateUtils";
-
 import {
   CertificationsConfig,
   CertificationsItem,
@@ -14,16 +12,14 @@ interface CertificationsSectionProps {
   config: CertificationsConfig;
 }
 
-const CertificationsSection: FunctionalComponent<CertificationsSectionProps> = (
-  { config },
-) => {
+const CertificationsSection: FunctionalComponent<
+  CertificationsSectionProps
+> = ({ config }) => {
   if (!config.items) return null;
   const { meta = DEFAULT_CERTIFICATIONS_META } = config;
 
   return (
-    <>
-      <CertificationsList meta={meta} items={config.items} firstLevel={true} />
-    </>
+    <CertificationsList meta={meta} items={config.items} firstLevel={true} />
   );
 };
 
@@ -37,170 +33,127 @@ const CertificationsList: FunctionalComponent<CertificationsListProps> = ({
   meta = DEFAULT_CERTIFICATIONS_META,
   items = [],
   firstLevel = false,
-}) => {
-  return (
-    <>
-      <ul class="list-square ml-6">
-        {(items || []).filter((
-          item,
-        ) => item.meta?.show ?? true).sort((a, b) => {
-          const d1 = a.issuedDate ?? "";
-          const d2 = b.issuedDate ?? "";
-          if (d1 > d2) return -1;
-          if (d1 < d2) return 1;
-          return 0;
-        }).map(
-          (item) => {
-            let title = (
-              <h3
-                class={firstLevel
-                  ? tw`text-gray-900 leading-snug`
-                  : tw`text-gray-900 leading-snug text-xs`}
-              >
-                {item.title}
-              </h3>
-            );
-            if (item.credentialUrl && item.credentialUrl !== "") {
-              title = (
-                <h3
-                  class={firstLevel
-                    ? tw`text-gray-900 leading-snug`
-                    : tw`text-gray-900 leading-snug text-xs`}
-                >
-                  <a href={item.credentialUrl}>
-                    {item.title}
-                  </a>
-                </h3>
-              );
-            }
+}) => (
+  <ul class="list-square ml-6 flex flex-col">
+    {sortedItems(items)
+      .filter(visibleItem)
+      .map((item) => (
+        <li class="text-gray-900">
+          <div class="justify-between">
+            {renderTitle(item, firstLevel)}
+            <div class="text-gray-500 text-xs flex flex-wrap">
+              {createSubHeaderItems(meta, item)}
+            </div>
+            {item.children && (
+              <div>
+                <CertificationsList meta={meta} items={item.children} />
+              </div>
+            )}
+          </div>
+        </li>
+      ))}
+  </ul>
+);
 
-            return (
-              <li class="text-gray-900">
-                <div class="justify-between">
-                  {title}
-                  <div class="text-gray-500 text-xs">
-                    {createSubHeaderItems(meta, item)}
-                  </div>
+const sortedItems = (items: CertificationsItem[]) =>
+  items.sort((a, b) => (b.issuedDate || "").localeCompare(a.issuedDate || ""));
 
-                  {item.children && (
-                    <div>
-                      <CertificationsList
-                        meta={meta}
-                        items={item.children}
-                      />
-                    </div>
-                  )}
-                </div>
-              </li>
-            );
-          },
-        )}
-      </ul>
-    </>
+const visibleItem = (item: CertificationsItem) => item.meta?.show ?? true;
+
+const renderTitle = (item: CertificationsItem, firstLevel: boolean) => {
+  const titleClass = tw`text-gray-900 leading-4 ${firstLevel ? "" : "text-xs"}`;
+  const titleContent = item.title;
+
+  return item.credentialUrl ? (
+    <h3 class={titleClass}>
+      <a href={item.credentialUrl}>{titleContent}</a>
+    </h3>
+  ) : (
+    <h3 class={titleClass}>{titleContent}</h3>
   );
 };
 
 const createSubHeaderItems = (
   meta: CertificationsMeta,
-  item: CertificationsItem,
+  item: CertificationsItem
 ): JSX.Element => {
-  const items: JSX.Element[] = [];
-  (meta.subHeaderItems || []).map((subHeaderItem) => {
-    switch (subHeaderItem) {
-      case "credentialType":
-        items.push(
-          <span>
-            <span class="mr-1">Credential Type:</span>
-            <span class="font-medium break-words">
-              {mapCredentialTypeValue(meta, item)}
-            </span>
-          </span>,
-        );
-        break;
-      case "credentialId":
-        if ((item.credentialId || "") !== "") {
-          // Shorten the credential ID if it's too long.
-          // For example, LinkedIn Learning Cert IDs have 64 characters.
-          const credentialId = item.credentialId?.substring(0, 25);
-
-          items.push(
-            <span class="break-words">
-              <span class="mr-1">Credential ID:</span>
-              <span class="font-medium">
-                <a href={item.verificationUrl}>
-                  {credentialId}
-                </a>
-              </span>
-            </span>,
-          );
-        }
-        break;
-      case "offeredBy":
-        if ((item.offeredBy || "") !== "") {
-          items.push(
-            <span>
-              <span class="mr-1">Offered By:</span>
-              <span class="font-medium break-words">
-                {mapOfferedByValue(meta, item)}
-              </span>
-            </span>,
-          );
-        }
-        break;
-      case "issuingOrganization":
-        items.push(
-          <span>
-            <span class="mr-1">Issuer:</span>
-            <span class="font-medium break-words">
-              {mapIssuingOrganizationValue(meta, item)}
-            </span>
-          </span>,
-        );
-        break;
-      case "issuedDate":
-        items.push(
-          <span>
-            <span class="mr-1">Issued Date:</span>
-            <span class="font-medium break-words">
-              {toReadableDate(item.issuedDate ?? "")}
-            </span>
-          </span>,
-        );
-        break;
-      case "gradeAchieved":
-        items.push(
-          <span>
-            <span class="mr-1">Grade Achieved:</span>
-            <span class="font-medium break-words">
-              {item.gradeAchieved}
-            </span>
-          </span>,
-        );
-        break;
-    }
-  });
+  const filteredSubHeaderItems =
+    meta.subHeaderItems?.filter((subHeaderItem) => {
+      const element = renderSubHeaderItem(subHeaderItem, meta, item);
+      return element !== null;
+    }) ?? [];
+  const total = filteredSubHeaderItems.length;
 
   return (
     <>
-      {items.map((item, index) => {
+      {filteredSubHeaderItems?.map((subHeaderItem, index) => {
         return (
-          <div key={index} class="inline">
-            {!!index && <span class="mx-1">|</span>}
-            {item}
-          </div>
+          <span key={index} class="inline-flex">
+            {renderSubHeaderItem(subHeaderItem, meta, item)}
+            {index !== total - 1 && <span class="mx-1">/</span>}
+          </span>
         );
       })}
     </>
   );
 };
 
+const renderSubHeaderItem = (
+  subHeaderItem: string,
+  meta: CertificationsMeta,
+  item: CertificationsItem
+): JSX.Element | null => {
+  switch (subHeaderItem) {
+    case "credentialType":
+      return renderLabelValue(
+        "Credential Type",
+        mapCredentialTypeValue(meta, item)
+      );
+    case "credentialId":
+      return item.credentialId ? renderCredentialId(item) : null;
+    case "offeredBy":
+      return item.offeredBy
+        ? renderLabelValue("Offered By", mapOfferedByValue(meta, item))
+        : null;
+    case "issuingOrganization":
+      return item.issuingOrganization
+        ? renderLabelValue("Issuer", mapIssuingOrganizationValue(meta, item))
+        : null;
+    case "issuedDate":
+      return item.issuedDate
+        ? renderLabelValue("Issued Date", toReadableDate(item.issuedDate ?? ""))
+        : null;
+    case "gradeAchieved":
+      return item.gradeAchieved
+        ? renderLabelValue("Grade Achieved", item.gradeAchieved ?? "")
+        : null;
+    default:
+      return null;
+  }
+};
+
+const renderLabelValue = (label: string, value: JSX.Element | string) => (
+  <span>
+    <span class="mr-1">{label}:</span>
+    <span class="font-medium break-words">{value}</span>
+  </span>
+);
+
+const renderCredentialId = (item: CertificationsItem) => {
+  const credentialId = item.credentialId?.substring(0, 40);
+  return renderLabelValue(
+    "Credential ID",
+    <a href={item.verificationUrl}>{credentialId}</a>
+  );
+};
+
 const mapCredentialTypeValue = (
   meta: CertificationsMeta,
-  item: CertificationsItem,
+  item: CertificationsItem
 ): JSX.Element => {
   const key = item.credentialType || "";
-  const results = (meta.credentialTypeMapping ?? []).filter((mapItem) =>
-    mapItem.key === key
+  const results = (meta.credentialTypeMapping ?? []).filter(
+    (mapItem) => mapItem.key === key
   );
 
   if (results.length === 0) {
@@ -213,11 +166,11 @@ const mapCredentialTypeValue = (
 
 const mapIssuingOrganizationValue = (
   meta: CertificationsMeta,
-  item: CertificationsItem,
+  item: CertificationsItem
 ): JSX.Element => {
   const key = item.issuingOrganization || "";
-  const results = (meta.issuingOrganizationMapping ?? []).filter((mapItem) =>
-    mapItem.key === key
+  const results = (meta.issuingOrganizationMapping ?? []).filter(
+    (mapItem) => mapItem.key === key
   );
 
   if (results.length === 0) {
@@ -228,9 +181,7 @@ const mapIssuingOrganizationValue = (
   if (mapping.url) {
     return (
       <>
-        <a href={mapping.url}>
-          {mapping.displayName}
-        </a>
+        <a href={mapping.url}>{mapping.displayName}</a>
       </>
     );
   }
@@ -240,11 +191,11 @@ const mapIssuingOrganizationValue = (
 
 const mapOfferedByValue = (
   meta: CertificationsMeta,
-  item: CertificationsItem,
+  item: CertificationsItem
 ): JSX.Element => {
   const key = item.offeredBy || "";
-  const results = (meta.offeredByMapping ?? []).filter((mapItem) =>
-    mapItem.key === key
+  const results = (meta.offeredByMapping ?? []).filter(
+    (mapItem) => mapItem.key === key
   );
 
   if (results.length === 0) {
@@ -255,9 +206,7 @@ const mapOfferedByValue = (
   if (mapping.url) {
     return (
       <>
-        <a href={mapping.url}>
-          {mapping.displayName}
-        </a>
+        <a href={mapping.url}>{mapping.displayName}</a>
       </>
     );
   }

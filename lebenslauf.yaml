@@ -60,11 +60,6 @@ sections:
             description: "Send Nap Joseph Calub an email"
           - title: "WhatsApp"
             icon: "fa-brands fa-whatsapp fa-fw"
-            value: "+63 922 896 2503"
-            url: "https://wa.me/639228962503"
-            description: "Add Nap Joseph Calub on WhatsApp"
-          - title: "WhatsApp"
-            icon: "fa-brands fa-whatsapp fa-fw"
             value: "+65 8374 8954"
             url: "https://wa.me/6583748954"
             description: "Add Nap Joseph Calub on WhatsApp"
@@ -75,6 +70,16 @@ sections:
             value: "github.com/njncalub"
             url: "https://github.com/njncalub"
             description: "View the GitHub profile of Nap Joseph Calub"
+          - title: "LinkedIn"
+            icon: "fa-brands fa-linkedin fa-fw"
+            value: "linkedin.com/in/njncalub"
+            url: "https://linkedin.com/in/njncalub"
+            description: "Add Nap Joseph Calub on LinkedIn"
+          - title: "WhatsApp"
+            icon: "fa-brands fa-whatsapp fa-fw"
+            value: "+63 922 896 2503"
+            url: "https://wa.me/639228962503"
+            description: "Add Nap Joseph Calub on WhatsApp"
   - meta:
       title: "Work Experience"
       container: "right"
@@ -157,7 +162,7 @@ sections:
       value:
         meta:
           useProficiencyMap: true
-          sortBy: "rating"
+          sortBy: "years"
           orderBy: "desc"
           useYears: true
         items:
@@ -292,6 +297,11 @@ sections:
               - title: "Kubernetes"
                 rating: 6
                 totalMonths: 12
+                meta:
+                  show: true
+              - title: "GraphQL"
+                rating: 7
+                totalMonths: 6
                 meta:
                   show: true
           - title: "Databases"
@@ -458,12 +468,12 @@ sections:
               - "preact"
               - "React Three Fiber"
               - "SurrealDB"
-              - "SVG"
               - "twind"
               - "TypeScript"
               - "vitest"
             roles:
-              - "Used graph databases to create a fan-made index of Named Entities for one of the longest pieces of fiction written in English."
+              - "Architected and developed a comprehensive fan-made index of Named Entities for one of the longest pieces of fiction written in English, utilizing advanced graph databases like Neo4j and SurrealDB."
+              - "Created an interactive 3D visualization of the author's word counts per year using React Three Fiber."
           - title: "Oracle Higher Education Student Cloud"
             linkTo: "https://www.oracle.com/ph/industries/government/education/higher-education/student-cloud/"
             meta:
@@ -484,7 +494,8 @@ sections:
               - "Sinon JS"
               - "TypeScript"
             roles:
-              - "Implemented additional features while ensuring at least 90% unit test code coverage and having fully automated tests for the acceptance criterias."
+              - "Implemented the subjects, tags, and grades management features using TypeScript and ensured high-quality code by maintaining at least 90% unit test coverage and incorporating fully automated acceptance tests using Sinon JS and Selenium."
+              - "Collaborated with cross-functional teams across multiple countries to ensure optimal user experience and adherence to accessibility guidelines."
           - title: "Performance Dashboard for Service Providers"
             meta:
               show: true
@@ -499,7 +510,7 @@ sections:
               - "Docker"
               - "Go"
               - "Google App Engine"
-              - "Google Chart API"
+              - "Google Charts"
               - "Google Cloud Bigtable"
               - "Google Cloud Platform"
               - "Google Cloud Storage"
@@ -513,24 +524,8 @@ sections:
               - "Sass"
               - "TypeScript"
             roles:
-              - "Maintained and refactored the legacy codebase to the latest Angular version and increased unit test coverage."
-              - "Added support for new data sources for the Service Provider data."
-              - "Added calculation and visualization for each ISP and their promised vs actual SLA."
-          - title: "BigQuery Migrater"
-            meta:
-              show: true
-            dates:
-              start: "2020-05"
-              end: "2020-07"
-            tags:
-              - "BigQuery"
-              - "Docker"
-              - "Go"
-              - "gRPC"
-              - "Google Cloud Platform"
-              - "Mercurial"
-            roles:
-              - "Continued the implementation of the BigQuery data migrater and importer."
+              - "Modernized a legacy Angular codebase and integrated new data sources for Internet Service Providers, enhancing the dashboard's capabilities and versatility."
+              - "Implemented advanced SLA calculations and visualizations using Google Charts, enabling comparisons between promised and actual performance metrics for each ISP."
           - title: "Dashboard for Tracking Network Assets Lifecyle"
             meta:
               show: true
@@ -559,11 +554,8 @@ sections:
               - "Sass"
               - "TypeScript"
             roles:
-              - "Maintained a legacy dashboard for visualizing and managing the lifecycle data of devices in our client's enterprise network."
-              - "Refactored the code to use the latest Angular version and added unit tests to both the Go backend and TypeScript frontend."
-              - "Migrated the old task runners using Python to use Go App Engine Cron and Cloud Tasks."
-              - "Added support for different realms other than the corporate and production network."
-              - "Added support for adding remediation dates, NPI dates, and part number data for each asset model."
+              - "Refactored and maintained a legacy Angular dashboard for visualizing and managing the lifecycle data of devices in an enterprise network, utilizing gRPC for efficient data ingestion and communication between frontend and backend components."
+              - "Expanded dashboard functionality by supporting multiple realms and incorporating essential data points, including remediation dates, NPI dates, and part numbers for each asset model."
   - meta:
       title: "Featured Certifications"
       footer: "See full list at napjose.ph/calub."
@@ -594,7 +586,7 @@ sections:
               displayName: "DataCamp"
               url: "https://datacamp.com"
             - key: "graphacademy.neo4j.com"
-              displayName: "Neo4j GraphAcademy"
+              displayName: "Neo4j"
               url: "https://graphacademy.neo4j.com"
             - key: "jjs"
               displayName: "Just JavaScript"
@@ -602,6 +594,9 @@ sections:
             - key: "linkedin.com"
               displayName: "LinkedIn Learning"
               url: "https://linkedin.com/learning"
+            - key: "apollographql.com"
+              displayName: "Apollo GraphQL"
+              url: "https://www.apollographql.com/"
           offeredByMapping:
             - key: "meta"
               displayName: "Meta"
@@ -628,6 +623,13 @@ sections:
               displayName: "(ISC)²"
               url: "https://www.coursera.org/isc2"
         items:
+          - title: "Apollo Graph Developer - Professional Certification"
+            credentialType: "professional_certificate"
+            credentialId: "dc5913a6-439a-4dd8-ae7f-5eeb9cd70064"
+            credentialUrl: "https://www.apollographql.com/tutorials/certifications/apollo-graph-professional"
+            issuingOrganization: "apollographql.com"
+            verificationUrl: "https://www.apollographql.com/tutorials/certifications/dc5913a6-439a-4dd8-ae7f-5eeb9cd70064"
+            issuedDate: "2023-04-28"
           - title: "Introduction to Containers w/ Docker, Kubernetes & OpenShift"
             offeredBy: "ibm"
             credentialType: "course"
@@ -663,8 +665,8 @@ sections:
             issuedDate: "2022-12-16"
           - title: "Neo4j Certified Professional (7 courses)"
             credentialType: "professional_certificate"
-            credentialId: null
-            credentialUrl: "https://graphacademy.neo4j.com/u/1584d329-2196-4f42-8e5e-444672d9c540/neo4j-certification"
+            credentialId: "1584d329-2196-4f42-8e5e-444672d9c540"
+            credentialUrl: "https://graphacademy.neo4j.com/courses/neo4j-certification/"
             issuingOrganization: "graphacademy.neo4j.com"
             verificationUrl: "https://graphacademy.neo4j.com/u/1584d329-2196-4f42-8e5e-444672d9c540/neo4j-certification"
             issuedDate: "2022-11-30"

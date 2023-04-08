@@ -7,9 +7,9 @@ interface WorkExperienceSectionProps {
   config: WorkExperienceConfig;
 }
 
-const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
-  { config },
-) => {
+const WorkExperienceSection: FunctionalComponent<
+  WorkExperienceSectionProps
+> = ({ config }) => {
   if (!config.items) return null;
 
   const now = new Date().toISOString();
@@ -17,10 +17,9 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
   return (
     <>
       <ul>
-        {(config.items || []).filter((
-          item,
-        ) => item.meta?.show ?? true).map(
-          (item) => {
+        {(config.items || [])
+          .filter((item) => item.meta?.show ?? true)
+          .map((item) => {
             return (
               <li class="mb-2">
                 <div class="flex justify-between gap-2">
@@ -30,7 +29,7 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
                       class="text-xs text-gray-500"
                       title={toReadableDuration(
                         item.dates.startDate,
-                        item.dates.endDate ?? now,
+                        item.dates.endDate ?? now
                       )}
                     >
                       {toReadableDate(item.dates.startDate)} to{" "}
@@ -57,13 +56,10 @@ const WorkExperienceSection: FunctionalComponent<WorkExperienceSectionProps> = (
                     </div>
                   </div>
                 </div>
-                <div class="text-xs text-gray-600 text-justify mt-2">
-                  {item.description}
-                </div>
+                <div class="text-xs text-justify mt-2">{item.description}</div>
               </li>
             );
-          },
-        )}
+          })}
       </ul>
     </>
   );

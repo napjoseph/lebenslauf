@@ -629,7 +629,7 @@ sections:
             credentialUrl: "https://www.apollographql.com/tutorials/certifications/apollo-graph-professional"
             issuingOrganization: "apollographql.com"
             verificationUrl: "https://www.apollographql.com/tutorials/certifications/dc5913a6-439a-4dd8-ae7f-5eeb9cd70064"
-            issuedDate: "2023-04-28"
+            issuedDate: "2023-04-08"
           - title: "Introduction to Containers w/ Docker, Kubernetes & OpenShift"
             offeredBy: "ibm"
             credentialType: "course"

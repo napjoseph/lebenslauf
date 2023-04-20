@@ -177,6 +177,15 @@
     "https://esm.sh/v115/preact@10.11.0/hooks/src/index.d.ts": "5c29febb624fc25d71cb0e125848c9b711e233337a08f7eacfade38fd4c14cc3",
     "https://esm.sh/v115/preact@10.11.0/jsx-runtime/src/index.d.ts": "e153460ed2b3fe2ad8b93696ecd48fbf73cd628b0b0ea6692b71804a3af69dfd",
     "https://esm.sh/v115/preact@10.11.0/src/index.d.ts": "1a5c331227be54be6515b0c92a469d352834fa413963ae84a39a05a3177111f6",
-    "https://esm.sh/v115/preact@10.11.0/src/jsx.d.ts": "c423715fd7992b2e1446fea11d2d04e8adbd66c1edca1ce5e85f90e0d26a2eb2"
+    "https://esm.sh/v115/preact@10.11.0/src/jsx.d.ts": "c423715fd7992b2e1446fea11d2d04e8adbd66c1edca1ce5e85f90e0d26a2eb2",
+    "https://esm.sh/v116/@types/prop-types@15.7.5/index.d.ts": "6a386ff939f180ae8ef064699d8b7b6e62bc2731a62d7fbf5e02589383838dea",
+    "https://esm.sh/v116/@types/react@18.0.34/global.d.ts": "49a253ec027e56c55c7450a0c331cfe96212b3d1cc215b1710ba94a083404cf3",
+    "https://esm.sh/v116/@types/react@18.0.34/index.d.ts": "8bf33250cf2dfe4bd1c13b4526d2523b6e027ba303122ebbdae238ae15624b2b",
+    "https://esm.sh/v116/@types/scheduler@0.16.3/tracing.d.ts": "f5a8b384f182b3851cec3596ccc96cb7464f8d3469f48c74bf2befb782a19de5",
+    "https://esm.sh/v116/csstype@3.1.2/index.d.ts": "4c68749a564a6facdf675416d75789ee5a557afda8960e0803cf6711fa569288",
+    "https://esm.sh/v116/linkify-react@4.0.2": "d8e15a56af815ce3b9ff99f21ada77b4c7614e29949f5c497bb757cd94e7b2ed",
+    "https://esm.sh/v116/linkify-react@4.0.2/deno/linkify-react.mjs": "bbc7b4dbfaf0568a1e49942f7c293f42b876420a7a89b090597ae85053080e49",
+    "https://esm.sh/v116/linkify-react@4.0.2/dist/linkify-react.cjs.d.ts": "5a8e4424fe530a7b903e28bfc4c3122631285f22306372d8dcf818d2076a5eb0",
+    "https://esm.sh/v116/linkifyjs@4.1.1/deno/linkifyjs.mjs": "ed04e036c9d178ad4b1d76ac9db4ec53c1f6eb4f6abdc881bd7d56cb58fd11bf"
   }
 }

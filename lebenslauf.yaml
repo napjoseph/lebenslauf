@@ -96,7 +96,7 @@ sections:
               title: "Oracle"
               url: "https://www.oracle.com/"
               address: "Makati City, Philippines 1225"
-            description: "I collaborated with hundreds of developers worldwide to enhance Oracle's Higher Education Student Cloud information system. I implemented critical features like subjects, tags, and grade management using Oracle JavaScript Extension Toolkit (JET) and Oracle Application Development Framework (ADF). I diligently maintained 90%+ code coverage in our repositories by crafting comprehensive unit tests with Mocha, Chai.js, and Sinon.JS and ensured feature adherence to acceptance criteria by developing functional tests using Selenium. Lastly, to demonstrate forward-thinking, I contributed to long-term sustainability by migrating legacy vanilla JavaScript modules to TypeScript."
+            description: "I collaborated with hundreds of developers worldwide to enhance Oracle's Higher Education Student Cloud information system. I implemented critical features like subjects, tags, and grade management using Oracle JavaScript Extension Toolkit (JET) and Oracle Application Development Framework (ADF). I diligently maintained 90%+ code coverage in our repositories by crafting comprehensive unit tests with Mocha, Chai.js, and Sinon.JS and ensured feature adherence to acceptance criteria by developing functional tests using Node.js and Selenium. Lastly, to demonstrate forward-thinking, I contributed to long-term sustainability by migrating legacy vanilla JavaScript modules to TypeScript."
           - title: "Business Apps Developer"
             dates:
               startDate: "2018-05"
@@ -105,7 +105,7 @@ sections:
               title: "Concentrix"
               url: "https://www.concentrix.com/"
               address: "Quezon City, Philippines 1110"
-            description: "As a vendor at Google, I spearheaded the development and maintenance of business-critical dashboards and tools for their Network Operations Center (NOC). Within three months, I earned the prestigious Go and TypeScript Readability certification, showcasing my adherence to best practices and coding style. Leveraging data sources like Bigtable and BigQuery, I crafted interactive dashboards with Angular, Data Studio, and PLX Dashboard. I also created tools for migrating data from BigQuery, alerting systems using gRPC, modernizing legacy Angular codebases, and implementing advanced ISP SLA calculations and visualizations. I effectively collaborated with stakeholders and technical project managers to ensure project success and proposed innovative Project Requirements Documents (PRD) for new initiatives."
+            description: "As a vendor at Google, I spearheaded the development and maintenance of business-critical dashboards and tools for their Network Operations Center (NOC). Within three months, I earned the prestigious Go and TypeScript Readability certification, showcasing my adherence to best practices and coding style. Leveraging data sources like Bigtable and BigQuery, I crafted interactive dashboards with Angular, Data Studio, and PLX Dashboard. I also created tools for migrating data from BigQuery, alerting systems using gRPC, modernizing legacy Node.js and Python codebases, and implementing advanced ISP SLA calculations and visualizations in Angular. I effectively collaborated with stakeholders and technical project managers to ensure project success and proposed innovative Project Requirements Documents (PRD) for new initiatives."
           - title: "Senior Process Executive"
             dates:
               startDate: "2017-08"
@@ -152,7 +152,7 @@ sections:
               title: "Ingenuity Global Consulting"
               url: "https://ingenuity.ph/"
               address: "Davao City, Philippines 8000"
-            description: "I showcased my diverse expertise by skillfully developing full-stack web and cross-platform mobile applications using technologies like Python, Django, AngularJS, and Appcelerator Titanium. I collaborated with project managers and product owners, implementing features for various projects catering to thousands of daily active users, including social media follower apps, RSS feed readers, interactive dashboards, and HIIT training applications. As a community advocate, I facilitated training boot camps for high school students to create web applications with Python and Django, embodying the company's commitment to giving back to the community."
+            description: "I showcased my diverse expertise by skillfully developing full-stack web and cross-platform mobile applications using technologies like Python, Django, JavaScript, Node.js, AngularJS, and Appcelerator Titanium. I collaborated with project managers and product owners, implementing features for various projects catering to thousands of daily active users, including social media follower apps, RSS feed readers, interactive dashboards, and HIIT training applications. As a community advocate, I facilitated training boot camps for high school students to create web applications with Python and Django, embodying the company's commitment to giving back to the community."
   - meta:
       title: "Tech Stack"
       container: "left"
@@ -282,6 +282,11 @@ sections:
               - title: "Deno"
                 rating: 8
                 totalMonths: 12
+                meta:
+                  show: true
+              - title: "Node.js"
+                rating: 8
+                totalMonths: 48
                 meta:
                   show: true
               - title: "Fresh"
@@ -465,6 +470,7 @@ sections:
               - "Fresh"
               - "Neo4j"
               - "Next.js"
+              - "Node.js"
               - "preact"
               - "React Three Fiber"
               - "SurrealDB"
@@ -487,6 +493,7 @@ sections:
               - "Jenkins"
               - "KnockoutJS"
               - "lodash"
+              - "Node.js"
               - "Oracle ADF"
               - "Oracle JET"
               - "Sass"
@@ -521,6 +528,7 @@ sections:
               - "Mercurial"
               - "MySQL"
               - "NgRx"
+              - "Node.js"
               - "Sass"
               - "TypeScript"
             roles:
@@ -550,6 +558,7 @@ sections:
               - "Mercurial"
               - "MySQL"
               - "NgRx"
+              - "Node.js"
               - "Python"
               - "Sass"
               - "TypeScript"
@@ -670,6 +679,20 @@ sections:
             issuingOrganization: "graphacademy.neo4j.com"
             verificationUrl: "https://graphacademy.neo4j.com/u/1584d329-2196-4f42-8e5e-444672d9c540/neo4j-certification"
             issuedDate: "2022-11-30"
+          - title: "WebSocket Communications with Node and Angular"
+            credentialType: "course"
+            credentialId: "283d4694a29a4d42e8c879c43e8bc7bae8c6ed07d4b1a8c6bfa5fd35342099ea"
+            credentialUrl: "https://www.linkedin.com/learning/websocket-communications-with-node-and-angular/"
+            issuingOrganization: "linkedin.com"
+            verificationUrl: "https://www.linkedin.com/learning/certificates/283d4694a29a4d42e8c879c43e8bc7bae8c6ed07d4b1a8c6bfa5fd35342099ea"
+            issuedDate: "2023-03-14"
+          - title: "Express Essential Training"
+            credentialType: "course"
+            credentialId: "b6414cce8bbe13c577482dde6b67b5458994f9e4d189d73909a8c24fea1e747f"
+            credentialUrl: "https://www.linkedin.com/learning/express-essential-training-14539342/"
+            issuingOrganization: "linkedin.com"
+            verificationUrl: "https://www.linkedin.com/learning/certificates/b6414cce8bbe13c577482dde6b67b5458994f9e4d189d73909a8c24fea1e747f"
+            issuedDate: "2023-03-14"
           - title: "Ask Questions to Make Data-Driven Decisions"
             offeredBy: "google"
             credentialType: "course"
@@ -679,6 +702,8 @@ sections:
             verificationUrl: "https://coursera.org/verify/9XHV4J8FG9UF"
             issuedDate: "2021-09-14"
             gradeAchieved: "100.00%"
+            meta:
+              show: false
           - title: "Developing Applications with Google Cloud Platform Specialization (4 courses)"
             offeredBy: "googlecloud"
             credentialType: "specialization"
@@ -758,3 +783,5 @@ sections:
             issuingOrganization: "coursera.org"
             verificationUrl: "https://www.coursera.org/account/accomplishments/verify/25KU2XHXQVNU"
             issuedDate: "2020-10-24"
+            meta:
+              show: false

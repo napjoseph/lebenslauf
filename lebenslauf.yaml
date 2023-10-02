@@ -449,7 +449,7 @@ sections:
               address: "Davao City, Philippines 8016"
               url: "https://www.addu.edu.ph/"
   - meta:
-      title: "Recent Projects"
+      title: "Featured Projects"
       page: 2
       container: "left"
       show: true
@@ -607,6 +607,9 @@ sections:
               displayName: "Apollo GraphQL"
               url: "https://www.apollographql.com/"
           offeredByMapping:
+            - key: "aws"
+              displayName: "Amazon Web Services"
+              url: "https://www.coursera.org/aws"
             - key: "meta"
               displayName: "Meta"
               url: "https://www.coursera.org/meta"
@@ -632,6 +635,15 @@ sections:
               displayName: "(ISC)²"
               url: "https://www.coursera.org/isc2"
         items:
+          - title: "AWS Cloud Technical Essentials"
+            offeredBy: "aws"
+            credentialType: "course"
+            credentialId: "QFAZ952XUT3S"
+            credentialUrl: "https://www.coursera.org/learn/aws-cloud-technical-essentials/"
+            issuingOrganization: "coursera.org"
+            verificationUrl: "https://coursera.org/verify/QFAZ952XUT3S"
+            issuedDate: "2023-10-01"
+            gradeAchieved: "100.00%"
           - title: "Apollo Graph Developer - Professional Certification"
             credentialType: "professional_certificate"
             credentialId: "dc5913a6-439a-4dd8-ae7f-5eeb9cd70064"
@@ -686,6 +698,8 @@ sections:
             issuingOrganization: "linkedin.com"
             verificationUrl: "https://www.linkedin.com/learning/certificates/283d4694a29a4d42e8c879c43e8bc7bae8c6ed07d4b1a8c6bfa5fd35342099ea"
             issuedDate: "2023-03-14"
+            meta:
+              show: false
           - title: "Express Essential Training"
             credentialType: "course"
             credentialId: "b6414cce8bbe13c577482dde6b67b5458994f9e4d189d73909a8c24fea1e747f"
